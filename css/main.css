@@ -31,7 +31,7 @@ h1 {
 }
 
 h2 {
-	
+
 }
 
 h3 {
@@ -43,15 +43,15 @@ h3 {
 }
 
 h4 {
-	
+
 }
 
 h5 {
-	
+
 }
 
 h6 {
-	
+
 }
 
 p {
@@ -62,8 +62,8 @@ p {
 a {
 	color: #3cb3f4;
 	text-decoration: none;
-	-moz-border-radius: 3px; 
-	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	border: 1px solid rgba(255, 255, 255, 0.0000);
 }
@@ -71,8 +71,8 @@ a {
 a:hover {
 	color: #ffffff;
 	background-color: #3cb3f4;
-	-moz-border-radius: 3px; 
-	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	border: 1px solid #3cb3f4;
 }
@@ -80,8 +80,8 @@ a:hover {
 h1 a {
 	color: #000000;
 	text-decoration: none;
-	-moz-border-radius: 3px; 
-	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	border: 1px solid rgba(255, 255, 255, 0.0000);
 }
@@ -89,8 +89,8 @@ h1 a {
 h1 a:hover {
 	color: #ffffff;
 	background-color: #000000;
-	-moz-border-radius: 3px; 
-	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	border: 3px solid #000000;
 }
@@ -98,7 +98,6 @@ h1 a:hover {
 /* Custom */
 
 body {
-	background-image: url(img/bg-texture.png);
 	font-weight: normal;
 	font-style: normal;
 	font-size: 10pt;
@@ -125,27 +124,27 @@ body {
 		margin-left: 300px;
 		text-shadow: 0 1px 1px #000000;
 	}
-	
+
 	#header-links li{
 		display: inline;
 		margin: 10px;
 	}
-	
+
 	#header-links a{
 		color: #eeeeee;
 		text-decoration: none;
 		background-color: transparent;
-		-moz-border-radius: 0; 
-		-webkit-border-radius: 0; 
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
 		border-radius: 0;
 		border: 0;
 	}
-	
+
 	#header-links a:hover{
 		color: #c3c3c3;
 		background-color: none;
-		-moz-border-radius: 0; 
-		-webkit-border-radius: 0; 
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
 		border-radius: 0;
 		border: 0;
 	}
@@ -192,8 +191,7 @@ body {
 
 #sidebar {
 	float: right;
-	background-image: url(img/dark-texture.png);
-	background-color: #e1e1e1;
+	background-color: #e9e9e9;
 	width: 200px;
 	height: 200px;
 	padding: 20px;
@@ -216,11 +214,11 @@ body {
 }
 
 .date {
+	background-color: #e9e9e9;
 	width: 50px;
 	height: auto;
 	padding: 8px;
 	margin-bottom: 20px ;
-	background-image: url(img/dark-texture.png);
 	border-style: solid;
 	border-width: 1px;
 	border-color: #bbbbbb;
@@ -237,4 +235,3 @@ body {
 	font-size: 0.8em;
 	color: #838383;
 }
-
