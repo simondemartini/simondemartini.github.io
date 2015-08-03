@@ -112,6 +112,11 @@ h1 a:hover {
 
 /* Custom */
 
+html {
+	min-height:100%;
+	position: relative;
+}
+
 body {
 	font-weight: normal;
 	font-style: normal;
@@ -120,6 +125,7 @@ body {
 	font-family: 'AllerRegular', Helvetica, Arial, sans-serif;
 	color: $color-darktext;
 	background-color: $color-primary;
+	height:100%;
 }
 
 #container {
@@ -259,7 +265,8 @@ body {
 	background-image: url("img/sidebar-bg.svg");
 	background-size: $ridge-width;
 	background-repeat: repeat-y;
-	height:100vh;
+	top:0;
+	bottom:0;
 	width:$ridge-width - 1px;
 	padding:0;
 	margin:0;
