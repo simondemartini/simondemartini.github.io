@@ -56,6 +56,7 @@ h1 a {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+  margin-left: -3px;
   border: 3px solid rgba(255, 255, 255, 0); }
 
 h1 a:hover {
@@ -149,15 +150,26 @@ body {
 #main {
   font-size: 10pt;
   margin-top: 20px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  float: left;
+  width: 500px; }
+
+#faux-ridge {
+  float: left;
+  width: 250px; }
 
 #content {
-  float: right;
-  width: 548px;
+  width: 537px;
   height: 100%;
   line-height: 15pt;
   background-color: #edeae8;
-  padding: 25px; }
+  padding: 50px;
+  padding-left: 60px;
+  margin-bottom: 50px; }
+  #content:last-child {
+    margin-bottom: 0; }
+  #content h1 {
+    margin-left: 0; }
 
 #sidebar {
   float: left;
@@ -205,7 +217,7 @@ body {
   font-size: 1.2em;
   line-height: 12pt;
   color: #525252;
-  float: left; }
+  float: right; }
   .date .year {
     font-family: AllerRegular;
     font-size: 0.8em;

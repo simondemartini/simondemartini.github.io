@@ -12,6 +12,8 @@ $color-neutral: 	#777777;
 $color-offwhite:	#edeae8;
 $color-darktext: 	#333333;
 
+$ridge-width: 		250px;
+
 
 /* Fonts */
 
@@ -95,6 +97,7 @@ h1 a {
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
+	margin-left: -3px;
 	border: 3px solid rgba(255, 255, 255, 0.0000);
 }
 
@@ -203,15 +206,31 @@ body {
 	font-size: 10pt;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	float:left;
+	width: 500px;
+}
+
+#faux-ridge {
+	float:left;
+	width:$ridge-width;
 }
 
 #content {
-	float: right;
-	width: 548px;
+	width: 537px;
 	height: 100%;
 	line-height: 15pt;
 	background-color: $color-offwhite;
-	padding:25px;
+	padding:50px;
+	padding-left: 60px;
+	margin-bottom: 50px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	h1 {
+		margin-left: 0;
+	}
 }
 
 #sidebar {
@@ -238,10 +257,10 @@ body {
 
 #ridge {
 	background-image: url("img/sidebar-bg.svg");
-	background-size: 250px;
+	background-size: $ridge-width;
 	background-repeat: repeat-y;
 	height:100vh;
-	width:249px;
+	width:$ridge-width - 1px;
 	padding:0;
 	margin:0;
 	z-index:-100;
@@ -263,7 +282,7 @@ body {
 	font-size: 1.2em;
 	line-height: 12pt;
 	color: #525252;
-	float: left;
+	float: right;
 
 	.year {
 		font-family: AllerRegular;
