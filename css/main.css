@@ -15,7 +15,7 @@
   src: local("☺"), url("aller_bold-webfont.woff") format("woff"), url("aller_bold-webfont.ttf") format("truetype"), url("aller_bold-webfont.svg#webfontDSrVwF7Z") format("svg");
   font-weight: normal;
   font-style: normal; }
-/* CSS */
+/* Styles */
 h1 {
   font-size: 2.5em;
   font-family: 'AllerBold';
@@ -188,7 +188,8 @@ body {
   padding: 0;
   margin: 0;
   z-index: -100;
-  position: absolute; }
+  position: absolute;
+  min-height: 100%; }
 
 .date {
   background-color: #d7d4d2;
@@ -205,10 +206,9 @@ body {
   line-height: 12pt;
   color: #525252;
   float: left; }
-
-.date .year {
-  font-family: AllerRegular;
-  font-size: 0.8em;
-  color: #838383; }
+  .date .year {
+    font-family: AllerRegular;
+    font-size: 0.8em;
+    color: #838383; }
 
 /*# sourceMappingURL=main.css.map */

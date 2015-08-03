@@ -5,12 +5,12 @@
 
 /* Variables */
 
-$color-primary: #366780;
-$color-secondary: #638e99;
-$color-highlight: #b25b30;
-$color-neutral: #777777;
-$color-offwhite: #edeae8;
-$color-darktext: #333333;
+$color-primary: 	#366780;
+$color-secondary: 	#638e99;
+$color-highlight: 	#b25b30;
+$color-neutral: 	#777777;
+$color-offwhite:	#edeae8;
+$color-darktext: 	#333333;
 
 
 /* Fonts */
@@ -246,6 +246,7 @@ body {
 	margin:0;
 	z-index:-100;
 	position: absolute;
+	min-height: 100%;
 }
 
 .date {
@@ -263,10 +264,10 @@ body {
 	line-height: 12pt;
 	color: #525252;
 	float: left;
-}
 
-.date .year {
-	font-family: AllerRegular;
-	font-size: 0.8em;
-	color: #838383;
+	.year {
+		font-family: AllerRegular;
+		font-size: 0.8em;
+		color: #838383;
+	}
 }
