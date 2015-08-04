@@ -16,6 +16,7 @@ $font-stack: 		'AllerRegular', Helvetica, Arial, sans-serif;
 $font-stack-bold: 	'AllerBold', Helvetica, Arial, sans-serif;
 
 $main-width: 		850px;
+$article-width:     480px;
 $ridge-width: 		250px;
 
 $border-radius: 	3px;
@@ -183,7 +184,10 @@ a {
     margin-top: 20px;
     margin-bottom: 20px;
     float: left;
-    width: 500px;
+    width: $article-width + 120px;
+    position: relative;
+    perspective: 900px;
+    perspective-origin: top left;
 }
 
 #sidebar {
@@ -193,21 +197,41 @@ a {
 }
 
 article {
-    width: 100%;
-    height: 100%;
+    width: $article-width;
+    position: relative;
     line-height: 15pt;
     background-color: $color-offwhite;
     padding: 50px 50px 50px 60px;
     margin-bottom: 50px;
+    float:left;
+    &::before {
+        content: "";
+        position: absolute;
+        margin-left: -72px;
+        margin-top: -50px;
+        float:left;
+        background-color: darken($color-white, 20%);
+        width:13px;
+        height:100%;
+        transform: rotateY(-20deg);
+        transform-origin: right;
+        z-index: -200;
+    }
     &:last-child {
         margin-bottom: 0;
     }
-
 	h1 {
         margin-left: 0;
         margin-right: 0;
         max-width: 430px;
     }
+}
+
+#article-fold {
+    float:left;
+    background-color: red;
+    width:10px;
+    height:100px;
 }
 
 .date {
