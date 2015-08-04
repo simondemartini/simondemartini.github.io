@@ -178,12 +178,6 @@ article {
     margin-right: 0;
     max-width: 430px; }
 
-#article-fold {
-  float: left;
-  background-color: red;
-  width: 10px;
-  height: 100px; }
-
 .date {
   background-color: #d7d0cb;
   width: 50px;
