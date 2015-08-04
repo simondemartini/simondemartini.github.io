@@ -1,6 +1,7 @@
 /* Reset */
 @import 'reset.css';
 
+
 /* Variables */
 $color-primary: 	#366780;
 $color-secondary: 	#638e99;
@@ -18,6 +19,7 @@ $main-width: 		850px;
 $ridge-width: 		250px;
 
 $border-radius: 	3px;
+
 
 /* Mixins */
 @mixin border-radius($radius) {
