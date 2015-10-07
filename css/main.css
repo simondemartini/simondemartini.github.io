@@ -17,10 +17,6 @@
   font-weight: normal;
   font-style: normal; }
 /* Styles */
-html {
-  min-height: 100%;
-  position: relative; }
-
 body {
   font: normal normal 10pt/normal "AllerRegular", Helvetica, Arial, sans-serif;
   background: #366780;
@@ -42,7 +38,7 @@ h1 {
     border-radius: 3px;
     border: 3px solid rgba(255, 255, 255, 0); }
   h1 a:hover {
-    color: #edeae8;
+    color: #f2f2f2;
     background-color: #333;
     border: 3px solid #333; }
 
@@ -66,15 +62,15 @@ a {
   border-radius: 3px;
   border: 1px solid rgba(255, 255, 255, 0); }
   a:hover {
-    color: #edeae8;
+    color: #f2f2f2;
     background-color: #b25b30;
     border: 1px solid #b25b30; }
 
 #header {
-  line-height: normal;
   font-family: "AllerBold", Helvetica, Arial, sans-serif;
   height: 250px;
   background: url("img/header-bg.svg") repeat-x 0 0/5px 250px;
+  background-color: #366780;
   z-index: -200; }
   #header ul {
     position: absolute;
@@ -90,10 +86,6 @@ a {
       color: #666666;
       text-decoration: none;
       background-color: transparent;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      -ms-border-radius: 0;
-      border-radius: 0;
       border: 0; }
     #header ul a:hover {
       color: black;
@@ -112,97 +104,69 @@ a {
   font-family: "AllerBold", Helvetica, Arial, sans-serif; }
 
 #logo {
-  background-image: url("img/sidebar-bg.svg");
+  background-color: #366780;
   background-size: 250px;
   background-repeat: repeat-y;
   width: 250px;
   z-index: 0;
   position: relative; }
 
-#ridge {
-  background-image: url("img/sidebar-bg.svg");
-  background-size: 250px;
-  background-repeat: repeat-y;
-  width: 249px;
-  padding: 0;
-  margin: 0;
-  z-index: -100;
-  position: absolute;
-  min-height: 100%; }
-
 #container {
   width: 850px;
   margin-left: auto;
-  margin-right: auto;
-  margin-top: -50px;
-  padding: 25px; }
-
-#main {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  float: left;
-  width: 600px;
-  position: relative;
-  perspective: 900px;
-  perspective-origin: top left; }
+  margin-right: auto; }
 
 #sidebar {
   float: left;
   width: 250px;
   height: 10px; }
 
+#main {
+  padding-left: 250px;
+  width: 600px;
+  position: relative; }
+
 article {
   width: 480px;
-  position: relative;
-  line-height: 15pt;
-  background-color: #edeae8;
-  padding: 50px 50px 50px 60px;
-  margin-bottom: 50px;
-  float: left; }
-  article::before {
-    content: "";
-    position: absolute;
-    margin-left: -72px;
-    margin-top: -50px;
-    float: left;
-    background-color: #cccccc;
-    width: 12px;
-    height: 100%;
-    transform: rotateY(-20deg);
-    transform-origin: right;
-    outline: 1px solid transparent;
-    -webkit-backface-visibility: hidden;
-    z-index: -500;
-    -webkit-box-shadow: inset 12px 0px 29px -13px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: inset 12px 0px 29px -13px rgba(0, 0, 0, 0.25);
-    box-shadow: inset 12px 0px 29px -13px rgba(0, 0, 0, 0.25); }
-  article:last-child {
-    margin-bottom: 0; }
+  background-color: #f2f2f2;
+  padding: 50px 60px 50px 60px;
+  margin-bottom: 50px; }
   article h1 {
     margin-left: 0;
     margin-right: 0;
     max-width: 405px; }
-
-.date {
-  background-color: #d7d0cb;
-  width: 50px;
-  height: auto;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  border-radius: 3px;
-  padding: 8px;
-  margin-bottom: 20px;
-  text-align: center;
-  font: 1.2em/12pt "AllerBold", Helvetica, Arial, sans-serif;
-  color: #4d4d4d;
-  float: right; }
-  .date .year {
-    font-size: 0.8em;
-    color: gray; }
+  article .title {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-bottom: solid 1px #333;
+    margin-bottom: 25px; }
+    article .title .date {
+      background-color: #d8d8d8;
+      width: 50px;
+      height: auto;
+      position: absolute;
+      bottom: 35px;
+      right: 0;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px;
+      padding: 8px;
+      text-align: center;
+      font: 1.2em/12pt "AllerBold", Helvetica, Arial, sans-serif;
+      color: #4d4d4d; }
+      article .title .date .year {
+        font-size: 0.8em;
+        color: gray; }
 
 /* Utility */
 .clearfix {
   clear: both; }
+
+.unselectable {
+  user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none; }
 
 /*# sourceMappingURL=main.css.map */
