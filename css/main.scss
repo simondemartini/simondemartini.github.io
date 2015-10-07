@@ -2,22 +2,27 @@
 @import 'reset.css';
 
 
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Roboto+Slab:400,700,300);
+$font-stack: 		'Roboto', Helvetica, Arial, sans-serif;
+$font-stack-title: 	'Roboto Slab', Helvetica, Arial, sans-serif;
+
+
 /* Variables */
-$color-primary: 	#366780;
+$color-primary: 	#333333;
 $color-secondary: 	#638e99;
 $color-highlight: 	#b25b30;
-$color-neutral: 	#777;
-$color-white: 		#fff;
+$color-neutral: 	#777777;
+$color-white: 		#ffffff;
 $color-offwhite: 	#f2f2f2;
-$color-darktext: 	#333;
+$color-darktext: 	#333333;
 $color-transparent: rgba(255, 255, 255, 0.0);
 
-$font-stack: 		'AllerRegular', Helvetica, Arial, sans-serif;
-$font-stack-bold: 	'AllerBold', Helvetica, Arial, sans-serif;
-
-$main-width: 		850px;
-$article-width:     480px;
-$ridge-width: 		250px;
+$header-height:     200px;
+$main-width: 		640px;
+$article-padding:   60px;
+$article-width:     $main-width - $article-padding;
+$ridge-width: 		$header-height;
 
 $border-radius: 	3px;
 
@@ -31,24 +36,6 @@ $border-radius: 	3px;
 }
 
 
-/* Fonts */
-@font-face {
-    font-family: 'AllerRegular';
-    src: url("aller_regular-webfont.eot");
-    src: local('☺'), url("aller_regular-webfont.woff") format('woff'), url("aller_regular-webfont.ttf") format('truetype'), url("aller_regular-webfont.svg#webfontHJIiPv90") format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'AllerBold';
-    src: url("aller_bold-webfont.eot");
-    src: local('☺'), url("aller_bold-webfont.woff") format('woff'), url("aller_bold-webfont.ttf") format('truetype'), url("aller_bold-webfont.svg#webfontDSrVwF7Z") format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 /* Styles */
 body {
     font: normal normal 10pt/normal $font-stack;
@@ -58,7 +45,8 @@ body {
 }
 
 h1 {
-    font: 2.5em $font-stack-bold;
+    font: 2.5em $font-stack-title;
+    font-weight: bold;
     width: auto;
     margin: 16px;
     float: left;
@@ -74,12 +62,6 @@ h1 {
         background-color: $color-darktext;
         border: $border-radius solid $color-darktext;
     }
-}
-
-h3 {
-    font: 1.5em $font-stack-bold;
-    margin: 0 10px 10px;
-    color: $color-darktext;
 }
 
 p {
@@ -102,108 +84,112 @@ a {
 }
 
 #header {
-    font-family: $font-stack-bold;
-    height: 250px;
-    background: url("img/header-bg.svg") repeat-x 0 0/5px 250px;
+    font-family: $font-stack-title;
+    height: $header-height;
+    margin-bottom: $article-padding/2;
+    margin-top: $article-padding/2;
+    background: url("img/header-bg.svg") repeat-x 0 0/5px $header-height;
     background-color: $color-primary;
     z-index: -200;
+
     ul {
         position: absolute;
         color: $color-darktext;
         font-size: 1.1em;
         display: inline;
-        margin-top: 10px;
-        margin-left: 300px;
+        margin-top: 0px;
+        margin-left: $header-height + 50;
+
 	    li {
 	        display: inline;
 	        margin: 10px;
 	    }
+
 		a {
 	        color: lighten($color-darktext, 20% );
 	        text-decoration: none;
 	        background-color: transparent;
 	        border: 0;
 	    }
+
 	    a:hover {
 	        color: darken($color-darktext, 20% );
 	        background-color: none;
 	    }
     }
-}
 
-#header-container {
-    width: $main-width;
-    margin-left: auto;
-    margin-right: auto;
-}
+    #header-container {
+        width: $main-width;
+        padding-left: $article-padding;
+        margin-left: auto;
+        margin-right: auto;
 
-#header-name {
-    margin-top: -180px;
-    margin-left: 310px;
-    color: darken($color-darktext, 10%);
-    font-size: 4em;
-    font-family: $font-stack-bold;
-}
+        #name {
+            margin-top: -155px;
+            margin-left: $header-height + 60;
+            color: $color-darktext;
+            font-size: 3.5em;
+            font-family: $font-stack-title;
+            font-weight: 700;
+        }
 
-#logo {
-    background-color: $color-primary;
-    background-size: $ridge-width;
-    background-repeat: repeat-y;
-    width: 250px;
-    z-index: 0;
-    position: relative;
+        #logo {
+            background-color: $color-primary;
+            background-size: $ridge-width;
+            background-repeat: repeat-y;
+            width: $header-height;
+            height: $header-height;
+            z-index: 0;
+            position: relative;
+        }
+    }
+
 }
 
 #container {
     width: $main-width;
     margin-left: auto;
     margin-right: auto;
+
+    #main {
+        width: $main-width;
+        position: relative;
+    }
 }
 
-#sidebar {
-    float: left;
-    width: $ridge-width;
-    height: 10px;
-}
-
-#main {
-    padding-left: $ridge-width;
-    width: $article-width + 120px;
-    position: relative;
-}
 
 article {
     width: $article-width;
     background-color: $color-offwhite;
-    padding: 50px 60px 50px 60px;
-    margin-bottom: 50px;
-	h1 {
-        margin-left: 0;
-        margin-right: 0;
-        max-width: 405px;
-    }
-    .title{
+    padding: $article-padding;
+    margin-bottom: $article-padding;
+
+    .head{
         position: relative;
-        display: inline-block;
         width:100%;
         border-bottom: solid 1px $color-darktext;
         margin-bottom: 25px;
+
         .date {
             background-color: darken($color-offwhite, 10% );
             width: 50px;
-            height: auto;
-            position: absolute;
-            bottom:35px;
-            right:0;
-            @include border-radius($border-radius);
+            margin-bottom: 25px;
+            float:right;
             padding: 8px;
             text-align: center;
-            font: 1.2em/12pt $font-stack-bold;
+            font: 1.2em/12pt $font-stack-title;
             color: lighten($color-darktext, 10% );
             .year {
                 font-size: 0.8em;
                 color: lighten($color-darktext, 30% );
             }
+        }
+
+        h1 {
+            float:none;
+            width:auto;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 }
