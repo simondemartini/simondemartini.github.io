@@ -19,9 +19,9 @@ $color-darktext: 	#333333;
 $color-transparent: rgba(255, 255, 255, 0.0);
 
 $header-height:     200px;
-$main-width: 		640px;
+$main-width: 		700px;
 $article-padding:   60px;
-$article-width:     $main-width - $article-padding;
+$article-width:     $main-width - (2*$article-padding);
 $ridge-width: 		$header-height;
 
 $border-radius: 	3px;
