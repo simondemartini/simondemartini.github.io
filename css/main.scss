@@ -88,9 +88,10 @@ a {
     height: $header-height;
     margin-bottom: $article-padding/2;
     margin-top: $article-padding/2;
-    background: url("img/header-bg.svg") repeat-x 0 0/5px $header-height;
     background-color: $color-primary;
     z-index: -200;
+    overflow: hidden;
+    position: relative;
 
     ul {
         position: absolute;
@@ -118,7 +119,31 @@ a {
 	    }
     }
 
-    #header-container {
+    #wrapper::before{
+        background-color: $color-offwhite;
+        margin-left:-100vw;
+        width:100vw;
+        top: $header-height * 0.16;
+        height:$header-height * 0.68;
+        display: inline-block;
+        position:absolute;
+        z-index:-1;
+        content:" ";
+    }
+
+    #wrapper::after{
+        background-color: $color-offwhite;
+        margin-left: $header-height;
+        width:100vw;
+        top: $header-height * 0.16;
+        height:$header-height * 0.68;
+        display: inline-block;
+        position:absolute;
+        z-index:-1;
+        content:" ";
+    }
+
+    #wrapper {
         width: $main-width;
         margin-left: auto;
         margin-right: auto;
@@ -130,15 +155,15 @@ a {
             font-size: 3.5em;
             font-family: $font-stack-title;
             font-weight: 700;
+            z-index:10;
         }
 
         #logo {
-            background-color: $color-primary;
             background-size: $ridge-width;
             background-repeat: repeat-y;
             width: $header-height;
             height: $header-height;
-            z-index: 0;
+            z-index: 10;
             position: relative;
         }
     }
