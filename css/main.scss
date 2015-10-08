@@ -19,12 +19,16 @@ $color-darktext: 	#333333;
 $color-transparent: rgba(255, 255, 255, 0.0);
 
 $header-height:     250px;
-$main-width: 		700px;
+$main-width: 		760px;
 $article-padding:   60px;
 $article-width:     $main-width - (2*$article-padding);
 $ridge-width: 		$header-height;
 
 $border-radius: 	3px;
+
+$device-small:      385px;
+$device-medium:     600px;
+$device-large:      $main-width - $article-padding;
 
 
 /* Mixins */
@@ -33,6 +37,7 @@ $border-radius: 	3px;
     -moz-border-radius: $radius;
     -ms-border-radius: $radius;
     border-radius: $radius;
+    min-width: 380px;
 }
 
 
@@ -147,6 +152,7 @@ a {
         width: $main-width;
         margin-left: auto;
         margin-right: auto;
+        padding-left: $article-padding;
 
         #name {
             margin-top: 75px - $header-height;
@@ -171,19 +177,20 @@ a {
 }
 
 #container {
-    width: $main-width;
+    max-width: $main-width;
+    min-width: $device-small;
     margin-left: auto;
     margin-right: auto;
 
     #main {
-        width: $main-width;
+        max-width: $main-width;
         position: relative;
     }
 }
 
 
 article {
-    width: $article-width;
+    max-width: $article-width;
     background-color: $color-offwhite;
     padding: $article-padding;
     margin-bottom: $article-padding;
@@ -199,6 +206,7 @@ article {
             background-color: $color-white;
             width: 50px;
             margin-bottom: 25px;
+            margin-left: 25px;
             float:right;
             padding: 8px;
             text-align: center;
@@ -231,4 +239,41 @@ article {
     user-drag: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
+}
+
+@media screen and (max-width: $device-large){
+    .hidden-lrg {
+        visibility: hidden;
+    }
+
+    article {
+        padding: 30px;
+    }
+
+    #header #wrapper #name {
+        line-height: 62px;
+        font-size: 2.5em;
+    }
+
+}
+
+@media screen and (max-width: $device-medium){
+    .hidden-med {
+        visibility: hidden;
+    }
+
+    #header #wrapper ul {
+        margin-top: -62px;
+        margin-left: $header-height + 30px;
+        li {
+            display: list-item;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: $device-small){
+    .hidden-sml {
+        visibility: hidden;
+    }
 }
