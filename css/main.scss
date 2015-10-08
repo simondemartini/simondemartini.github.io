@@ -18,7 +18,7 @@ $color-offwhite: 	#f2f2f2;
 $color-darktext: 	#333333;
 $color-transparent: rgba(255, 255, 255, 0.0);
 
-$header-height:     200px;
+$header-height:     250px;
 $main-width: 		700px;
 $article-padding:   60px;
 $article-width:     $main-width - (2*$article-padding);
@@ -120,12 +120,11 @@ a {
 
     #header-container {
         width: $main-width;
-        padding-left: $article-padding;
         margin-left: auto;
         margin-right: auto;
 
         #name {
-            margin-top: -155px;
+            margin-top: 75px - $header-height;
             margin-left: $header-height + 60;
             color: $color-darktext;
             font-size: 3.5em;

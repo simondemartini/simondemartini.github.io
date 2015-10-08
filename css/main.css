@@ -52,10 +52,10 @@ a {
 
 #header {
   font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
-  height: 200px;
+  height: 250px;
   margin-bottom: 30px;
   margin-top: 30px;
-  background: url("img/header-bg.svg") repeat-x 0 0/5px 200px;
+  background: url("img/header-bg.svg") repeat-x 0 0/5px 250px;
   background-color: #333333;
   z-index: -200; }
   #header ul {
@@ -64,7 +64,7 @@ a {
     font-size: 1.1em;
     display: inline;
     margin-top: 0px;
-    margin-left: 250px; }
+    margin-left: 300px; }
     #header ul li {
       display: inline;
       margin: 10px; }
@@ -78,22 +78,21 @@ a {
       background-color: none; }
   #header #header-container {
     width: 700px;
-    padding-left: 60px;
     margin-left: auto;
     margin-right: auto; }
     #header #header-container #name {
-      margin-top: -155px;
-      margin-left: 260px;
+      margin-top: -175px;
+      margin-left: 310px;
       color: #333333;
       font-size: 3.5em;
       font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
       font-weight: 700; }
     #header #header-container #logo {
       background-color: #333333;
-      background-size: 200px;
+      background-size: 250px;
       background-repeat: repeat-y;
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
       z-index: 0;
       position: relative; }
 
