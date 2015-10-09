@@ -1,5 +1,5 @@
 /* Reset */
-@import 'reset.css';
+@import 'reset';
 
 
 /* Fonts */
@@ -22,13 +22,12 @@ $header-height:     250px;
 $main-width: 		760px;
 $article-padding:   60px;
 $article-width:     $main-width - (2*$article-padding);
-$ridge-width: 		$header-height;
 
 $border-radius: 	3px;
 
 $device-small:      385px;
 $device-medium:     600px;
-$device-large:      $main-width - $article-padding;
+$device-large:      770px;
 
 
 /* Mixins */
@@ -40,6 +39,29 @@ $device-large:      $main-width - $article-padding;
     min-width: 380px;
 }
 
+@mixin a-color($color, $color-invert) {
+    color: $color;
+    @include border-radius($border-radius);
+    border: 1px solid $color-transparent;
+    text-decoration: none;
+    &:hover {
+        color: $color-invert;
+        background-color: $color;
+        border: 1px solid $color;
+    }
+}
+
+@mixin extend-a-color($color, $color-invert) {
+    a {
+        color: $color;
+    }
+    a:hover {
+        color: $color-invert;
+        background-color: $color;
+        border: 1px solid $color;
+    }
+}
+
 
 /* Styles */
 body {
@@ -49,43 +71,14 @@ body {
     height: 100%;
 }
 
-h1 {
-    font: 2.5em $font-stack-title;
-    font-weight: bold;
-    width: auto;
-    margin: 16px;
-    float: left;
-    a {
-        color: $color-darktext;
-        text-decoration: none;
-        margin-left: -3px;
-        @include border-radius($border-radius);
-        border: $border-radius solid $color-transparent;
-    }
-    a:hover {
-        color: $color-offwhite;
-        background-color: $color-darktext;
-        border: $border-radius solid $color-darktext;
-    }
+a {
+    @include a-color($color-secondary,$color-offwhite);
 }
 
 p {
     font-size: 1.1em;
     line-height: 1.6em;
-    clear: both;
     margin-bottom: 15px;
-}
-
-a {
-    color: $color-highlight;
-    text-decoration: none;
-    @include border-radius($border-radius);
-    border: 1px solid $color-transparent;
-    &:hover {
-        color: $color-offwhite;
-        background-color: $color-highlight;
-        border: 1px solid $color-highlight;
-    }
 }
 
 #header {
@@ -94,65 +87,41 @@ a {
     margin-bottom: $article-padding/2;
     margin-top: $article-padding/2;
     background-color: $color-primary;
-    z-index: -200;
+    z-index: 0;
     overflow: hidden;
     position: relative;
 
-    ul {
-        position: absolute;
-        color: $color-darktext;
-        font-size: 1.1em;
-        display: inline;
-        margin-top: 0px;
-        margin-left: $header-height + 50;
-
-	    li {
-	        display: inline;
-	        margin: 10px;
-	    }
-
-		a {
-	        color: lighten($color-darktext, 20% );
-	        text-decoration: none;
-	        background-color: transparent;
-	        border: 0;
-	    }
-
-	    a:hover {
-	        color: darken($color-darktext, 20% );
-	        background-color: none;
-	    }
-    }
-
-    #wrapper::before{
+    .wrapper::before{
         background-color: $color-offwhite;
-        margin-left:-100vw;
-        width:100vw;
+        margin-left: -100vw;
+        width: 100vw;
         top: $header-height * 0.16;
-        height:$header-height * 0.68;
+        height: $header-height * 0.68;
         display: inline-block;
-        position:absolute;
-        z-index:-1;
-        content:" ";
+        position: absolute;
+        z-index: -1;
+        content: " ";
     }
 
-    #wrapper::after{
+    .wrapper::after{
         background-color: $color-offwhite;
         margin-left: $header-height;
-        width:100vw;
+        width: 100vw;
         top: $header-height * 0.16;
         height:$header-height * 0.68;
         display: inline-block;
-        position:absolute;
-        z-index:-1;
-        content:" ";
+        position: absolute;
+        z-index: -1;
+        content: " ";
     }
 
-    #wrapper {
-        width: $main-width;
-        margin-left: auto;
-        margin-right: auto;
+    .wrapper {
         padding-left: $article-padding;
+
+        .nav-link {
+            font-size: 1.1em;
+            margin-left: $header-height + 50;
+        }
 
         #name {
             margin-top: 75px - $header-height;
@@ -161,44 +130,22 @@ a {
             font-size: 3.5em;
             font-family: $font-stack-title;
             font-weight: 700;
-            z-index:10;
         }
 
         #logo {
-            background-size: $ridge-width;
-            background-repeat: repeat-y;
             width: $header-height;
             height: $header-height;
-            z-index: 10;
-            position: relative;
         }
     }
-
 }
-
-#container {
-    max-width: $main-width;
-    min-width: $device-small;
-    margin-left: auto;
-    margin-right: auto;
-
-    #main {
-        max-width: $main-width;
-        position: relative;
-    }
-}
-
 
 article {
-    max-width: $article-width;
     background-color: $color-offwhite;
     padding: $article-padding;
     margin-bottom: $article-padding;
 
     .head{
-        position: relative;
         width:100%;
-        height: auto;
         border-bottom: dashed 1px lighten($color-darktext, 50% );
         margin-bottom: 25px;
 
@@ -209,7 +156,7 @@ article {
             margin-left: 25px;
             float:right;
             padding: 8px;
-            text-align: center;
+            text-align: right;
             font: 1.2em/12pt $font-stack-title;
             color: lighten($color-darktext, 10% );
             .year {
@@ -219,15 +166,27 @@ article {
         }
 
         h1 {
-            float:none;
-            width:auto;
-            margin-left: 0;
-            margin-right: 0;
+            font: 2.5em $font-stack-title;
+            font-weight: bold;
+            margin: 0;
             margin-bottom: 25px;
         }
     }
 }
 
+#footer {
+    font-family: $font-stack-title;
+    height: auto;
+    margin-bottom: $article-padding;
+    margin-top: $article-padding;
+    background-color: $color-offwhite;
+    padding: $article-padding/2;
+    line-height: 2em;
+
+    .wrapper {
+        max-width: $main-width;
+    }
+}
 
 
 /* Utility */
@@ -239,7 +198,49 @@ article {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+    -webkit-user-drag: none;
 }
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $main-width;
+    min-width: $device-small;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.nav-link {
+    li {
+        display: inline;
+        margin: 10px;
+    }
+}
+
+.link-primary {
+    @include extend-a-color($color-primary,$color-offwhite);
+}
+
+.link-secondary {
+    @include extend-a-color($color-secondary,$color-offwhite);
+}
+
+.link-highlight {
+    @include extend-a-color($color-highlight,$color-offwhite);
+}
+
+.link-neutral {
+    @include extend-a-color($color-neutral,$color-offwhite);
+}
+
+.link-title {
+    @include extend-a-color($color-darktext,$color-offwhite);
+}
+
+
+/**Responsive**/
 
 @media screen and (max-width: $device-large){
     .hidden-lrg {
@@ -248,13 +249,15 @@ article {
 
     article {
         padding: 30px;
+
     }
 
-    #header #wrapper #name {
-        line-height: 62px;
-        font-size: 2.5em;
+    #header .wrapper #text {
+        #name {
+            font-size: 2.5em;
+        }
+        margin-top: 10px;
     }
-
 }
 
 @media screen and (max-width: $device-medium){
@@ -262,7 +265,7 @@ article {
         visibility: hidden;
     }
 
-    #header #wrapper ul {
+    #header .wrapper .nav-link {
         margin-top: -62px;
         margin-left: $header-height + 30px;
         li {
