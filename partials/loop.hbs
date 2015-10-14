@@ -1,18 +1,26 @@
-{{#post}}
-{{!< default}}
+{{! Previous/next page links - only displayed on page 2+ }}
+{{#is "paged"}}
+<div class="extra-pagination inner">
+    {{pagination}}
+</div>
+{{/is}}
 
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
 <article class="{{post_class}} wrapper">
-    <header class="head link-title">
+    <header class="head">
         <time class="date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MM/DD"}} <span class="year">{{date format="YYYY"}}</span></time>
-        <h1><a href="{{url}}">{{{title}}}</a></h1>
+        <h1 class="link-title"><a href="{{url}}">{{{title}}}</a></h1>
 
         {{! Display tags, if assigned}}
         {{#if tags}}
         <ul class="tags link-secondary"><li>{{tags separator="</li><li>"}}</li></ul>
         {{/if}}
 
+
     </header>
-    <section class="post">
+
+    <section class="post-excerpt {{post_class}}">
         {{! Display header image, if assigned }}
         {{#if image}}
         <div class="big-img">
@@ -20,11 +28,14 @@
         </div>
         {{/if}}
 
-        {{content}}
+        {{content words="120"}}
+        <a class="read-more" href="{{url}}">Continue Reading &raquo;</a>
     </section>
     <footer class="post-meta">
-        {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
+
     </footer>
 </article>
+{{/foreach}}
 
-{{/post}}
+{{! Previous/next page links - displayed on every page }}
+{{pagination}}

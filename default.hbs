@@ -22,27 +22,39 @@
 </head>
 <body class="{{body_class}} nav-closed">
 
-    {{navigation}}
+    <div id="header">
+    	<div class="wrapper">
+    		<a href="{{@blog.url}}" class="link-nostyle"><img id="logo" class="unselectable" src="{{asset "img/sd-square.svg"}}" /></a>
+    		<div id="text">
+    			<div id="name" class="hidden-med"><a href="{{@blog.url}}" class="link-nostyle">Simon DeMartini</a></div>
 
-    <div class="site-wrapper">
+                {{navigation}}
+
+    		</div>
+    	</div>
+    </div>
+
+    <div id="container" class="wrapper" role="main">
 
         {{! Everything else gets inserted here }}
         {{{body}}}
 
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-        </footer>
+    </div>
 
+    <div id="footer">
+    	<div class="link-neutral wrapper center-text">
+    		<a href="#" class="">Simon DeMartini</a>
+    		<br>
+    		<ul class="nav-link">
+    			<li><a href="#">projects</a></li>
+    			<li><a href="#">blog</a></li>
+    			<li><a href="#">contact</a></li>
+    		</ul>
+    	</div>
     </div>
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-    {{! The main JavaScript file for Casper }}
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
 </body>
 </html>

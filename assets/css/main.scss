@@ -1,25 +1,29 @@
 /* Reset */
 @import 'reset';
 
-
 /* Fonts */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Roboto+Slab:400,700,300);
 $font-stack: 		'Roboto', Helvetica, Arial, sans-serif;
 $font-stack-title: 	'Roboto Slab', Helvetica, Arial, sans-serif;
+
+/*Restore Basic Styles*/
+@import 'markdown';
 
 
 /* Variables */
 $color-primary: 	#333333;
 $color-secondary: 	#638e99;
 $color-highlight: 	#b25b30;
-$color-neutral: 	#777777;
+$color-neutral: 	#999999;
 $color-white: 		#ffffff;
 $color-offwhite: 	#f2f2f2;
+
 $color-darktext: 	#333333;
+$color-bg:          $color-secondary;
 $color-transparent: rgba(255, 255, 255, 0.0);
 
 $header-height:     250px;
-$main-width: 		760px;
+$main-width: 		768px;
 $article-padding:   60px;
 $article-width:     $main-width - (2*$article-padding);
 
@@ -36,7 +40,6 @@ $device-large:      770px;
     -moz-border-radius: $radius;
     -ms-border-radius: $radius;
     border-radius: $radius;
-    min-width: 380px;
 }
 
 @mixin a-color($color, $color-invert) {
@@ -66,7 +69,7 @@ $device-large:      770px;
 /* Styles */
 body {
     font: normal normal 10pt/normal $font-stack;
-    background: $color-primary;
+    background: $color-bg;
     color: $color-darktext;
     height: 100%;
 }
@@ -86,7 +89,6 @@ p {
     height: $header-height;
     margin-bottom: $article-padding/2;
     margin-top: $article-padding/2;
-    background-color: $color-primary;
     z-index: 0;
     overflow: hidden;
     position: relative;
@@ -130,6 +132,7 @@ p {
             font-size: 3.5em;
             font-family: $font-stack-title;
             font-weight: 700;
+
         }
 
         #logo {
@@ -142,12 +145,16 @@ p {
 article {
     background-color: $color-offwhite;
     padding: $article-padding;
+    padding-top: 45px;
     margin-bottom: $article-padding;
 
     .head{
         width:100%;
+        padding: 0 $article-padding 0 $article-padding;
+        margin-left: -$article-padding;
         border-bottom: dashed 1px lighten($color-darktext, 50% );
-        margin-bottom: 25px;
+        margin-bottom: $article-padding/2;
+        padding-bottom: $article-padding/2;
 
         .date {
             background-color: $color-white;
@@ -166,10 +173,45 @@ article {
         }
 
         h1 {
-            font: 2.5em $font-stack-title;
-            font-weight: bold;
+            font-weight: 700;
+            letter-spacing: -1px;
             margin: 0;
-            margin-bottom: 25px;
+            margin-bottom: $article-padding/4;
+        }
+
+        .tags{
+            padding-left: 0;
+            margin-bottom: $article-padding/4;
+            display: inline-block;
+            li{
+                display: inline-block;
+                margin-right:5px;
+                height: 100%;
+                white-space: nowrap;
+                a{
+                    color: $color-white;
+                    background-color: $color-neutral;
+                    padding: 3px;
+                    &:hover{
+                        background-color: $color-highlight;
+                        border-color: $color-highlight;
+                    }
+                }
+            }
+        }
+    }
+
+    img {
+        max-width:100%;
+        height:auto;
+    }
+
+    .big-img {
+        max-width: $article-width + 2* $article-padding ;
+        height:auto;
+        margin: $article-padding/2 -60px;
+        &:first-child{
+            margin-top:-$article-padding/2 - 1px;
         }
     }
 }
@@ -208,11 +250,45 @@ article {
     min-width: $device-small;
 }
 
+.pagination{
+    width:100%;
+    background: $color-offwhite;
+    display: inline-block;
+
+    a{
+        background-color: $color-white;
+        padding: 10px;
+        border: none;
+        border-radius: 0;
+        &:hover {
+            background-color: $color-secondary;
+            color:$color-offwhite;
+        }
+
+    }
+
+    .newer-posts{
+        float:left;
+    }
+
+    .page-number{
+        padding-top: 10px;
+        margin-left: auto;
+        margin-right:auto;
+        text-align: center;
+    }
+    .older-posts{
+        float:right;
+        text-align: right;
+    }
+}
 .center-text {
     text-align: center;
 }
 
 .nav-link {
+    padding-left: 0;
+    margin-bottom: 0;
     li {
         display: inline;
         margin: 10px;
@@ -237,6 +313,17 @@ article {
 
 .link-title {
     @include extend-a-color($color-darktext,$color-offwhite);
+}
+
+.link-nostyle {
+        color: $color-darktext;
+        border: none;
+
+    &:hover {
+        color: $color-darktext;
+        border: none;
+        background-color: rgba(0,0,0,0);
+    }
 }
 
 
