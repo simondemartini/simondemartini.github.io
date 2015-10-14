@@ -32,7 +32,6 @@ q:after, q:before {
 /* Fonts */
 /*Restore Basic Styles*/
 html {
-  height: 100%;
   max-height: 100%;
   font-size: 62.5%;
   -webkit-tap-highlight-color: transparent; }
