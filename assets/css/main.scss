@@ -3,7 +3,7 @@
 
 /* Fonts */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Roboto+Slab:400,700,300);
-$font-stack: 		'Roboto', Helvetica, Arial, sans-serif;
+$font-stack: 		'Roboto', Helvet ica, Arial, sans-serif;
 $font-stack-title: 	'Roboto Slab', Helvetica, Arial, sans-serif;
 
 /*Restore Basic Styles*/
@@ -19,7 +19,7 @@ $color-white: 		#ffffff;
 $color-offwhite: 	#f2f2f2;
 
 $color-darktext: 	#333333;
-$color-bg:          $color-secondary;
+$color-bg:          #dddddd;
 $color-transparent: rgba(255, 255, 255, 0.0);
 
 $header-height:     250px;
@@ -72,6 +72,7 @@ body {
     background: $color-bg;
     color: $color-darktext;
     height: 100%;
+    position: relative;
 }
 
 a {
@@ -82,6 +83,21 @@ p {
     font-size: 1.1em;
     line-height: 1.6em;
     margin-bottom: 15px;
+}
+
+.bg-head{
+    position:absolute;
+    background-color: $color-primary;
+    background-image: url(../img/bg-texture.min.svg);
+    background-size: auto 768pt ;
+    background-repeat: repeat;
+    background-position: center;
+    top:0;
+    margin-top: -30px;
+    width: 100%;
+    min-height: $header-height + 150px;
+    height: 60vh;
+    z-index: -5;
 }
 
 #header {
@@ -282,6 +298,7 @@ article {
         text-align: right;
     }
 }
+
 .center-text {
     text-align: center;
 }
