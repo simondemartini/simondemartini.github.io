@@ -268,7 +268,7 @@ article {
 
 .pagination{
     width:100%;
-    background: $color-offwhite;
+    color: #444;
     display: inline-block;
 
     a{
@@ -292,11 +292,16 @@ article {
         margin-left: auto;
         margin-right:auto;
         text-align: center;
+        display: block;
     }
     .older-posts{
         float:right;
         text-align: right;
     }
+}
+
+.invisible {
+    visibility: hidden;
 }
 
 .center-text {

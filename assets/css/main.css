@@ -429,7 +429,7 @@ article {
 
 .pagination {
   width: 100%;
-  background: #f2f2f2;
+  color: #444;
   display: inline-block; }
   .pagination a {
     background-color: #ffffff;
@@ -445,10 +445,14 @@ article {
     padding-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center; }
+    text-align: center;
+    display: block; }
   .pagination .older-posts {
     float: right;
     text-align: right; }
+
+.invisible {
+  visibility: hidden; }
 
 .center-text {
   text-align: center; }
