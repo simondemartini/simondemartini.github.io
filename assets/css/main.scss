@@ -23,6 +23,7 @@ $color-bg:          #dddddd;
 $color-transparent: rgba(255, 255, 255, 0.0);
 
 $header-height:     250px;
+$footer-height:     235px;
 $main-width: 		768px;
 $article-padding:   60px;
 $article-width:     $main-width - (2*$article-padding);
@@ -67,6 +68,10 @@ $device-large:      770px;
 
 
 /* Styles */
+html {
+    height: 100%;
+}
+
 body {
     font: normal normal 10pt/normal $font-stack;
     background: $color-bg;
@@ -85,7 +90,7 @@ p {
     margin-bottom: 15px;
 }
 
-.bg-head{
+#bg-head{
     position:absolute;
     background-color: $color-primary;
     background-image: url(../img/bg-texture.min.svg);
@@ -104,7 +109,7 @@ p {
     font-family: $font-stack-title;
     height: $header-height;
     margin-bottom: $article-padding/2;
-    margin-top: $article-padding/2;
+    padding-top: $article-padding/2;
     z-index: 0;
     overflow: hidden;
     position: relative;
@@ -113,7 +118,7 @@ p {
         background-color: $color-offwhite;
         margin-left: -100vw;
         width: 100vw;
-        top: $header-height * 0.16;
+        top: $header-height * 0.28;
         height: $header-height * 0.68;
         display: inline-block;
         position: absolute;
@@ -125,7 +130,7 @@ p {
         background-color: $color-offwhite;
         margin-left: $header-height;
         width: 100vw;
-        top: $header-height * 0.16;
+        top: $header-height * 0.28;
         height:$header-height * 0.68;
         display: inline-block;
         position: absolute;
@@ -232,11 +237,27 @@ article {
     }
 }
 
+#container {
+    $header-adjust: $header-height + $article-padding;
+
+    min-height: 100%;
+    margin-bottom: -$footer-height + $article-padding;
+
+    margin-top: -$header-adjust;
+    padding-top: $header-adjust;
+    padding-bottom: $footer-height;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 #footer {
     font-family: $font-stack-title;
     height: auto;
     margin-bottom: $article-padding;
-    margin-top: $article-padding;
+    margin-top: -$footer-height + $article-padding;
+    position: relative;
     background-color: $color-offwhite;
     padding: $article-padding/2;
     line-height: 2em;
