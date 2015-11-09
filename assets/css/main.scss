@@ -24,7 +24,7 @@ $color-transparent: rgba(255, 255, 255, 0.0);
 
 $header-height:     250px;
 $footer-height:     235px;
-$main-width: 		840px;
+$main-width: 		820px;
 $article-padding:   60px;
 $article-width:     $main-width - (2*$article-padding);
 
@@ -139,6 +139,7 @@ p {
 
     .wrapper {
         padding-left: $article-padding;
+        max-width: 755px;
 
         .nav-link {
             font-size: 1.1em;
@@ -154,7 +155,7 @@ p {
             font-family: $font-stack-title;
             font-weight: 700;
 			width:auto;
-			
+
         }
 
         #logo {
@@ -381,12 +382,16 @@ article {
     }
 
     article {
+        padding-top: $article-padding/2;
 		padding-left: $article-padding/2;
 		padding-right: $article-padding/2;
 		.head {
-			padding: 0 $article-padding/2 0 $article-padding/2;
+			padding: 0 $article-padding/2 13px $article-padding/2;
 			margin-left: -$article-padding/2;
 		}
+        .big-img {
+            padding: 0 $article-padding/2 0 $article-padding/2;
+        }
     }
 
     #header .wrapper #text {
@@ -398,6 +403,7 @@ article {
 			padding-bottom:8px;
         }
         margin-top: -100px;
+        margin-left: -25px;
 		height:100%;
 		position:relative;
     }
@@ -415,10 +421,9 @@ article {
 
     #header .wrapper .nav-link {
         margin-top: -95px;
-        margin-left: $header-height + 30px;
         li {
             display: list-item;
-            margin-bottom: 20px;
+            margin-bottom: 21px;
         }
     }
 }
@@ -427,7 +432,7 @@ article {
     .hidden-sml {
         visibility: hidden;
     }
-    
+
     #container {
         padding-left: 0;
 		padding-right: 0;
