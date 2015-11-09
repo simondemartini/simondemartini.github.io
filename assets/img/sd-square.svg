@@ -27,11 +27,11 @@
        y2="95.182899">
       <stop
          offset="0"
-         style="stop-color:#000000"
+         style="stop-color:#989898;stop-opacity:1"
          id="stop50" />
       <stop
          offset="1"
-         style="stop-color:#FFFFFF"
+         style="stop-color:#f1f1f1;stop-opacity:1"
          id="stop52" />
     </linearGradient>
   </defs>
@@ -43,16 +43,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="309"
-     inkscape:cy="463.38723"
+     inkscape:cx="233.18981"
+     inkscape:cy="410.68073"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g4011"
      showgrid="true"
      inkscape:snap-global="true"
      inkscape:window-width="1553"
      inkscape:window-height="1040"
-     inkscape:window-x="163"
-     inkscape:window-y="71"
+     inkscape:window-x="218"
+     inkscape:window-y="1"
      inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true">
@@ -109,7 +109,7 @@
          d="m 493.36882,251.85697 -493.43183037,35.31439 0,543.88858 484.74920037,35.38403 0,-396.04813 -337.44973,7.13466 0,-23.01894 14.74602,-1.12748 333.4164,-8.72814 0,-192.55257 -2.03006,-0.2464 z m -185.44201,393.84131 0,23.73933 -307.98982037,-8.44428 0,-21.9637 307.98982037,6.66865 z"
          id="S"
          inkscape:connector-curvature="0"
-         style="fill:url(#S_2_)" />
+         style="fill:url(#S_2_);opacity:1" />
     </g>
     <g
        inkscape:groupmode="layer"
