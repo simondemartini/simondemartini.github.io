@@ -39,7 +39,7 @@ html {
 body {
   height: 100%;
   max-height: 100%;
-  font-family: "Roboto", Helvet ica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   letter-spacing: 0.01rem;
   font-size: 1.8rem;
   line-height: 1.75em;
@@ -265,7 +265,7 @@ html {
   height: 100%; }
 
 body {
-  font: normal normal 10pt/normal "Roboto", Helvet ica, Arial, sans-serif;
+  font: normal normal 10pt/normal "Roboto", Helvetica, Arial, sans-serif;
   background: #dddddd;
   color: #333333;
   height: 100%;
@@ -297,7 +297,6 @@ p {
   background-repeat: repeat;
   background-position: center;
   top: 0;
-  margin-top: -30px;
   width: 100%;
   min-height: 400px;
   height: 60vh;
@@ -335,14 +334,16 @@ p {
     padding-left: 60px; }
     #header .wrapper .nav-link {
       font-size: 1.1em;
-      margin-left: 300px; }
+      margin-left: 300px;
+      list-style-type: none; }
     #header .wrapper #name {
       margin-top: -175px;
       margin-left: 310px;
       color: #333333;
       font-size: 3.5em;
       font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
-      font-weight: 700; }
+      font-weight: 700;
+      width: auto; }
     #header .wrapper #logo {
       width: 250px;
       height: 250px; }
@@ -409,6 +410,8 @@ article {
   margin-top: -310px;
   padding-top: 310px;
   padding-bottom: 235px;
+  padding-left: 30px;
+  padding-right: 30px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -527,24 +530,42 @@ article {
     visibility: hidden; }
 
   article {
-    padding: 30px; }
+    padding-left: 30px;
+    padding-right: 30px; }
+    article .head {
+      padding: 0 30px 0 30px;
+      margin-left: -30px; }
 
   #header .wrapper #text {
-    margin-top: 10px; }
+    margin-top: -100px;
+    height: 100%;
+    position: relative; }
     #header .wrapper #text #name {
-      font-size: 2.5em; } }
+      font-size: 2.5em;
+      width: 200px;
+      overflow: auto;
+      margin-top: -190px;
+      padding-bottom: 8px; } }
 @media screen and (max-width: 600px) {
   .hidden-med {
     visibility: hidden; }
 
+  #container {
+    padding-left: 15px;
+    padding-right: 15px; }
+
   #header .wrapper .nav-link {
-    margin-top: -62px;
+    margin-top: -95px;
     margin-left: 280px; }
     #header .wrapper .nav-link li {
       display: list-item;
-      margin-bottom: 10px; } }
+      margin-bottom: 20px; } }
 @media screen and (max-width: 385px) {
   .hidden-sml {
-    visibility: hidden; } }
+    visibility: hidden; }
+
+  #container {
+    padding-left: 0;
+    padding-right: 0; } }
 
 /*# sourceMappingURL=main.css.map */
