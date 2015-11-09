@@ -377,27 +377,30 @@ article {
 /**Responsive**/
 
 @media screen and (max-width: $device-large){
+    $lrg-padding: $article-padding/2;
     .hidden-lrg {
         visibility: hidden;
     }
 
     article {
-        padding-top: $article-padding/2;
-		padding-left: $article-padding/2;
-		padding-right: $article-padding/2;
+        padding-top: $lrg-padding;
+		padding-left: $lrg-padding;
+		padding-right: $lrg-padding;
 		.head {
-			padding: 0 $article-padding/2 13px $article-padding/2;
-			margin-left: -$article-padding/2;
+			padding: 0 $lrg-padding 13px $lrg-padding;
+			margin-left: -$lrg-padding;
 		}
         .big-img {
-            padding: 0 $article-padding/2 0 $article-padding/2;
+            margin: $lrg-padding - 60px;
+            margin-top: -31px;
+            margin-bottom: $lrg-padding;
         }
     }
 
     #header .wrapper #text {
         #name {
             font-size: 2.5em;
-			width: 200px;
+			max-width: 200px;
 			overflow:auto;
 			margin-top:-190px;
 			padding-bottom:8px;
@@ -410,13 +413,20 @@ article {
 }
 
 @media screen and (max-width: $device-medium){
+    $med-padding: $article-padding/4;
+
     .hidden-med {
         visibility: hidden;
     }
 
     #container {
-        padding-left: 15px;
-		padding-right: 15px;
+        padding-left: $med-padding;
+		padding-right: $med-padding;
+        .big-img {
+            margin: $med-padding - 45px;
+            margin-top: -31px;
+            margin-bottom: $med-padding;
+        }
     }
 
     #header .wrapper .nav-link {
@@ -429,8 +439,25 @@ article {
 }
 
 @media screen and (max-width: $device-small){
+    $sml-padding: $article-padding/4;
+
     .hidden-sml {
         visibility: hidden;
+    }
+
+    article {
+        padding-top: $sml-padding;
+		padding-left: $sml-padding;
+		padding-right: $sml-padding;
+		.head {
+			padding: 0 $sml-padding 13px $sml-padding;
+			margin-left: -$sml-padding;
+		}
+        .big-img {
+            margin: $sml-padding - 30px;
+            margin-top: -31px;
+            margin-bottom: $sml-padding;
+        }
     }
 
     #container {
