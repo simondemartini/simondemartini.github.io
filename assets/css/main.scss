@@ -30,7 +30,7 @@ $article-width:     $main-width - (2*$article-padding);
 
 $border-radius: 	3px;
 
-$device-small:      385px;
+$device-small:      380px;
 $device-medium:     600px;
 $device-large:      770px;
 
@@ -145,6 +145,7 @@ p {
             font-size: 1.1em;
             margin-left: $header-height + 50;
 			list-style-type:none;
+            line-height: 2em;
         }
 
         #name {
@@ -397,21 +398,58 @@ article {
         }
     }
 
-    #header .wrapper #text {
-        #name {
-            font-size: 2.5em;
-			max-width: 200px;
-			margin-top:-190px;
-			padding-bottom:8px;
+    #container {
+        margin-top: -375px;
+    }
+
+    #header {
+        $sml-header: 180px;
+
+        .wrapper::before{
+            top: $sml-header * 0.33;
+            height: $sml-header * 0.675;
         }
-        margin-top: -100px;
-        margin-left: -25px;
-		height:100%;
-		position:relative;
+
+        .wrapper::after{
+            margin-left: $sml-header - 2px;;
+            top: $sml-header * 0.33;
+            height:$sml-header * 0.675;
+        }
+
+        .wrapper {
+            padding-left: $article-padding/2;
+            padding-right: $article-padding/2;
+            max-width: 500px;
+
+            .nav-link {
+                margin-left: $sml-header + 50;
+                li {
+                    padding-bottom: 8px;
+                }
+            }
+
+            #text {
+                #name {
+                    font-size: 2.5em;
+        			//max-width: 200px;
+        			//margin-top:-190px;
+        			//padding-bottom:8px;
+                    margin-top: 75px - $sml-header;
+                    margin-left: $sml-header + 60;
+                }
+                margin-top: -131px;
+                margin-left: -25px;
+            }
+
+            #logo {
+                width: $sml-header;
+                height: $sml-header;
+            }
+        }
     }
 }
 
-@media screen and (max-width: $device-medium) and (min-width: $device-small){
+@media screen and (max-width: $device-medium) and (min-width: $device-small+1px){
     $med-padding: $article-padding/4;
 
     .hidden-med {
@@ -428,11 +466,27 @@ article {
         }
     }
 
-    #header .wrapper .nav-link {
-        margin-top: -95px;
-        li {
-            display: list-item;
-            margin-bottom: 21px;
+    #header {
+        .wrapper {
+            max-width: 385px;
+            padding-right: 15px;
+        }
+        #text {
+            margin-left: -40px !important;
+            margin-top:-130px !important;
+            #name {
+                font-size: 1.9em !important;
+                line-height: 1.1em;
+                max-width: 200px;
+            }
+            .nav-link {
+                overflow: none;
+                font-size: 1.0em;
+                line-height: 1.5em;
+                li {
+                    margin-right: 0;
+                }
+            }
         }
     }
 }
@@ -442,6 +496,13 @@ article {
 
     .hidden-sml {
         visibility: hidden;
+    }
+
+    #header {
+        .nav-link {
+            margin-top: -95px;
+            margin-left: 220px !important;
+        }
     }
 
     article {
