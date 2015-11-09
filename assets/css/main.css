@@ -553,7 +553,7 @@ article {
       overflow: auto;
       margin-top: -190px;
       padding-bottom: 8px; } }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) and (min-width: 385px) {
   .hidden-med {
     visibility: hidden; }
 

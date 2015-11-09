@@ -412,7 +412,7 @@ article {
     }
 }
 
-@media screen and (max-width: $device-medium){
+@media screen and (max-width: $device-medium) and (min-width: $device-small){
     $med-padding: $article-padding/4;
 
     .hidden-med {
