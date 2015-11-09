@@ -127,7 +127,7 @@ p {
 
     .wrapper::after{
         background-color: $color-offwhite;
-        margin-left: $header-height;
+        margin-left: $header-height - 2px;;
         width: 100vw;
         top: $header-height * 0.28;
         height:$header-height * 0.68;
