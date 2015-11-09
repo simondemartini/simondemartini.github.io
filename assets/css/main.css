@@ -550,7 +550,6 @@ article {
     #header .wrapper #text #name {
       font-size: 2.5em;
       max-width: 200px;
-      overflow: auto;
       margin-top: -190px;
       padding-bottom: 8px; } }
 @media screen and (max-width: 600px) and (min-width: 385px) {
@@ -579,7 +578,7 @@ article {
     padding-left: 15px;
     padding-right: 15px; }
     article .head {
-      padding: 0 15px 13px 15px;
+      padding: 13px 15px 13px 15px;
       margin-left: -15px; }
     article .big-img {
       margin: -15px;

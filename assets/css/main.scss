@@ -401,7 +401,6 @@ article {
         #name {
             font-size: 2.5em;
 			max-width: 200px;
-			overflow:auto;
 			margin-top:-190px;
 			padding-bottom:8px;
         }
@@ -450,7 +449,7 @@ article {
 		padding-left: $sml-padding;
 		padding-right: $sml-padding;
 		.head {
-			padding: 0 $sml-padding 13px $sml-padding;
+			padding: 13px $sml-padding 13px $sml-padding;
 			margin-left: -$sml-padding;
 		}
         .big-img {
