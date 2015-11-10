@@ -30,7 +30,7 @@ q:after, q:before {
   content: ""; }
 
 /* Fonts */
-/*Restore Basic Styles*/
+/*Markdown Post Styles*/
 html {
   max-height: 100%;
   font-size: 62.5%;
@@ -292,7 +292,6 @@ p {
 #bg-head {
   position: absolute;
   background-color: #333333;
-  background-image: url(../img/bg-texture.min.svg);
   background-size: auto 768pt;
   background-repeat: repeat;
   background-position: center;
@@ -482,6 +481,8 @@ article {
   .nav-link li {
     display: inline;
     margin: 10px; }
+  .nav-link .nav-current {
+    font-weight: bold; }
 
 .link-primary a {
   color: #333333; }

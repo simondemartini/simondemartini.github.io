@@ -6,7 +6,7 @@
 $font-stack: 		'Roboto', Helvetica, Arial, sans-serif;
 $font-stack-title: 	'Roboto Slab', Helvetica, Arial, sans-serif;
 
-/*Restore Basic Styles*/
+/*Markdown Post Styles*/
 @import 'markdown';
 
 
@@ -93,7 +93,6 @@ p {
 #bg-head{
     position:absolute;
     background-color: $color-primary;
-    background-image: url(../img/bg-texture.min.svg);
     background-size: auto 768pt ;
     background-repeat: repeat;
     background-position: center;
@@ -340,6 +339,9 @@ article {
     li {
         display: inline;
         margin: 10px;
+    }
+    .nav-current {
+        font-weight: bold;
     }
 }
 

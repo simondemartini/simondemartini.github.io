@@ -19,9 +19,10 @@
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
+
 </head>
 <body class="{{body_class}} nav-closed">
-    <div id="bg-head"></div>
+    <div id="bg-head" style="background-image: url({{@blog.cover}})"></div>
 
     <div id="header">
     	<div class="wrapper">
@@ -44,13 +45,9 @@
 
     <div id="footer">
     	<div class="link-neutral wrapper center-text">
-    		<a href="#" class="">Simon DeMartini</a>
+    		<a href="{{@blog.url}}">Simon DeMartini</a>
     		<br>
-    		<ul class="nav-link">
-    			<li><a href="#">projects</a></li>
-    			<li><a href="#">blog</a></li>
-    			<li><a href="#">contact</a></li>
-    		</ul>
+            {{navigation}}
     	</div>
     </div>
 
