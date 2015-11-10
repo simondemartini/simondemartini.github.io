@@ -607,6 +607,8 @@ article {
   #header .nav-link {
     margin-top: -95px;
     margin-left: 220px !important; }
+  #header .wrapper {
+    max-width: 250px; }
 
   article {
     padding-top: 15px;
