@@ -100,6 +100,7 @@ p {
     width: 100%;
     min-height: $header-height + 150px;
     height: 60vh;
+    max-height: 550px;
     z-index: -5;
 }
 
@@ -170,6 +171,10 @@ article {
     padding: $article-padding;
     padding-top: 45px;
     margin-bottom: $article-padding;
+    min-height: 300px;
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     .head{
         width:100%;

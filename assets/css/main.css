@@ -299,6 +299,7 @@ p {
   width: 100%;
   min-height: 400px;
   height: 60vh;
+  max-height: 550px;
   z-index: -5; }
 
 #header {
@@ -353,7 +354,10 @@ article {
   background-color: #f2f2f2;
   padding: 60px;
   padding-top: 45px;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  min-height: 300px; }
+  article:last-child {
+    margin-bottom: 0; }
   article .head {
     width: 100%;
     padding: 0 60px 0 60px;
