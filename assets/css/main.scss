@@ -415,13 +415,15 @@ article {
 		padding-left: $lrg-padding;
 		padding-right: $lrg-padding;
 		.head {
-			padding: 0 $lrg-padding 13px $lrg-padding;
+			padding: 0 $lrg-padding 22px $lrg-padding;
 			margin-left: -$lrg-padding;
 		}
         .big-img {
-            margin: $lrg-padding - 60px;
-            margin-top: -31px;
+            margin: 20px $lrg-padding - 60px;
             margin-bottom: $lrg-padding;
+            &:first-child {
+                margin-top: -31px;
+            }
         }
     }
 
@@ -487,9 +489,11 @@ article {
         padding-left: $med-padding;
 		padding-right: $med-padding;
         .big-img {
-            margin: $med-padding - 45px;
-            margin-top: -31px;
+            margin: 20px $med-padding - 45px;
             margin-bottom: $med-padding;
+            &:first-child {
+                margin-top: -31px;
+            }
         }
     }
 
@@ -540,13 +544,15 @@ article {
 		padding-left: $sml-padding;
 		padding-right: $sml-padding;
 		.head {
-			padding: 13px $sml-padding 13px $sml-padding;
+			padding: 13px $sml-padding 22px $sml-padding;
 			margin-left: -$sml-padding;
 		}
         .big-img {
-            margin: $sml-padding - 30px;
-            margin-top: -31px;
+            margin: 20px $sml-padding - 30px;
             margin-bottom: $sml-padding;
+            &:first-child {
+                margin-top: -31px;
+            }
         }
     }
 

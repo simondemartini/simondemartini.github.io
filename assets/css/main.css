@@ -551,12 +551,13 @@ article {
     padding-left: 30px;
     padding-right: 30px; }
     article .head {
-      padding: 0 30px 13px 30px;
+      padding: 0 30px 22px 30px;
       margin-left: -30px; }
     article .big-img {
-      margin: -30px;
-      margin-top: -31px;
+      margin: 20px -30px;
       margin-bottom: 30px; }
+      article .big-img:first-child {
+        margin-top: -31px; }
 
   #container {
     margin-top: -375px; }
@@ -594,9 +595,10 @@ article {
     padding-left: 15px;
     padding-right: 15px; }
     #container .big-img {
-      margin: -30px;
-      margin-top: -31px;
+      margin: 20px -30px;
       margin-bottom: 15px; }
+      #container .big-img:first-child {
+        margin-top: -31px; }
 
   #header .wrapper {
     max-width: 385px;
@@ -629,12 +631,13 @@ article {
     padding-left: 15px;
     padding-right: 15px; }
     article .head {
-      padding: 13px 15px 13px 15px;
+      padding: 13px 15px 22px 15px;
       margin-left: -15px; }
     article .big-img {
-      margin: -15px;
-      margin-top: -31px;
+      margin: 20px -15px;
       margin-bottom: 15px; }
+      article .big-img:first-child {
+        margin-top: -31px; }
 
   #container {
     padding-left: 0;
