@@ -66,6 +66,23 @@ $device-large:      770px;
     }
 }
 
+@mixin word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+@mixin ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 
 /* Styles */
 html {
@@ -204,7 +221,8 @@ article {
             font-weight: 700;
             letter-spacing: -1px;
             line-height: 1.3em;
-            word-break: break-word;
+            display: inline;
+            @include word-wrap();
             margin: 0;
             margin-bottom: $article-padding/4;
         }

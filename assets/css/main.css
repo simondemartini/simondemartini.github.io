@@ -382,7 +382,15 @@ article {
       font-weight: 700;
       letter-spacing: -1px;
       line-height: 1.3em;
+      display: inline;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      -ms-word-break: break-all;
       word-break: break-word;
+      -ms-hyphens: auto;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
       margin: 0;
       margin-bottom: 15px; }
     article .head .tags {
