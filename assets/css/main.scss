@@ -23,9 +23,9 @@ $color-bg:          #dddddd;
 $color-transparent: rgba(255, 255, 255, 0.0);
 
 $header-height:     180px;
-$footer-height:     235px;
-$main-width: 		920px;
-$article-padding:   60px;
+$footer-height:     82px;
+$main-width: 		840px;
+$article-padding:   30px;
 $article-width:     $main-width - (2*$article-padding);
 
 $border-radius: 	3px;
@@ -109,7 +109,7 @@ p {
 
 #bg-head{
     position:absolute;
-    background-color: $color-primary;
+    background-color: $color-secondary;
     background-size: auto 768pt ;
     background-repeat: repeat;
     background-position: center;
@@ -134,7 +134,7 @@ p {
         background-color: $color-offwhite;
         margin-left: -100vw;
         width: 100vw;
-        top: $header-height * 0.33;
+        top: $header-height * 0.245;
         height: $header-height * 0.675;
         display: inline-block;
         position: absolute;
@@ -146,7 +146,7 @@ p {
         background-color: $color-offwhite;
         margin-left: $header-height - 2px;;
         width: 100vw;
-        top: $header-height * 0.33;
+        top: $header-height * 0.245;
         height: $header-height * 0.675;
         display: inline-block;
         position: absolute;
@@ -157,7 +157,6 @@ p {
     .wrapper {
         padding-left: $article-padding;
         max-width: 620px;
-
 
         #text{
             margin-top: -135px;
@@ -193,7 +192,7 @@ p {
 article {
     background-color: $color-offwhite;
     padding: $article-padding;
-    padding-top: 45px;
+    padding-top: $article-padding;
     margin-bottom: $article-padding;
     min-height: 300px;
     &:last-child {
@@ -257,7 +256,7 @@ article {
     .big-img {
         max-width: $article-width + 2* $article-padding ;
         height:auto;
-        margin: $article-padding/2 -60px;
+        margin: $article-padding/2 0 -$article-padding;
         &:first-child{
             margin-top:-$article-padding/2 - 1px;
         }
@@ -265,14 +264,14 @@ article {
 }
 
 #container {
-    $header-adjust: $header-height + $article-padding;
+    $header-adjust: $header-height + 2*$article-padding;
 
     min-height: 100%;
-    margin-bottom: -$footer-height + $article-padding;
+    //margin-bottom: -$footer-height + $article-padding;
 
     margin-top: -$header-adjust;
     padding-top: $header-adjust;
-    padding-bottom: $footer-height;
+    padding-bottom: $footer-height + $article-padding;
     padding-left: 30px;
     padding-right: 30px;
 
@@ -285,7 +284,7 @@ article {
     font-family: $font-stack-title;
     height: auto;
     margin-bottom: $article-padding;
-    margin-top: -$footer-height + $article-padding;
+    margin-top: -$footer-height;
     position: relative;
     background-color: $color-offwhite;
     padding: $article-padding/2;
@@ -411,7 +410,8 @@ article {
     }
 
     article {
-        padding-top: $lrg-padding;
+        padding-top: $lrg-padding*1.5;
+        padding-bottom: $lrg-padding*1.5;
 		padding-left: $lrg-padding;
 		padding-right: $lrg-padding;
 		.head {
@@ -419,7 +419,7 @@ article {
 			margin-left: -$lrg-padding;
 		}
         .big-img {
-            margin: 20px $lrg-padding - 60px;
+            margin: 20px $lrg-padding - $article-padding;
             margin-bottom: $lrg-padding;
             &:first-child {
                 margin-top: -31px;
@@ -445,7 +445,7 @@ article {
 }
 
 @media screen and (max-width: $device-medium) and (min-width: $device-small+1px){
-    $med-padding: $article-padding/4;
+    $med-padding: $article-padding/2;
 
     .hidden-med {
         visibility: hidden;
@@ -455,7 +455,7 @@ article {
         padding-left: $med-padding;
 		padding-right: $med-padding;
         .big-img {
-            margin: 20px $med-padding - 45px;
+            margin: 20px $med-padding - $article-padding;
             margin-bottom: $med-padding;
             &:first-child {
                 margin-top: -31px;
