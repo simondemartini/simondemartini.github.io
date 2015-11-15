@@ -16,15 +16,14 @@
 
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
-    <style>
-    </style>
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 
 </head>
 <body class="{{body_class}} nav-closed">
-    <div id="bg-head"></div>
+    <div id="bg-head" style="background-image: url({{@blog.cover}})"
+></div>
 
     <div id="header">
     	<div class="wrapper">
