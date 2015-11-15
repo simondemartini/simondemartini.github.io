@@ -109,7 +109,7 @@ p {
 
 #bg-head{
     position:absolute;
-    background-color: $color-secondary;
+    background-color: $color-primary;
     background-size: auto 768pt ;
     background-repeat: repeat;
     background-position: center;
@@ -156,7 +156,8 @@ p {
 
     .wrapper {
         padding-left: $article-padding;
-        max-width: 620px;
+        padding-right: $article-padding;
+        max-width: 580px;
 
         #text{
             margin-top: -135px;
@@ -490,7 +491,7 @@ article {
 }
 
 @media screen and (max-width: $device-small){
-    $sml-padding: $article-padding/4;
+    $sml-padding: $article-padding/3;
 
     .hidden-sml {
         visibility: hidden;
@@ -502,7 +503,8 @@ article {
             margin-left: 220px !important;
         }
         .wrapper {
-            max-width: 250px;
+            max-width: 265px;
+            min-width: 265px;
         }
     }
 
@@ -515,7 +517,7 @@ article {
 			margin-left: -$sml-padding;
 		}
         .big-img {
-            margin: 20px $sml-padding - 30px;
+            margin: 20px $sml-padding - 20px;
             margin-bottom: $sml-padding;
             &:first-child {
                 margin-top: -31px;
