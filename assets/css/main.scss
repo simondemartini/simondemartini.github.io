@@ -209,17 +209,14 @@ article {
         padding-bottom: $article-padding/2;
 
         .date {
-            background-color: $color-white;
-            width: 50px;
-            margin-bottom: 25px;
-            margin-left: 25px;
-            float:right;
-            padding: 8px;
-            text-align: right;
-            font: 1.2em/12pt $font-stack-title;
+            width: auto;
+            margin-bottom: 10px;
+            margin-top:5px;
+            margin-left: 2px;
+            display: block;
+            font: 1.0em $font-stack-title;
             color: lighten($color-darktext, 10% );
             .year {
-                font-size: 0.8em;
                 color: lighten($color-darktext, 30% );
             }
         }
@@ -228,7 +225,6 @@ article {
             font-weight: 700;
             letter-spacing: -1px;
             margin: 0;
-            margin-bottom: $article-padding/4;
         }
 
         .tags{

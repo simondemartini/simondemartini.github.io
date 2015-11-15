@@ -372,23 +372,19 @@ article {
     margin-bottom: 30px;
     padding-bottom: 30px; }
     article .head .date {
-      background-color: #ffffff;
-      width: 50px;
-      margin-bottom: 25px;
-      margin-left: 25px;
-      float: right;
-      padding: 8px;
-      text-align: right;
-      font: 1.2em/12pt "Roboto Slab", Helvetica, Arial, sans-serif;
+      width: auto;
+      margin-bottom: 10px;
+      margin-top: 5px;
+      margin-left: 2px;
+      display: block;
+      font: 1em "Roboto Slab", Helvetica, Arial, sans-serif;
       color: #4d4d4d; }
       article .head .date .year {
-        font-size: 0.8em;
         color: gray; }
     article .head h1 {
       font-weight: 700;
       letter-spacing: -1px;
-      margin: 0;
-      margin-bottom: 15px; }
+      margin: 0; }
     article .head .tags {
       padding-left: 0;
       margin-bottom: 15px;

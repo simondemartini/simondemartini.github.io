@@ -10,13 +10,15 @@
 {{#foreach posts}}
 <article class="{{post_class}} wrapper">
     <header class="head">
-        <time class="date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MM/DD"}} <span class="year">{{date format="YYYY"}}</span></time>
+
         <h1 class="link-title"><a href="{{url}}">{{{title}}}</a></h1>
+        <time class="date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, "}}<span class="year">{{date format="YYYY"}}</span></time>
 
         {{! Display tags, if assigned}}
         {{#if tags}}
         <ul class="tags link-secondary"><li>{{tags separator="</li><li>"}}</li></ul>
         {{/if}}
+
 
 
     </header>

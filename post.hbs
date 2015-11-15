@@ -3,8 +3,8 @@
 
 <article class="{{post_class}} wrapper">
     <header class="head link-title">
-        <time class="date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MM/DD"}} <span class="year">{{date format="YYYY"}}</span></time>
         <h1><a href="{{url}}">{{{title}}}</a></h1>
+        <time class="date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, "}}<span class="year">{{date format="YYYY"}}</span></time>
 
         {{! Display tags, if assigned}}
         {{#if tags}}
