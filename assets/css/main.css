@@ -414,9 +414,9 @@ article {
 
 #container {
   min-height: 100%;
-  margin-top: -240px;
-  padding-top: 240px;
-  padding-bottom: 112px;
+  margin-top: -270px;
+  padding-top: 270px;
+  padding-bottom: 172px;
   padding-left: 30px;
   padding-right: 30px;
   -webkit-box-sizing: border-box;
@@ -427,7 +427,7 @@ article {
   font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
   height: auto;
   margin-bottom: 30px;
-  margin-top: -82px;
+  margin-top: -127px;
   position: relative;
   background-color: #f8f8f8;
   padding: 15px;
@@ -456,7 +456,7 @@ article {
   color: #444;
   display: inline-block; }
   .pagination a {
-    background-color: #ffffff;
+    background-color: none;
     padding: 10px;
     border: none;
     border-radius: 0; }

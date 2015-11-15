@@ -265,14 +265,14 @@ article {
 }
 
 #container {
-    $header-adjust: $header-height + 2*$article-padding;
+    $header-adjust: $header-height + 2*($article-padding*1.5);
 
     min-height: 100%;
     //margin-bottom: -$footer-height + $article-padding;
 
     margin-top: -$header-adjust;
     padding-top: $header-adjust;
-    padding-bottom: $footer-height + $article-padding;
+    padding-bottom: $footer-height + 2*($article-padding*1.5);
     padding-left: 30px;
     padding-right: 30px;
 
@@ -285,7 +285,7 @@ article {
     font-family: $font-stack-title;
     height: auto;
     margin-bottom: $article-padding;
-    margin-top: -$footer-height;
+    margin-top: -$footer-height - $article-padding*1.5;
     position: relative;
     background-color: $color-offwhite;
     padding: $article-padding/2;
@@ -322,7 +322,7 @@ article {
     display: inline-block;
 
     a{
-        background-color: $color-white;
+        background-color: none;
         padding: 10px;
         border: none;
         border-radius: 0;
