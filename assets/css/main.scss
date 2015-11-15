@@ -22,7 +22,7 @@ $color-darktext: 	#333333;
 $color-bg:          #dddddd;
 $color-transparent: rgba(255, 255, 255, 0.0);
 
-$header-height:     250px;
+$header-height:     180px;
 $footer-height:     235px;
 $main-width: 		920px;
 $article-padding:   60px;
@@ -134,8 +134,8 @@ p {
         background-color: $color-offwhite;
         margin-left: -100vw;
         width: 100vw;
-        top: $header-height * 0.28;
-        height: $header-height * 0.68;
+        top: $header-height * 0.33;
+        height: $header-height * 0.675;
         display: inline-block;
         position: absolute;
         z-index: -1;
@@ -146,8 +146,8 @@ p {
         background-color: $color-offwhite;
         margin-left: $header-height - 2px;;
         width: 100vw;
-        top: $header-height * 0.28;
-        height:$header-height * 0.68;
+        top: $header-height * 0.33;
+        height: $header-height * 0.675;
         display: inline-block;
         position: absolute;
         z-index: -1;
@@ -156,24 +156,31 @@ p {
 
     .wrapper {
         padding-left: $article-padding;
-        max-width: 755px;
+        max-width: 620px;
 
-        .nav-link {
-            font-size: 1.1em;
-            margin-left: $header-height + 50;
-			list-style-type:none;
-            line-height: 2em;
-        }
 
-        #name {
-            margin-top: 75px - $header-height;
-            margin-left: $header-height + 60;
-            color: $color-darktext;
-            font-size: 3.5em;
-            font-family: $font-stack-title;
-            font-weight: 700;
-			width:auto;
-
+        #text{
+            margin-top: -135px;
+            margin-left: -25px;
+            #name {
+                margin-top: 75px - $header-height;
+                margin-left: $header-height + 60;
+                color: $color-darktext;
+                font-size: 3.25em;
+                font-family: $font-stack-title;
+                font-weight: 700;
+    			width:auto;
+            }
+            .nav-link {
+                font-size: 1.1em;
+                margin-top: -8px;
+                margin-left: $header-height + 50;
+    			list-style-type:none;
+                line-height: 2em;
+                li {
+                    padding-bottom: 8px;
+                }
+            }
         }
 
         #logo {
@@ -424,52 +431,18 @@ article {
         }
     }
 
-    #container {
-        margin-top: -375px;
-    }
-
     #header {
-        $sml-header: 180px;
-
-        .wrapper::before{
-            top: $sml-header * 0.33;
-            height: $sml-header * 0.675;
-        }
-
-        .wrapper::after{
-            margin-left: $sml-header - 2px;;
-            top: $sml-header * 0.33;
-            height:$sml-header * 0.675;
-        }
-
         .wrapper {
             padding-left: $article-padding/2;
             padding-right: $article-padding/2;
             max-width: 500px;
-
-            .nav-link {
-                margin-left: $sml-header + 50;
-                li {
-                    padding-bottom: 8px;
-                }
-            }
-
             #text {
                 #name {
                     font-size: 2.5em;
-        			//max-width: 200px;
-        			//margin-top:-190px;
-        			//padding-bottom:8px;
-                    margin-top: 75px - $sml-header;
-                    margin-left: $sml-header + 60;
                 }
-                margin-top: -131px;
-                margin-left: -25px;
-            }
 
-            #logo {
-                width: $sml-header;
-                height: $sml-header;
+                margin-top: -128px;
+                margin-left: -25px;
             }
         }
     }
@@ -508,9 +481,10 @@ article {
                 max-width: 200px;
             }
             .nav-link {
-                overflow: none;
-                font-size: 1.0em;
-                line-height: 1.5em;
+                overflow: hidden !important;
+                font-size: 1.0em !important;
+                line-height: 1.5em !important;
+                margin-top: 0 !important;
                 li {
                     margin-right: 0;
                 }
@@ -528,7 +502,7 @@ article {
 
     #header {
         .nav-link {
-            margin-top: -95px;
+            margin-top: -98px !important;
             margin-left: 220px !important;
         }
         .wrapper {
