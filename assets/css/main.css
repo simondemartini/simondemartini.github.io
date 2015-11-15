@@ -266,7 +266,7 @@ html {
 
 body {
   font: normal normal 10pt/normal "Roboto", Helvetica, Arial, sans-serif;
-  background: #dddddd;
+  background: #eeeeee;
   color: #333333;
   height: 100%;
   position: relative; }
@@ -280,7 +280,7 @@ a {
   border: 1px solid rgba(255, 255, 255, 0);
   text-decoration: none; }
   a:hover {
-    color: #f2f2f2;
+    color: #f8f8f8;
     background-color: #638e99;
     border: 1px solid #638e99; }
 
@@ -305,27 +305,27 @@ p {
 #header {
   font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
   height: 180px;
-  margin-bottom: 15px;
-  padding-top: 15px;
+  margin-bottom: 45px;
+  padding-top: 45px;
   z-index: 0;
   overflow: hidden;
   position: relative; }
   #header .wrapper::before {
-    background-color: #f2f2f2;
+    background-color: #f8f8f8;
     margin-left: -100vw;
     width: 100vw;
-    top: 44.1px;
-    height: 121.5px;
+    top: 73.8px;
+    height: 122.4px;
     display: inline-block;
     position: absolute;
     z-index: -1;
     content: " "; }
   #header .wrapper::after {
-    background-color: #f2f2f2;
+    background-color: #f8f8f8;
     margin-left: 178px;
     width: 100vw;
-    top: 44.1px;
-    height: 121.5px;
+    top: 73.8px;
+    height: 122.4px;
     display: inline-block;
     position: absolute;
     z-index: -1;
@@ -358,7 +358,7 @@ p {
       height: 180px; }
 
 article {
-  background-color: #f2f2f2;
+  background-color: #f8f8f8;
   padding: 30px;
   padding-top: 26.08696px;
   margin-bottom: 30px;
@@ -429,7 +429,7 @@ article {
   margin-bottom: 30px;
   margin-top: -82px;
   position: relative;
-  background-color: #f2f2f2;
+  background-color: #f8f8f8;
   padding: 15px;
   line-height: 2em; }
   #footer .wrapper {
@@ -462,7 +462,7 @@ article {
     border-radius: 0; }
     .pagination a:hover {
       background-color: #638e99;
-      color: #f2f2f2; }
+      color: #f8f8f8; }
   .pagination .newer-posts {
     float: left; }
   .pagination .page-number {
@@ -493,35 +493,35 @@ article {
 .link-primary a {
   color: #333333; }
 .link-primary a:hover {
-  color: #f2f2f2;
+  color: #f8f8f8;
   background-color: #333333;
   border: 1px solid #333333; }
 
 .link-secondary a {
   color: #638e99; }
 .link-secondary a:hover {
-  color: #f2f2f2;
+  color: #f8f8f8;
   background-color: #638e99;
   border: 1px solid #638e99; }
 
 .link-highlight a {
   color: #b25b30; }
 .link-highlight a:hover {
-  color: #f2f2f2;
+  color: #f8f8f8;
   background-color: #b25b30;
   border: 1px solid #b25b30; }
 
 .link-neutral a {
   color: #999999; }
 .link-neutral a:hover {
-  color: #f2f2f2;
+  color: #f8f8f8;
   background-color: #999999;
   border: 1px solid #999999; }
 
 .link-title a {
   color: #333333; }
 .link-title a:hover {
-  color: #f2f2f2;
+  color: #f8f8f8;
   background-color: #333333;
   border: 1px solid #333333; }
 
