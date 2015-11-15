@@ -17,20 +17,6 @@
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
     <style>
-        #bg-head {
-            background:
-                /* top, transparent, faked with gradient */
-                linear-gradient(
-                    rgba(63, 127, 191, 0.85),
-                    rgba(63, 127, 191, 0.55)
-                ),
-                /* bottom, image */
-                url({{@blog.cover}});
-            background-size: auto 100%;
-            background-repeat: repeat-x;
-            background-position: left top;
-            height: 100%;
-        }
     </style>
 
     {{! Ghost outputs important style and meta data with this tag }}
