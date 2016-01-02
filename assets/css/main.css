@@ -297,16 +297,16 @@ p {
   background-position: center;
   top: 0;
   width: 100%;
-  min-height: 330px;
+  min-height: 350px;
   height: 60vh;
   max-height: 550px;
   z-index: -5; }
 
 #header {
   font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
-  height: 180px;
-  margin-bottom: 45px;
-  padding-top: 45px;
+  height: 200px;
+  margin-bottom: 15px;
+  padding-top: 15px;
   z-index: 0;
   overflow: hidden;
   position: relative; }
@@ -314,18 +314,18 @@ p {
     background-color: #f8f8f8;
     margin-left: -100vw;
     width: 100vw;
-    top: 73.8px;
-    height: 122.4px;
+    top: 47px;
+    height: 136px;
     display: inline-block;
     position: absolute;
     z-index: -1;
     content: " "; }
   #header .wrapper::after {
     background-color: #f8f8f8;
-    margin-left: 178px;
+    margin-left: 198px;
     width: 100vw;
-    top: 73.8px;
-    height: 122.4px;
+    top: 47px;
+    height: 136px;
     display: inline-block;
     position: absolute;
     z-index: -1;
@@ -333,13 +333,13 @@ p {
   #header .wrapper {
     padding-left: 30px;
     padding-right: 30px;
-    max-width: 580px; }
+    max-width: 600px; }
     #header .wrapper #text {
-      margin-top: -135px;
+      margin-top: -145px;
       margin-left: -25px; }
       #header .wrapper #text #name {
-        margin-top: -105px;
-        margin-left: 240px;
+        margin-top: -125px;
+        margin-left: 260px;
         color: #333333;
         font-size: 3.25em;
         font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
@@ -348,19 +348,19 @@ p {
       #header .wrapper #text .nav-link {
         font-size: 1.1em;
         margin-top: -8px;
-        margin-left: 230px;
+        margin-left: 250px;
         list-style-type: none;
         line-height: 2em; }
         #header .wrapper #text .nav-link li {
           padding-bottom: 8px; }
     #header .wrapper #logo {
-      width: 180px;
-      height: 180px; }
+      width: 200px;
+      height: 200px; }
 
 article {
   background-color: #f8f8f8;
   padding: 30px;
-  padding-top: 26.08696px;
+  padding-top: 28px;
   margin-bottom: 30px;
   min-height: 300px; }
   article:last-child {
@@ -414,8 +414,8 @@ article {
 
 #container {
   min-height: 100%;
-  margin-top: -270px;
-  padding-top: 270px;
+  margin-top: -290px;
+  padding-top: 290px;
   padding-bottom: 172px;
   padding-left: 30px;
   padding-right: 30px;
