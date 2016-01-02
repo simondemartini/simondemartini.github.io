@@ -266,7 +266,7 @@ html {
 
 body {
   font: normal normal 10pt/normal "Roboto", Helvetica, Arial, sans-serif;
-  background: #eeeeee;
+  background: #638e99;
   color: #333333;
   height: 100%;
   position: relative; }
@@ -291,7 +291,7 @@ p {
 
 #bg-head {
   position: absolute;
-  background-color: #333333;
+  background-color: #638e99;
   background-size: auto 768pt;
   background-repeat: repeat;
   background-position: center;
@@ -322,7 +322,7 @@ p {
     content: " "; }
   #header .wrapper::after {
     background-color: #f8f8f8;
-    margin-left: 198px;
+    margin-left: 200px;
     width: 100vw;
     top: 47px;
     height: 136px;
@@ -334,6 +334,15 @@ p {
     padding-left: 30px;
     padding-right: 30px;
     max-width: 600px; }
+    #header .wrapper #ribbon-vert {
+      position: fixed;
+      content: " ";
+      z-index: -1000;
+      top: 0;
+      width: 200px;
+      height: 100vh;
+      margin-right: -5px;
+      background-color: #81a5ae; }
     #header .wrapper #text {
       margin-top: -145px;
       margin-left: -25px; }
@@ -362,7 +371,8 @@ article {
   padding: 30px;
   padding-top: 28px;
   margin-bottom: 30px;
-  min-height: 300px; }
+  min-height: 300px;
+  position: relative; }
   article:last-child {
     margin-bottom: 0; }
   article .head {
@@ -429,7 +439,7 @@ article {
   margin-bottom: 30px;
   margin-top: -127px;
   position: relative;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   padding: 15px;
   line-height: 2em; }
   #footer .wrapper {
@@ -453,16 +463,17 @@ article {
 
 .pagination {
   width: 100%;
-  color: #444;
+  color: #f8f8f8;
   display: inline-block; }
   .pagination a {
+    color: #ffffff;
     background-color: none;
     padding: 10px;
     border: none;
     border-radius: 0; }
     .pagination a:hover {
-      background-color: #638e99;
-      color: #f8f8f8; }
+      background-color: #f8f8f8;
+      color: #638e99; }
   .pagination .newer-posts {
     float: left; }
   .pagination .page-number {
@@ -489,6 +500,9 @@ article {
     margin: 10px; }
   .nav-link .nav-current {
     font-weight: bold; }
+
+.drop-shadow, #header .wrapper::before, #header .wrapper::after {
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15); }
 
 .link-primary a {
   color: #333333; }
@@ -555,12 +569,15 @@ article {
   #header .wrapper {
     padding-left: 15px;
     padding-right: 15px;
-    max-width: 500px; }
+    max-width: 440px; }
     #header .wrapper #text {
-      margin-top: -128px;
+      margin-top: -152px;
       margin-left: -25px; }
       #header .wrapper #text #name {
-        font-size: 2.5em; } }
+        font-size: 2.5em;
+        line-height: 1.1; }
+      #header .wrapper #text .nav-link {
+        margin-top: 0; } }
 @media screen and (max-width: 600px) and (min-width: 381px) {
   .hidden-med {
     visibility: hidden; }
@@ -579,7 +596,7 @@ article {
     padding-right: 15px; }
   #header #text {
     margin-left: -40px !important;
-    margin-top: -130px !important; }
+    margin-top: -140px !important; }
     #header #text #name {
       font-size: 1.9em !important;
       line-height: 1.1em;
@@ -596,8 +613,8 @@ article {
     visibility: hidden; }
 
   #header .nav-link {
-    margin-top: -98px !important;
-    margin-left: 220px !important; }
+    margin-top: -68px !important;
+    margin-left: 230px !important; }
   #header .wrapper {
     max-width: 265px;
     min-width: 265px; }

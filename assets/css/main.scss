@@ -19,7 +19,7 @@ $color-white: 		#ffffff;
 $color-offwhite: 	#f8f8f8;
 
 $color-darktext: 	#333333;
-$color-bg:          #eeeeee;
+$color-bg:          $color-secondary;
 $color-transparent: rgba(255, 255, 255, 0.0);
 
 $header-height:     200px;
@@ -109,7 +109,7 @@ p {
 
 #bg-head{
     position:absolute;
-    background-color: $color-primary;
+    background-color: $color-bg;
     background-size: auto 768pt ;
     background-repeat: repeat;
     background-position: center;
@@ -140,11 +140,12 @@ p {
         position: absolute;
         z-index: -1;
         content: " ";
+        @extend .drop-shadow;
     }
 
     .wrapper::after{
         background-color: $color-offwhite;
-        margin-left: $header-height - 2px;;
+        margin-left: $header-height;
         width: 100vw;
         top: $header-height * 0.235;
         height: $header-height * 0.68;
@@ -152,12 +153,24 @@ p {
         position: absolute;
         z-index: -1;
         content: " ";
+        @extend .drop-shadow;
     }
 
     .wrapper {
         padding-left: $article-padding;
         padding-right: $article-padding;
         max-width: 600px;
+
+        #ribbon-vert {
+            position: fixed;
+            content:" ";
+            z-index: -1000;
+            top: 0;
+            width: $header-height;
+            height: 100vh;
+            margin-right: -5px;
+            background-color: lighten($color-bg,10%);
+        }
 
         #text{
             margin-top: -145px;
@@ -196,6 +209,7 @@ article {
     padding-top: $article-padding - 2px;;
     margin-bottom: $article-padding;
     min-height: 300px;
+    position: relative;
     &:last-child {
         margin-bottom: 0;
     }
@@ -287,7 +301,7 @@ article {
     margin-bottom: $article-padding;
     margin-top: -$footer-height - $article-padding*1.5;
     position: relative;
-    background-color: $color-offwhite;
+    background-color: $color-white;
     padding: $article-padding/2;
     line-height: 2em;
 
@@ -318,17 +332,18 @@ article {
 
 .pagination{
     width:100%;
-    color: #444;
+    color: $color-offwhite;
     display: inline-block;
 
     a{
+        color: $color-white;
         background-color: none;
         padding: 10px;
         border: none;
         border-radius: 0;
         &:hover {
-            background-color: $color-secondary;
-            color:$color-offwhite;
+            background-color: $color-offwhite;
+            color:$color-secondary;
         }
 
     }
@@ -368,6 +383,10 @@ article {
     .nav-current {
         font-weight: bold;
     }
+}
+
+.drop-shadow {
+    box-shadow: 0px 3px 0px 0px hsla(0, 10, 0, 0.15);
 }
 
 .link-primary {
@@ -432,13 +451,16 @@ article {
         .wrapper {
             padding-left: $article-padding/2;
             padding-right: $article-padding/2;
-            max-width: 500px;
+            max-width: 440px;
             #text {
                 #name {
                     font-size: 2.5em;
+                    line-height: 1.1;
                 }
-
-                margin-top: -128px;
+                .nav-link {
+                    margin-top: 0;
+                }
+                margin-top: -152px;
                 margin-left: -25px;
             }
         }
@@ -471,7 +493,7 @@ article {
         }
         #text {
             margin-left: -40px !important;
-            margin-top:-130px !important;
+            margin-top:-140px !important;
             #name {
                 font-size: 1.9em !important;
                 line-height: 1.1em;
@@ -499,8 +521,8 @@ article {
 
     #header {
         .nav-link {
-            margin-top: -98px !important;
-            margin-left: 220px !important;
+            margin-top: -68px !important;
+            margin-left: 230px !important;
         }
         .wrapper {
             max-width: 265px;

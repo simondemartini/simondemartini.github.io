@@ -8,7 +8,7 @@
 -->
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
-<article class="{{post_class}} wrapper">
+<article class="{{post_class}} wrapper drop-shadow">
     <header class="head">
 
         <h1 class="link-title"><a href="{{url}}">{{{title}}}</a></h1>
@@ -31,7 +31,7 @@
         </div>
         {{/if}}
 
-        {{content words="120"}}
+        {{content words="100"}}
         <a class="read-more" href="{{url}}">Continue Reading &raquo;</a>
     </section>
     <footer class="post-meta">
