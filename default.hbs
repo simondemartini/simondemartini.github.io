@@ -22,10 +22,12 @@
 
 </head>
 <body class="{{body_class}} nav-closed">
-    <div id="bg-head" style="background-image: url({{@blog.cover}})"></div>
+    <div id="bg-head" style="background-image: url({{@blog.cover}})"
+></div>
 
     <div id="header">
     	<div class="wrapper">
+            <div id="ribbon-vert"></div>
     		<a href="{{@blog.url}}" class="link-nostyle"><img id="logo" class="unselectable" src="{{asset "img/sd-square.svg"}}" /></a>
     		<div id="text">
     			<div id="name" class=" hidden-sml"><a href="{{@blog.url}}" class="link-nostyle">{{@blog.title}}</a></div>
@@ -43,7 +45,7 @@
 
     </div>
 
-    <div id="footer">
+    <div id="footer" class="drop-shadow">
     	<div class="link-neutral wrapper center-text">
     		<a href="{{@blog.url}}">Simon DeMartini</a>
     		<br>

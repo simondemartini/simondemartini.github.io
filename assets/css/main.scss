@@ -16,16 +16,16 @@ $color-secondary: 	#638e99;
 $color-highlight: 	#b25b30;
 $color-neutral: 	#999999;
 $color-white: 		#ffffff;
-$color-offwhite: 	#f2f2f2;
+$color-offwhite: 	#f8f8f8;
 
 $color-darktext: 	#333333;
-$color-bg:          #dddddd;
+$color-bg:          $color-secondary;
 $color-transparent: rgba(255, 255, 255, 0.0);
 
-$header-height:     250px;
-$footer-height:     235px;
-$main-width: 		920px;
-$article-padding:   60px;
+$header-height:     200px;
+$footer-height:     82px;
+$main-width: 		840px;
+$article-padding:   30px;
 $article-width:     $main-width - (2*$article-padding);
 
 $border-radius: 	3px;
@@ -109,7 +109,7 @@ p {
 
 #bg-head{
     position:absolute;
-    background-color: $color-primary;
+    background-color: $color-bg;
     background-size: auto 768pt ;
     background-repeat: repeat;
     background-position: center;
@@ -124,8 +124,8 @@ p {
 #header {
     font-family: $font-stack-title;
     height: $header-height;
-    margin-bottom: $article-padding/2;
-    padding-top: $article-padding/2;
+    margin-bottom: $article-padding*0.5;
+    padding-top: $article-padding*0.5;
     z-index: 0;
 	overflow: hidden;
     position: relative;
@@ -134,46 +134,66 @@ p {
         background-color: $color-offwhite;
         margin-left: -100vw;
         width: 100vw;
-        top: $header-height * 0.28;
+        top: $header-height * 0.235;
         height: $header-height * 0.68;
         display: inline-block;
         position: absolute;
         z-index: -1;
         content: " ";
+        @extend .drop-shadow;
     }
 
     .wrapper::after{
         background-color: $color-offwhite;
-        margin-left: $header-height - 2px;;
+        margin-left: $header-height;
         width: 100vw;
-        top: $header-height * 0.28;
-        height:$header-height * 0.68;
+        top: $header-height * 0.235;
+        height: $header-height * 0.68;
         display: inline-block;
         position: absolute;
         z-index: -1;
         content: " ";
+        @extend .drop-shadow;
     }
 
     .wrapper {
         padding-left: $article-padding;
-        max-width: 755px;
+        padding-right: $article-padding;
+        max-width: 600px;
 
-        .nav-link {
-            font-size: 1.1em;
-            margin-left: $header-height + 50;
-			list-style-type:none;
-            line-height: 2em;
+        #ribbon-vert {
+            position: fixed;
+            content:" ";
+            z-index: -1000;
+            top: 0;
+            width: $header-height;
+            height: 100vh;
+            margin-right: -5px;
+            background-color: lighten($color-bg,10%);
         }
 
-        #name {
-            margin-top: 75px - $header-height;
-            margin-left: $header-height + 60;
-            color: $color-darktext;
-            font-size: 3.5em;
-            font-family: $font-stack-title;
-            font-weight: 700;
-			width:auto;
-
+        #text{
+            margin-top: -145px;
+            margin-left: -25px;
+            #name {
+                margin-top: 75px - $header-height;
+                margin-left: $header-height + 60;
+                color: $color-darktext;
+                font-size: 3.25em;
+                font-family: $font-stack-title;
+                font-weight: 700;
+    			width:auto;
+            }
+            .nav-link {
+                font-size: 1.1em;
+                margin-top: -8px;
+                margin-left: $header-height + 50;
+    			list-style-type:none;
+                line-height: 2em;
+                li {
+                    padding-bottom: 8px;
+                }
+            }
         }
 
         #logo {
@@ -186,9 +206,10 @@ p {
 article {
     background-color: $color-offwhite;
     padding: $article-padding;
-    padding-top: 45px;
+    padding-top: $article-padding - 2px;;
     margin-bottom: $article-padding;
-    min-height: 300px;
+    min-height: 200px;
+    position: relative;
     &:last-child {
         margin-bottom: 0;
     }
@@ -202,17 +223,14 @@ article {
         padding-bottom: $article-padding/2;
 
         .date {
-            background-color: $color-white;
-            width: 50px;
-            margin-bottom: 25px;
-            margin-left: 25px;
-            float:right;
-            padding: 8px;
-            text-align: right;
-            font: 1.2em/12pt $font-stack-title;
+            width: auto;
+            margin-bottom: 10px;
+            margin-top:5px;
+            margin-left: 2px;
+            display: block;
+            font: 1.0em $font-stack-title;
             color: lighten($color-darktext, 10% );
             .year {
-                font-size: 0.8em;
                 color: lighten($color-darktext, 30% );
             }
         }
@@ -221,7 +239,6 @@ article {
             font-weight: 700;
             letter-spacing: -1px;
             margin: 0;
-            margin-bottom: $article-padding/4;
         }
 
         .tags{
@@ -254,7 +271,7 @@ article {
     .big-img {
         max-width: $article-width + 2* $article-padding ;
         height:auto;
-        margin: $article-padding/2 -60px;
+        margin: $article-padding/2 0 -$article-padding;
         &:first-child{
             margin-top:-$article-padding/2 - 1px;
         }
@@ -262,14 +279,14 @@ article {
 }
 
 #container {
-    $header-adjust: $header-height + $article-padding;
+    $header-adjust: $header-height + 2*($article-padding*1.5);
 
     min-height: 100%;
-    margin-bottom: -$footer-height + $article-padding;
+    //margin-bottom: -$footer-height + $article-padding;
 
     margin-top: -$header-adjust;
     padding-top: $header-adjust;
-    padding-bottom: $footer-height;
+    padding-bottom: $footer-height + 2*($article-padding*1.5);
     padding-left: 30px;
     padding-right: 30px;
 
@@ -282,9 +299,9 @@ article {
     font-family: $font-stack-title;
     height: auto;
     margin-bottom: $article-padding;
-    margin-top: -$footer-height + $article-padding;
+    margin-top: -$footer-height - $article-padding*1.5;
     position: relative;
-    background-color: $color-offwhite;
+    background-color: $color-white;
     padding: $article-padding/2;
     line-height: 2em;
 
@@ -315,17 +332,18 @@ article {
 
 .pagination{
     width:100%;
-    color: #444;
+    color: $color-offwhite;
     display: inline-block;
 
     a{
-        background-color: $color-white;
+        color: $color-white;
+        background-color: none;
         padding: 10px;
         border: none;
         border-radius: 0;
         &:hover {
-            background-color: $color-secondary;
-            color:$color-offwhite;
+            background-color: $color-offwhite;
+            color:$color-secondary;
         }
 
     }
@@ -365,6 +383,10 @@ article {
     .nav-current {
         font-weight: bold;
     }
+}
+
+.drop-shadow {
+    box-shadow: 0px 2px 0px 1px hsla(0, 10, 0, 0.15);
 }
 
 .link-primary {
@@ -408,7 +430,8 @@ article {
     }
 
     article {
-        padding-top: $lrg-padding;
+        padding-top: $lrg-padding*1.5;
+        padding-bottom: $lrg-padding*1.5;
 		padding-left: $lrg-padding;
 		padding-right: $lrg-padding;
 		.head {
@@ -416,7 +439,7 @@ article {
 			margin-left: -$lrg-padding;
 		}
         .big-img {
-            margin: 20px $lrg-padding - 60px;
+            margin: 20px $lrg-padding - $article-padding;
             margin-bottom: $lrg-padding;
             &:first-child {
                 margin-top: -31px;
@@ -424,59 +447,28 @@ article {
         }
     }
 
-    #container {
-        margin-top: -375px;
-    }
-
     #header {
-        $sml-header: 180px;
-
-        .wrapper::before{
-            top: $sml-header * 0.33;
-            height: $sml-header * 0.675;
-        }
-
-        .wrapper::after{
-            margin-left: $sml-header - 2px;;
-            top: $sml-header * 0.33;
-            height:$sml-header * 0.675;
-        }
-
         .wrapper {
             padding-left: $article-padding/2;
             padding-right: $article-padding/2;
-            max-width: 500px;
-
-            .nav-link {
-                margin-left: $sml-header + 50;
-                li {
-                    padding-bottom: 8px;
-                }
-            }
-
+            max-width: 440px;
             #text {
                 #name {
                     font-size: 2.5em;
-        			//max-width: 200px;
-        			//margin-top:-190px;
-        			//padding-bottom:8px;
-                    margin-top: 75px - $sml-header;
-                    margin-left: $sml-header + 60;
+                    line-height: 1.1;
                 }
-                margin-top: -131px;
+                .nav-link {
+                    margin-top: 0;
+                }
+                margin-top: -152px;
                 margin-left: -25px;
-            }
-
-            #logo {
-                width: $sml-header;
-                height: $sml-header;
             }
         }
     }
 }
 
 @media screen and (max-width: $device-medium) and (min-width: $device-small+1px){
-    $med-padding: $article-padding/4;
+    $med-padding: $article-padding/2;
 
     .hidden-med {
         visibility: hidden;
@@ -486,7 +478,7 @@ article {
         padding-left: $med-padding;
 		padding-right: $med-padding;
         .big-img {
-            margin: 20px $med-padding - 45px;
+            margin: 20px $med-padding - $article-padding;
             margin-bottom: $med-padding;
             &:first-child {
                 margin-top: -31px;
@@ -501,16 +493,17 @@ article {
         }
         #text {
             margin-left: -40px !important;
-            margin-top:-130px !important;
+            margin-top:-140px !important;
             #name {
                 font-size: 1.9em !important;
                 line-height: 1.1em;
                 max-width: 200px;
             }
             .nav-link {
-                overflow: none;
-                font-size: 1.0em;
-                line-height: 1.5em;
+                overflow: hidden !important;
+                font-size: 1.0em !important;
+                line-height: 1.5em !important;
+                margin-top: 0 !important;
                 li {
                     margin-right: 0;
                 }
@@ -520,7 +513,7 @@ article {
 }
 
 @media screen and (max-width: $device-small){
-    $sml-padding: $article-padding/4;
+    $sml-padding: $article-padding/3;
 
     .hidden-sml {
         visibility: hidden;
@@ -528,11 +521,12 @@ article {
 
     #header {
         .nav-link {
-            margin-top: -95px;
-            margin-left: 220px !important;
+            margin-top: -68px !important;
+            margin-left: 230px !important;
         }
         .wrapper {
-            max-width: 250px;
+            max-width: 265px;
+            min-width: 265px;
         }
     }
 
@@ -545,7 +539,7 @@ article {
 			margin-left: -$sml-padding;
 		}
         .big-img {
-            margin: 20px $sml-padding - 30px;
+            margin: 20px $sml-padding - 20px;
             margin-bottom: $sml-padding;
             &:first-child {
                 margin-top: -31px;
