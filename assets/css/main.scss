@@ -125,8 +125,8 @@ p {
 
 #header {
     font-family: $font-stack-title;
-    height: $header-height;
-    margin-bottom: $article-padding*0.5;
+    height: $header-height + ($article-padding*0.5); //Chrome mobile fixed child bug work-around. TEMPORARY
+    //margin-bottom: $article-padding*0.5;
     padding-top: $article-padding*0.5;
     z-index: 0;
 	overflow: hidden;
@@ -473,8 +473,8 @@ article {
 
     #header {
         font-family: $font-stack-title;
-        height: $med-header-height;
-        margin-bottom: $article-padding*0.5;
+        height: $med-header-height + ($article-padding*0.5) ; //Chrome mobile fixed child bug work-around. TEMPORARY
+        //margin-bottom: $article-padding*0.5;
         padding-top: $article-padding*0.5;
 
         .wrapper::before{
@@ -548,8 +548,9 @@ article {
 
     #header {
         font-family: $font-stack-title;
-        height: $sml-header-height;
-        margin-bottom: $article-padding*0.25;
+        height: $sml-header-height + ($article-padding*0.25);  //Chrome mobile fixed child bug work-around. TEMPORARY
+        //margin-bottom: $article-padding*0.5;
+        //margin-bottom: $article-padding*0.25;
         padding-top: $article-padding*0.25;
 
         .wrapper::before{
