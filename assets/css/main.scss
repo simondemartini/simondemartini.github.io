@@ -23,7 +23,9 @@ $color-bg:          $color-secondary;
 $color-transparent: rgba(255, 255, 255, 0.0);
 
 $header-height:     200px;
-$footer-height:     82px;
+$med-header-height: 120px;
+$sml-header-height: 100px;
+$footer-height:     60px;
 $main-width: 		840px;
 $article-padding:   30px;
 $article-width:     $main-width - (2*$article-padding);
@@ -168,7 +170,6 @@ p {
             top: 0;
             width: $header-height;
             height: 100vh;
-            margin-right: -5px;
             background-color: lighten($color-bg,10%);
         }
 
@@ -286,7 +287,7 @@ article {
 
     margin-top: -$header-adjust;
     padding-top: $header-adjust;
-    padding-bottom: $footer-height + 2*($article-padding*1.5);
+    padding-bottom: $footer-height + 2*($article-padding);
     padding-left: 30px;
     padding-right: 30px;
 
@@ -297,9 +298,9 @@ article {
 
 #footer {
     font-family: $font-stack-title;
-    height: auto;
+    height: $footer-height;
     margin-bottom: $article-padding;
-    margin-top: -$footer-height - $article-padding*1.5;
+    margin-top: -$footer-height;
     position: relative;
     background-color: $color-offwhite;
     padding: $article-padding/2;
@@ -470,6 +471,57 @@ article {
 @media screen and (max-width: $device-medium) and (min-width: $device-small+1px){
     $med-padding: $article-padding/2;
 
+    #header {
+        font-family: $font-stack-title;
+        height: $med-header-height;
+        margin-bottom: $article-padding*0.5;
+        padding-top: $article-padding*0.5;
+
+        .wrapper::before{
+            top: $med-header-height * 0.285;
+            height: $med-header-height * 0.68;
+        }
+
+        .wrapper {
+            width: 350px;
+            padding-right: 15px;
+        }
+
+        .wrapper::after{
+            margin-left: $med-header-height;
+            top: $med-header-height * 0.285;
+            height: $med-header-height * 0.68;
+        }
+
+            #ribbon-vert {
+                width: $med-header-height !important;
+            }
+
+            #logo {
+                width: $med-header-height !important;
+                height: $med-header-height !important;
+            }
+
+            #text {
+                margin-left: -120px !important;
+                margin-top:40px !important;
+                #name {
+                    font-size: 1.9em !important;
+                    line-height: 1.1em;
+                    max-width: 300px;
+                }
+                .nav-link {
+                    overflow: hidden !important;
+                    font-size: 1.0em !important;
+                    line-height: 1.5em !important;
+                    margin-top: 0 !important;
+                    li {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
     .hidden-med {
         visibility: hidden;
     }
@@ -485,31 +537,6 @@ article {
             }
         }
     }
-
-    #header {
-        .wrapper {
-            max-width: 385px;
-            padding-right: 15px;
-        }
-        #text {
-            margin-left: -40px !important;
-            margin-top:-140px !important;
-            #name {
-                font-size: 1.9em !important;
-                line-height: 1.1em;
-                max-width: 200px;
-            }
-            .nav-link {
-                overflow: hidden !important;
-                font-size: 1.0em !important;
-                line-height: 1.5em !important;
-                margin-top: 0 !important;
-                li {
-                    margin-right: 0;
-                }
-            }
-        }
-    }
 }
 
 @media screen and (max-width: $device-small){
@@ -520,15 +547,61 @@ article {
     }
 
     #header {
-        .nav-link {
-            margin-top: -68px !important;
-            margin-left: 230px !important;
-        }
         .wrapper {
-            max-width: 265px;
-            min-width: 265px;
         }
     }
+
+    #header {
+        font-family: $font-stack-title;
+        height: $sml-header-height;
+        margin-bottom: $article-padding*0.25;
+        padding-top: $article-padding*0.25;
+
+        .wrapper::before{
+            top: $sml-header-height * 0.235;
+            height: $sml-header-height * 0.68;
+        }
+
+        .wrapper {
+            max-width: 295px;
+            min-width: 265px;
+            padding-right: 15px;
+        }
+
+        .wrapper::after{
+            margin-left: $sml-header-height;
+            top: $sml-header-height * 0.235;
+            height: $sml-header-height * 0.68;
+        }
+
+            #ribbon-vert {
+                width: $sml-header-height !important;
+            }
+
+            #logo {
+                width: $sml-header-height !important;
+                height: $sml-header-height !important;
+            }
+
+            #text {
+                margin-left: -140px !important;
+                margin-top:50px !important;
+                #name {
+                    font-size: 1.5em !important;
+                    line-height: 1.1em;
+                    max-width: 300px;
+                }
+                .nav-link {
+                    overflow: hidden !important;
+                    font-size: 1.0em !important;
+                    line-height: 1.6em !important;
+                    margin-top: 0 !important;
+                    li {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
 
     article {
         padding-top: $sml-padding;

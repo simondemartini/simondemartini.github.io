@@ -341,7 +341,6 @@ p {
       top: 0;
       width: 200px;
       height: 100vh;
-      margin-right: -5px;
       background-color: #81a5ae; }
     #header .wrapper #text {
       margin-top: -145px;
@@ -426,7 +425,7 @@ article {
   min-height: 100%;
   margin-top: -290px;
   padding-top: 290px;
-  padding-bottom: 172px;
+  padding-bottom: 120px;
   padding-left: 30px;
   padding-right: 30px;
   -webkit-box-sizing: border-box;
@@ -435,9 +434,9 @@ article {
 
 #footer {
   font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
-  height: auto;
+  height: 60px;
   margin-bottom: 30px;
-  margin-top: -127px;
+  margin-top: -60px;
   position: relative;
   background-color: #f8f8f8;
   padding: 15px;
@@ -579,6 +578,41 @@ article {
       #header .wrapper #text .nav-link {
         margin-top: 0; } }
 @media screen and (max-width: 600px) and (min-width: 381px) {
+  #header {
+    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+    height: 120px;
+    margin-bottom: 15px;
+    padding-top: 15px; }
+    #header .wrapper::before {
+      top: 34.2px;
+      height: 81.6px; }
+    #header .wrapper {
+      width: 350px;
+      padding-right: 15px; }
+    #header .wrapper::after {
+      margin-left: 120px;
+      top: 34.2px;
+      height: 81.6px; }
+    #header #ribbon-vert {
+      width: 120px !important; }
+    #header #logo {
+      width: 120px !important;
+      height: 120px !important; }
+    #header #text {
+      margin-left: -120px !important;
+      margin-top: 40px !important; }
+      #header #text #name {
+        font-size: 1.9em !important;
+        line-height: 1.1em;
+        max-width: 300px; }
+      #header #text .nav-link {
+        overflow: hidden !important;
+        font-size: 1.0em !important;
+        line-height: 1.5em !important;
+        margin-top: 0 !important; }
+        #header #text .nav-link li {
+          margin-right: 0; }
+
   .hidden-med {
     visibility: hidden; }
 
@@ -589,35 +623,46 @@ article {
       margin: 20px -15px;
       margin-bottom: 15px; }
       #container .big-img:first-child {
-        margin-top: -31px; }
-
-  #header .wrapper {
-    max-width: 385px;
-    padding-right: 15px; }
-  #header #text {
-    margin-left: -40px !important;
-    margin-top: -140px !important; }
-    #header #text #name {
-      font-size: 1.9em !important;
-      line-height: 1.1em;
-      max-width: 200px; }
-    #header #text .nav-link {
-      overflow: hidden !important;
-      font-size: 1.0em !important;
-      line-height: 1.5em !important;
-      margin-top: 0 !important; }
-      #header #text .nav-link li {
-        margin-right: 0; } }
+        margin-top: -31px; } }
 @media screen and (max-width: 380px) {
   .hidden-sml {
     visibility: hidden; }
 
-  #header .nav-link {
-    margin-top: -68px !important;
-    margin-left: 230px !important; }
-  #header .wrapper {
-    max-width: 265px;
-    min-width: 265px; }
+  #header {
+    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+    height: 100px;
+    margin-bottom: 7.5px;
+    padding-top: 7.5px; }
+    #header .wrapper::before {
+      top: 23.5px;
+      height: 68px; }
+    #header .wrapper {
+      max-width: 295px;
+      min-width: 265px;
+      padding-right: 15px; }
+    #header .wrapper::after {
+      margin-left: 100px;
+      top: 23.5px;
+      height: 68px; }
+    #header #ribbon-vert {
+      width: 100px !important; }
+    #header #logo {
+      width: 100px !important;
+      height: 100px !important; }
+    #header #text {
+      margin-left: -140px !important;
+      margin-top: 50px !important; }
+      #header #text #name {
+        font-size: 1.5em !important;
+        line-height: 1.1em;
+        max-width: 300px; }
+      #header #text .nav-link {
+        overflow: hidden !important;
+        font-size: 1.0em !important;
+        line-height: 1.6em !important;
+        margin-top: 0 !important; }
+        #header #text .nav-link li {
+          margin-right: 0; }
 
   article {
     padding-top: 10px;
