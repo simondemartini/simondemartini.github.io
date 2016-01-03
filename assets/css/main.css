@@ -336,7 +336,6 @@ p {
     max-width: 600px; }
     #header .wrapper #ribbon-vert {
       position: fixed;
-      -webkit-backface-visibility: hidden;
       content: " ";
       z-index: -1000;
       top: 0;
