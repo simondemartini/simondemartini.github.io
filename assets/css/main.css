@@ -318,7 +318,8 @@ p {
     display: inline-block;
     position: absolute;
     z-index: -1;
-    content: " "; }
+    content: " ";
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15); }
   #header .wrapper::after {
     background-color: #f8f8f8;
     margin-left: 200px;
@@ -328,7 +329,8 @@ p {
     display: inline-block;
     position: absolute;
     z-index: -1;
-    content: " "; }
+    content: " ";
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15); }
   #header .wrapper {
     padding-left: 30px;
     padding-right: 30px;
@@ -362,7 +364,10 @@ p {
           padding-bottom: 8px; }
     #header .wrapper #logo {
       width: 200px;
-      height: 200px; }
+      height: 200px;
+      background-image: url("../img/sd-shadow.svg");
+      background-size: contain;
+      background-position: 0 3px; }
 
 article {
   background-color: #f8f8f8;
@@ -457,7 +462,7 @@ article {
   margin-left: auto;
   margin-right: auto;
   max-width: 840px;
-  min-width: 320px; }
+  min-width: 290px; }
 
 .pagination {
   width: 100%;
@@ -499,7 +504,7 @@ article {
   .nav-link .nav-current {
     font-weight: bold; }
 
-.drop-shadow, #header .wrapper::before, #header .wrapper::after {
+.drop-shadow {
   box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.15); }
 
 .link-primary a {
@@ -556,13 +561,13 @@ article {
     padding-left: 15px;
     padding-right: 15px; }
     article .head {
-      padding: 0 15px 22px 15px;
+      padding: 0 15px 15px 15px;
       margin-left: -15px; }
     article .big-img {
       margin: 20px -15px;
       margin-bottom: 15px; }
       article .big-img:first-child {
-        margin-top: -31px; }
+        margin-top: -16px; }
 
   #header .wrapper {
     padding-left: 15px;
@@ -621,7 +626,7 @@ article {
       margin: 20px -15px;
       margin-bottom: 15px; }
       #container .big-img:first-child {
-        margin-top: -31px; } }
+        margin-top: -16px; } }
 @media screen and (max-width: 380px) {
   .hidden-sml {
     visibility: hidden; }
@@ -635,7 +640,7 @@ article {
       height: 68px; }
     #header .wrapper {
       max-width: 295px;
-      min-width: 265px;
+      min-width: 290px;
       padding-right: 15px; }
     #header .wrapper::after {
       margin-left: 100px;
@@ -667,16 +672,16 @@ article {
     padding-right: 10px;
     margin-bottom: 10px; }
     article .head {
-      padding: 13px 10px 22px 10px;
+      padding: 5px 10px 5px 10px;
       margin-left: -10px; }
     article .big-img {
       margin: 20px -10px;
       margin-bottom: 10px; }
       article .big-img:first-child {
-        margin-top: -31px; }
+        margin-top: -16px; }
 
   #container {
-    padding-left: 0;
-    padding-right: 0; } }
+    padding-left: 10px;
+    padding-right: 10px; } }
 
 /*# sourceMappingURL=main.css.map */

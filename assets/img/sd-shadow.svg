@@ -16,7 +16,7 @@
    id="svg3014"
    version="1.1"
    inkscape:version="0.91 r"
-   sodipodi:docname="sd-square.svg">
+   sodipodi:docname="sd-shadow.svg">
   <defs
      id="defs3016">
     <linearGradient
@@ -96,9 +96,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="125.88431"
-     inkscape:cy="376.74468"
+     inkscape:zoom="45.254834"
+     inkscape:cx="0.03345677"
+     inkscape:cy="136.95953"
      inkscape:document-units="px"
      inkscape:current-layer="layer5"
      showgrid="false"
@@ -175,10 +175,10 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Shadow"
-     style="display:none">
+     style="display:inline">
     <g
        id="g4011-0"
-       transform="matrix(1.0025053,0,0,1,-0.09667179,-131.14794)"
+       transform="matrix(1.0025053,0,0,1,-0.09667179,-143.14794)"
        style="display:inline;fill:#000000;fill-opacity:0.19215686;stroke:none;stroke-width:0.99974847;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <path
          d="m 326.29179,287.09762 228.09814,-6.58115 -2.4e-4,181.77418 -228.11033,17.46076 m 472.81052,336.37946 -456.22063,83.22525 0,-396.87837 239.51768,-19.4094 -0.0351,-203.01594 216.73185,-7.88765 c 0.0249,181.32086 0.006,362.64257 0.006,543.96611 z M 595.86432,613.681 l -24.88481,2.63155 0,97.7217 24.88481,-3.88078 z"
@@ -217,7 +217,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-251.36218)"
-     style="display:inline">
+     style="display:none">
     <g
        id="g4011"
        transform="matrix(1.0025053,0,0,1,-0.09730695,93.21171)"

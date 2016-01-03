@@ -142,7 +142,7 @@ p {
         position: absolute;
         z-index: -1;
         content: " ";
-        @extend .drop-shadow;
+        box-shadow: 0px 3px 0px 0px hsla(0, 10, 0, 0.15);
     }
 
     .wrapper::after{
@@ -155,7 +155,7 @@ p {
         position: absolute;
         z-index: -1;
         content: " ";
-        @extend .drop-shadow;
+        box-shadow: 0px 3px 0px 0px hsla(0, 10, 0, 0.15);
     }
 
     .wrapper {
@@ -200,6 +200,9 @@ p {
         #logo {
             width: $header-height;
             height: $header-height;
+            background-image: url("../img/sd-shadow.svg");
+            background-size: contain;
+            background-position: 0 3px;
         }
     }
 }
@@ -328,7 +331,7 @@ article {
     margin-left: auto;
     margin-right: auto;
     max-width: $main-width;
-    min-width: $device-small - $article-padding*2;
+    min-width: 290px;
 }
 
 .pagination{
@@ -436,14 +439,14 @@ article {
 		padding-left: $lrg-padding;
 		padding-right: $lrg-padding;
 		.head {
-			padding: 0 $lrg-padding 22px $lrg-padding;
+			padding: 0 $lrg-padding 15px $lrg-padding;
 			margin-left: -$lrg-padding;
 		}
         .big-img {
             margin: 20px $lrg-padding - $article-padding;
             margin-bottom: $lrg-padding;
             &:first-child {
-                margin-top: -31px;
+                margin-top: -16px;
             }
         }
     }
@@ -533,7 +536,7 @@ article {
             margin: 20px $med-padding - $article-padding;
             margin-bottom: $med-padding;
             &:first-child {
-                margin-top: -31px;
+                margin-top: -16px;
             }
         }
     }
@@ -560,7 +563,7 @@ article {
 
         .wrapper {
             max-width: 295px;
-            min-width: 265px;
+            min-width: 290px;
             padding-right: 15px;
         }
 
@@ -605,20 +608,20 @@ article {
 		padding-right: $sml-padding;
         margin-bottom: $sml-padding;
 		.head {
-			padding: 13px $sml-padding 22px $sml-padding;
+			padding: 5px $sml-padding 5px $sml-padding;
 			margin-left: -$sml-padding;
 		}
         .big-img {
             margin: 20px $sml-padding - 20px;
             margin-bottom: $sml-padding;
             &:first-child {
-                margin-top: -31px;
+                margin-top: -16px;
             }
         }
     }
 
     #container {
-        padding-left: 0;
-		padding-right: 0;
+        padding-left: 10px;
+		padding-right: 10px;
     }
 }
