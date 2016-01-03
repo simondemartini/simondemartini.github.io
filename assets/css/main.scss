@@ -25,7 +25,7 @@ $color-transparent: rgba(255, 255, 255, 0.0);
 $header-height:     200px;
 $med-header-height: 120px;
 $sml-header-height: 100px;
-$footer-height:     60px;
+$footer-height:     52px;
 $main-width: 		840px;
 $article-padding:   30px;
 $article-width:     $main-width - (2*$article-padding);
@@ -532,6 +532,16 @@ article {
     #container {
         padding-left: $med-padding;
 		padding-right: $med-padding;
+        padding-bottom: $med-padding*2;
+
+        $header-adjust: $med-header-height + 2*($article-padding + $med-padding);
+
+        min-height: 100%;
+        //margin-bottom: -$footer-height + $article-padding;
+
+        margin-top: -$header-adjust;
+        padding-top: $header-adjust;
+        padding-bottom: $footer-height + 2*($med-padding);
         .big-img {
             margin: 20px $med-padding - $article-padding;
             margin-bottom: $med-padding;
@@ -539,6 +549,10 @@ article {
                 margin-top: -16px;
             }
         }
+    }
+
+    #footer {
+        margin-bottom: $med-padding*2;
     }
 }
 
@@ -623,5 +637,19 @@ article {
     #container {
         padding-left: 10px;
 		padding-right: 10px;
+        padding-bottom: $sml-padding*2;
+
+        $header-adjust: $sml-header-height + 2*($article-padding + 5px);
+
+        min-height: 100%;
+        //margin-bottom: -$footer-height + $article-padding;
+
+        margin-top: -$header-adjust;
+        padding-top: $header-adjust;
+        padding-bottom: $footer-height + 2*($sml-padding);
+    }
+
+    #footer {
+        margin-bottom: $sml-padding*2;
     }
 }
