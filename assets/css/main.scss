@@ -547,11 +547,6 @@ article {
     }
 
     #header {
-        .wrapper {
-        }
-    }
-
-    #header {
         font-family: $font-stack-title;
         height: $sml-header-height;
         margin-bottom: $article-padding*0.25;
@@ -607,6 +602,7 @@ article {
         padding-top: $sml-padding;
 		padding-left: $sml-padding;
 		padding-right: $sml-padding;
+        margin-bottom: $sml-padding;
 		.head {
 			padding: 13px $sml-padding 22px $sml-padding;
 			margin-left: -$sml-padding;
