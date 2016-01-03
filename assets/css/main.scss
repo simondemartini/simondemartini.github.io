@@ -342,6 +342,7 @@ article {
     display: block;
     text-align: center;
     position: relative;
+    padding-top: 3px;
 
     a{
         color: $color-highlight;
@@ -358,6 +359,7 @@ article {
 
     .newer-posts{
         float:left;
+        margin-top: -3px;
     }
 
     .page-number{
@@ -365,11 +367,11 @@ article {
         margin-left: auto;
         margin-right:auto;
         text-align: center;
-        display: block;
     }
     .older-posts{
         float:right;
         text-align: right;
+        margin-top: -3px;
     }
 }
 
