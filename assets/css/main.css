@@ -272,7 +272,7 @@ body {
   position: relative; }
 
 a {
-  color: #638e99;
+  color: #b25b30;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -281,8 +281,8 @@ a {
   text-decoration: none; }
   a:hover {
     color: #f8f8f8;
-    background-color: #638e99;
-    border: 1px solid #638e99; }
+    background-color: #b25b30;
+    border: 1px solid #b25b30; }
 
 p {
   font-size: 1.1em;
@@ -465,22 +465,26 @@ article {
   min-width: 290px; }
 
 .pagination {
-  width: 100%;
-  color: #f8f8f8;
-  display: inline-block; }
+  max-width: 400px;
+  margin: 0 auto;
+  color: #999999;
+  background-color: #f8f8f8;
+  display: block;
+  text-align: center;
+  position: relative; }
   .pagination a {
-    color: #ffffff;
-    background-color: none;
+    color: #b25b30;
+    background-color: #f8f8f8;
     padding: 10px;
     border: none;
     border-radius: 0; }
     .pagination a:hover {
-      background-color: #f8f8f8;
-      color: #638e99; }
+      background-color: #b25b30;
+      color: #f8f8f8; }
   .pagination .newer-posts {
     float: left; }
   .pagination .page-number {
-    padding-top: 10px;
+    padding: 10px 0;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -678,7 +682,7 @@ article {
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: 10px; }
+    margin-bottom: 20px; }
     article .head {
       padding: 5px 10px 5px 10px;
       margin-left: -10px; }

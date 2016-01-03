@@ -100,7 +100,7 @@ body {
 }
 
 a {
-    @include a-color($color-secondary,$color-offwhite);
+    @include a-color($color-highlight,$color-offwhite);
 }
 
 p {
@@ -335,19 +335,23 @@ article {
 }
 
 .pagination{
-    width:100%;
-    color: $color-offwhite;
-    display: inline-block;
+    max-width:400px;;
+    margin: 0 auto;
+    color: $color-neutral;
+    background-color: $color-offwhite;
+    display: block;
+    text-align: center;
+    position: relative;
 
     a{
-        color: $color-white;
-        background-color: none;
+        color: $color-highlight;
+        background-color: $color-offwhite;
         padding: 10px;
         border: none;
         border-radius: 0;
         &:hover {
-            background-color: $color-offwhite;
-            color:$color-secondary;
+            background-color: $color-highlight;
+            color:$color-offwhite;
         }
 
     }
@@ -357,7 +361,7 @@ article {
     }
 
     .page-number{
-        padding-top: 10px;
+        padding: 10px 0;
         margin-left: auto;
         margin-right:auto;
         text-align: center;
@@ -620,7 +624,7 @@ article {
         padding-top: $sml-padding;
 		padding-left: $sml-padding;
 		padding-right: $sml-padding;
-        margin-bottom: $sml-padding;
+        margin-bottom: $sml-padding*2;
 		.head {
 			padding: 5px $sml-padding 5px $sml-padding;
 			margin-left: -$sml-padding;
