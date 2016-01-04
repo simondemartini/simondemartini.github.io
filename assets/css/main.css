@@ -471,8 +471,7 @@ article {
   background-color: #f8f8f8;
   display: block;
   text-align: center;
-  position: relative;
-  padding-top: 3px; }
+  position: relative; }
   .pagination a {
     color: #b25b30;
     background-color: #f8f8f8;
@@ -483,8 +482,7 @@ article {
       background-color: #b25b30;
       color: #f8f8f8; }
   .pagination .newer-posts {
-    float: left;
-    margin-top: -3px; }
+    float: left; }
   .pagination .page-number {
     padding: 10px 0;
     margin-left: auto;
@@ -492,8 +490,7 @@ article {
     text-align: center; }
   .pagination .older-posts {
     float: right;
-    text-align: right;
-    margin-top: -3px; }
+    text-align: right; }
 
 .invisible {
   visibility: hidden; }
