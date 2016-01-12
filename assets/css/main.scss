@@ -28,7 +28,7 @@ $header-height:     200px;
 $med-header-height: 120px;
 $sml-header-height: 100px;
 $footer-height:     52px;
-$main-width: 		840px;
+$main-width: 		780px;
 $article-padding:   30px;
 $article-width:     $main-width - (2*$article-padding);
 
@@ -228,6 +228,9 @@ article {
     border-bottom: 30px;
     border-bottom-color: $color-offwhite;
     border-bottom-style:solid;
+    &:first-child {
+        padding-top: 0;
+    }
     &:last-child {
         margin-bottom: 0;
     }

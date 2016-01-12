@@ -381,6 +381,8 @@ article {
   border-bottom: 30px;
   border-bottom-color: #f4f4f4;
   border-bottom-style: solid; }
+  article:first-child {
+    padding-top: 0; }
   article:last-child {
     margin-bottom: 0; }
   article .head {
@@ -424,7 +426,7 @@ article {
     max-width: 100%;
     height: auto; }
   article .big-img {
-    max-width: 840px;
+    max-width: 780px;
     height: auto;
     margin: 15px -30px; }
     article .big-img:first-child {
@@ -450,7 +452,7 @@ article {
   padding: 15px;
   line-height: 2em; }
   #footer .wrapper {
-    max-width: 840px; }
+    max-width: 780px; }
 
 /* Utility */
 .clearfix {
@@ -465,7 +467,7 @@ article {
 .wrapper {
   margin-left: auto;
   margin-right: auto;
-  max-width: 840px;
+  max-width: 780px;
   min-width: 290px; }
 
 .pagination {
