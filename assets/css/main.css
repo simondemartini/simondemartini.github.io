@@ -266,7 +266,7 @@ html {
 
 body {
   font: normal normal 10pt/normal "Roboto", Helvetica, Arial, sans-serif;
-  background: #638e99;
+  background: #f8f8f8;
   color: #333333;
   height: 100%;
   position: relative; }
@@ -291,7 +291,7 @@ p {
 
 #bg-head {
   position: absolute;
-  background-color: #638e99;
+  background-color: #f8f8f8;
   background-size: auto 768pt;
   background-repeat: repeat;
   background-position: center;
@@ -310,7 +310,7 @@ p {
   overflow: hidden;
   position: relative; }
   #header .wrapper::before {
-    background-color: #f8f8f8;
+    background-color: #b25b30;
     margin-left: -100vw;
     width: 100vw;
     top: 47px;
@@ -321,7 +321,7 @@ p {
     content: " ";
     box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15); }
   #header .wrapper::after {
-    background-color: #f8f8f8;
+    background-color: #b25b30;
     margin-left: 200px;
     width: 100vw;
     top: 47px;
@@ -342,14 +342,14 @@ p {
       top: 0;
       width: 200px;
       height: 100vh;
-      background-color: #81a5ae; }
+      margin-right: -5px; }
     #header .wrapper #text {
       margin-top: -145px;
       margin-left: -25px; }
       #header .wrapper #text #name {
         margin-top: -125px;
         margin-left: 260px;
-        color: #333333;
+        color: #ffffff;
         font-size: 3.25em;
         font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
         font-weight: 700;
@@ -508,7 +508,12 @@ article {
     font-weight: bold; }
 
 .drop-shadow {
-  box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.15); }
+  box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.1); }
+
+.outline {
+  border-color: rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  border-width: 1px; }
 
 .link-primary a {
   color: #333333; }
@@ -531,6 +536,13 @@ article {
   background-color: #b25b30;
   border: 1px solid #b25b30; }
 
+.link-highlight-header a {
+  color: #f8f8f8; }
+.link-highlight-header a:hover {
+  color: #b25b30;
+  background-color: #f8f8f8;
+  border: 1px solid #f8f8f8; }
+
 .link-neutral a {
   color: #999999; }
 .link-neutral a:hover {
@@ -546,7 +558,7 @@ article {
   border: 1px solid #333333; }
 
 .link-nostyle {
-  color: #333333;
+  color: #f8f8f8;
   border: none; }
   .link-nostyle:hover {
     color: #333333;
