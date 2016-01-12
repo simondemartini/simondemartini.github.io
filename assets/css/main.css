@@ -266,7 +266,7 @@ html {
 
 body {
   font: normal normal 10pt/normal "Roboto", Helvetica, Arial, sans-serif;
-  background: #f8f8f8;
+  background: #f4f4f4;
   color: #333333;
   height: 100%;
   position: relative; }
@@ -280,7 +280,7 @@ a {
   border: 1px solid rgba(255, 255, 255, 0);
   text-decoration: none; }
   a:hover {
-    color: #f8f8f8;
+    color: #f4f4f4;
     background-color: #b25b30;
     border: 1px solid #b25b30; }
 
@@ -291,7 +291,7 @@ p {
 
 #bg-head {
   position: absolute;
-  background-color: #f8f8f8;
+  background-color: #f4f4f4;
   background-size: auto 768pt;
   background-repeat: repeat;
   background-position: center;
@@ -310,7 +310,7 @@ p {
   overflow: hidden;
   position: relative; }
   #header .wrapper::before {
-    background-color: #b25b30;
+    background-color: #ce7447;
     margin-left: -100vw;
     width: 100vw;
     top: 47px;
@@ -321,7 +321,7 @@ p {
     content: " ";
     box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15); }
   #header .wrapper::after {
-    background-color: #b25b30;
+    background-color: #ce7447;
     margin-left: 200px;
     width: 100vw;
     top: 47px;
@@ -368,21 +368,26 @@ p {
       background-image: url("../img/sd-shadow.svg");
       background-size: contain;
       background-position: 0 3px; }
+    #header .wrapper #logo-s {
+      fill: #c66535; }
+    #header .wrapper #logo-d {
+      fill: #d3835c; }
 
 article {
-  background-color: #f8f8f8;
   padding: 30px;
   padding-top: 28px;
-  margin-bottom: 30px;
   min-height: 200px;
-  position: relative; }
+  position: relative;
+  border-bottom: 30px;
+  border-bottom-color: #f4f4f4;
+  border-bottom-style: solid; }
   article:last-child {
     margin-bottom: 0; }
   article .head {
     width: 100%;
     padding: 0 30px 0 30px;
     margin-left: -30px;
-    border-bottom: dashed 1px #b3b3b3;
+    border-bottom: dashed 1px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
     padding-bottom: 15px; }
     article .head .date {
@@ -430,8 +435,7 @@ article {
   margin-top: -290px;
   padding-top: 290px;
   padding-bottom: 82px;
-  padding-left: 30px;
-  padding-right: 30px;
+  background-color: #ffffff;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -442,7 +446,7 @@ article {
   margin-bottom: 30px;
   margin-top: -52px;
   position: relative;
-  background-color: #f8f8f8;
+  background-color: #ce7447;
   padding: 15px;
   line-height: 2em; }
   #footer .wrapper {
@@ -468,19 +472,17 @@ article {
   max-width: 400px;
   margin: 0 auto;
   color: #999999;
-  background-color: #f8f8f8;
   display: block;
   text-align: center;
   position: relative; }
   .pagination a {
     color: #b25b30;
-    background-color: #f8f8f8;
     padding: 10px;
     border: none;
     border-radius: 0; }
     .pagination a:hover {
       background-color: #b25b30;
-      color: #f8f8f8; }
+      color: #f4f4f4; }
   .pagination .newer-posts {
     float: left; }
   .pagination .page-number {
@@ -512,56 +514,55 @@ article {
 
 .outline {
   border-color: rgba(0, 0, 0, 0.1);
-  border-style: solid;
-  border-width: 1px; }
+  border-style: solid; }
 
 .link-primary a {
   color: #333333; }
 .link-primary a:hover {
-  color: #f8f8f8;
+  color: #f4f4f4;
   background-color: #333333;
   border: 1px solid #333333; }
 
 .link-secondary a {
   color: #638e99; }
 .link-secondary a:hover {
-  color: #f8f8f8;
+  color: #f4f4f4;
   background-color: #638e99;
   border: 1px solid #638e99; }
 
 .link-highlight a {
   color: #b25b30; }
 .link-highlight a:hover {
-  color: #f8f8f8;
+  color: #f4f4f4;
   background-color: #b25b30;
   border: 1px solid #b25b30; }
 
 .link-highlight-header a {
-  color: #f8f8f8; }
+  color: #f4f4f4; }
 .link-highlight-header a:hover {
   color: #b25b30;
-  background-color: #f8f8f8;
-  border: 1px solid #f8f8f8; }
+  background-color: #f4f4f4;
+  border: 1px solid #f4f4f4; }
 
 .link-neutral a {
-  color: #999999; }
+  color: #f4f4f4; }
 .link-neutral a:hover {
-  color: #f8f8f8;
-  background-color: #999999;
-  border: 1px solid #999999; }
+  color: #f4f4f4;
+  background-color: #f4f4f4;
+  border: 1px solid #f4f4f4; }
 
 .link-title a {
   color: #333333; }
 .link-title a:hover {
-  color: #f8f8f8;
+  color: #f4f4f4;
   background-color: #333333;
   border: 1px solid #333333; }
 
 .link-nostyle {
-  color: #f8f8f8;
+  color: #f4f4f4;
   border: none; }
   .link-nostyle:hover {
-    color: #333333;
+    color: #f4f4f4;
     border: none;
     background-color: transparent; }
 

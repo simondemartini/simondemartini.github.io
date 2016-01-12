@@ -16,11 +16,13 @@ $color-secondary: 	#638e99;
 $color-highlight: 	#b25b30;
 $color-neutral: 	#999999;
 $color-white: 		#ffffff;
-$color-offwhite: 	#f8f8f8;
+$color-offwhite: 	#f4f4f4;
 
 $color-darktext: 	#333333;
 $color-bg:          $color-offwhite;
+$color-header:      lighten($color-highlight, 10%);
 $color-transparent: rgba(255, 255, 255, 0.0);
+$color-border:      hsla(0, 10, 0, 0.1);
 
 $header-height:     200px;
 $med-header-height: 120px;
@@ -133,7 +135,7 @@ p {
     position: relative;
 
     .wrapper::before{
-        background-color: $color-highlight;
+        background-color: $color-header;
         margin-left: -100vw;
         width: 100vw;
         top: $header-height * 0.235;
@@ -146,7 +148,7 @@ p {
     }
 
     .wrapper::after{
-        background-color: $color-highlight;
+        background-color: $color-header;
         margin-left: $header-height;
         width: 100vw;
         top: $header-height * 0.235;
@@ -205,16 +207,27 @@ p {
             background-size: contain;
             background-position: 0 3px;
         }
+
+        #logo-s {
+            fill: darken($color-header, 5%);
+        }
+
+        #logo-d {
+            fill: lighten($color-header, 5%);
+        }
     }
 }
 
 article {
-    background-color: $color-offwhite;
+    //background-color: $color-offwhite;
     padding: $article-padding;
     padding-top: $article-padding - 2px;;
-    margin-bottom: $article-padding;
+    //margin-bottom: $article-padding;
     min-height: 200px;
     position: relative;
+    border-bottom: 30px;
+    border-bottom-color: $color-offwhite;
+    border-bottom-style:solid;
     &:last-child {
         margin-bottom: 0;
     }
@@ -223,7 +236,7 @@ article {
         width:100%;
         padding: 0 $article-padding 0 $article-padding;
         margin-left: -$article-padding;
-        border-bottom: dashed 1px lighten($color-darktext, 50% );
+        border-bottom: dashed 1px $color-border;
         margin-bottom: $article-padding/2;
         padding-bottom: $article-padding/2;
 
@@ -292,8 +305,8 @@ article {
     margin-top: -$header-adjust;
     padding-top: $header-adjust;
     padding-bottom: $footer-height + 1*($article-padding);
-    padding-left: 30px;
-    padding-right: 30px;
+
+    background-color: $color-white;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -306,7 +319,7 @@ article {
     margin-bottom: $article-padding;
     margin-top: -$footer-height;
     position: relative;
-    background-color: $color-offwhite;
+    background-color: $color-header;
     padding: $article-padding/2;
     line-height: 2em;
 
@@ -339,14 +352,14 @@ article {
     max-width:400px;;
     margin: 0 auto;
     color: $color-neutral;
-    background-color: $color-offwhite;
+    //background-color: $color-offwhite;
     display: block;
     text-align: center;
     position: relative;
 
     a{
         color: $color-highlight;
-        background-color: $color-offwhite;
+        //background-color: $color-offwhite;
         padding: 10px;
         border: none;
         border-radius: 0;
@@ -394,14 +407,13 @@ article {
 }
 
 .drop-shadow {
-    box-shadow: 0px 2px 0px 1px hsla(0, 10, 0, 0.1);
+    box-shadow: 0px 2px 0px 1px $color-border;
 }
 
 .outline {
-    border-color: hsla(0, 10, 0, 0.1);
+    border-color: $color-border;
     border-style: solid;
-    border-width: 1px;
-
+    //border-width: 1px;
 }
 
 .link-primary {
@@ -421,7 +433,7 @@ article {
 }
 
 .link-neutral {
-    @include extend-a-color($color-neutral,$color-offwhite);
+    @include extend-a-color($color-offwhite,$color-offwhite);
 }
 
 .link-title {
@@ -433,7 +445,7 @@ article {
         border: none;
 
     &:hover {
-        color: $color-darktext;
+        color: $color-offwhite;
         border: none;
         background-color: rgba(0,0,0,0);
     }
