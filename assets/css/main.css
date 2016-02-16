@@ -335,14 +335,6 @@ p {
     padding-left: 30px;
     padding-right: 30px;
     max-width: 600px; }
-    #header .wrapper #ribbon-vert {
-      position: fixed;
-      content: " ";
-      z-index: -1000;
-      top: 0;
-      width: 200px;
-      height: 100vh;
-      margin-right: -5px; }
     #header .wrapper #text {
       margin-top: -145px;
       margin-left: -25px; }
@@ -601,19 +593,36 @@ article {
         margin-top: 0; } }
 @media screen and (max-width: 600px) and (min-width: 381px) {
   #header {
-    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
-    height: 135px;
-    padding-top: 15px; }
+    height: 127.5px;
+    padding-top: 7.5px;
+    z-index: 0;
+    overflow: hidden;
+    position: relative; }
     #header .wrapper::before {
-      top: 34.2px;
-      height: 81.6px; }
+      background-color: #ce7447;
+      margin-left: -100vw;
+      width: 100vw;
+      top: 26.7px;
+      height: 81.6px;
+      display: inline-block;
+      position: absolute;
+      z-index: -1;
+      content: " ";
+      box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15); }
+    #header .wrapper::after {
+      background-color: #ce7447;
+      margin-left: 120px;
+      width: 100vw;
+      top: 26.7px;
+      height: 81.6px;
+      display: inline-block;
+      position: absolute;
+      z-index: -1;
+      content: " ";
+      box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15); }
     #header .wrapper {
       width: 350px;
       padding-right: 15px; }
-    #header .wrapper::after {
-      margin-left: 120px;
-      top: 34.2px;
-      height: 81.6px; }
     #header #ribbon-vert {
       width: 120px !important; }
     #header #logo {
@@ -658,20 +667,37 @@ article {
     visibility: hidden; }
 
   #header {
-    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
-    height: 107.5px;
-    padding-top: 7.5px; }
+    height: 105px;
+    padding-top: 5px;
+    z-index: 0;
+    overflow: hidden;
+    position: relative; }
     #header .wrapper::before {
-      top: 23.5px;
-      height: 68px; }
+      background-color: #ce7447;
+      margin-left: -100vw;
+      width: 100vw;
+      top: 21px;
+      height: 68px;
+      display: inline-block;
+      position: absolute;
+      z-index: -1;
+      content: " ";
+      box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15); }
+    #header .wrapper::after {
+      background-color: #ce7447;
+      margin-left: 100px;
+      width: 100vw;
+      top: 21px;
+      height: 68px;
+      display: inline-block;
+      position: absolute;
+      z-index: -1;
+      content: " ";
+      box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15); }
     #header .wrapper {
       max-width: 295px;
       min-width: 290px;
       padding-right: 15px; }
-    #header .wrapper::after {
-      margin-left: 100px;
-      top: 23.5px;
-      height: 68px; }
     #header #ribbon-vert {
       width: 100px !important; }
     #header #logo {

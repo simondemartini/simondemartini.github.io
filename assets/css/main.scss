@@ -40,6 +40,42 @@ $device-large:      770px;
 
 
 /* Mixins */
+
+@mixin generate-header($height, $padding) {
+    height: $height + ($padding*0.5); //Chrome mobile fixed child bug work-around. TEMPORARY
+    //margin-bottom: $article-padding*0.5;
+    padding-top: $padding*0.5;
+    z-index: 0;
+	overflow: hidden;
+    position: relative;
+
+    .wrapper::before{
+        background-color: $color-header;
+        margin-left: -100vw;
+        width: 100vw;
+        top: 0.16 * $height + ($padding * 0.5);
+        height: $height * 0.68;
+        display: inline-block;
+        position: absolute;
+        z-index: -1;
+        content: " ";
+        box-shadow: 0px 3px 0px 0px hsla(0, 10, 0, 0.15);
+    }
+
+    .wrapper::after{
+        background-color: $color-header;
+        margin-left: $height;
+        width: 100vw;
+        top: 0.16 * $height + ($padding * 0.5);
+        height: $height * 0.68;
+        display: inline-block;
+        position: absolute;
+        z-index: -1;
+        content: " ";
+        box-shadow: 0px 3px 0px 0px hsla(0, 10, 0, 0.15);
+    }
+}
+
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
@@ -127,54 +163,12 @@ p {
 
 #header {
     font-family: $font-stack-title;
-    height: $header-height + ($article-padding*0.5); //Chrome mobile fixed child bug work-around. TEMPORARY
-    //margin-bottom: $article-padding*0.5;
-    padding-top: $article-padding*0.5;
-    z-index: 0;
-	overflow: hidden;
-    position: relative;
-
-    .wrapper::before{
-        background-color: $color-header;
-        margin-left: -100vw;
-        width: 100vw;
-        top: 0.16 * $header-height + ($article-padding * 0.5);
-        height: $header-height * 0.68;
-        display: inline-block;
-        position: absolute;
-        z-index: -1;
-        content: " ";
-        box-shadow: 0px 3px 0px 0px hsla(0, 10, 0, 0.15);
-    }
-
-    .wrapper::after{
-        background-color: $color-header;
-        margin-left: $header-height;
-        width: 100vw;
-        top: 0.16 * $header-height + ($article-padding * 0.5);
-        height: $header-height * 0.68;
-        display: inline-block;
-        position: absolute;
-        z-index: -1;
-        content: " ";
-        box-shadow: 0px 3px 0px 0px hsla(0, 10, 0, 0.15);
-    }
+    @include generate-header($header-height, $article-padding);
 
     .wrapper {
         padding-left: $article-padding;
         padding-right: $article-padding;
         max-width: 600px;
-
-        #ribbon-vert {
-            position: fixed;
-            content:" ";
-            z-index: -1000;
-            top: 0;
-            width: $header-height;
-            height: 100vh;
-            //background-color: lighten($color-bg,10%);
-            margin-right: -5px;
-        }
 
         #text{
             margin-top: -145px;
@@ -505,25 +499,11 @@ article {
     $med-padding: $article-padding/2;
 
     #header {
-        font-family: $font-stack-title;
-        height: $med-header-height + ($article-padding*0.5) ; //Chrome mobile fixed child bug work-around. TEMPORARY
-        //margin-bottom: $article-padding*0.5;
-        padding-top: $article-padding*0.5;
-
-        .wrapper::before{
-            top: $med-header-height * 0.285;
-            height: $med-header-height * 0.68;
-        }
+        @include generate-header($med-header-height, $med-padding);
 
         .wrapper {
             width: 350px;
             padding-right: 15px;
-        }
-
-        .wrapper::after{
-            margin-left: $med-header-height;
-            top: $med-header-height * 0.285;
-            height: $med-header-height * 0.68;
         }
 
             #ribbon-vert {
@@ -594,27 +574,12 @@ article {
     }
 
     #header {
-        font-family: $font-stack-title;
-        height: $sml-header-height + ($article-padding*0.25);  //Chrome mobile fixed child bug work-around. TEMPORARY
-        //margin-bottom: $article-padding*0.5;
-        //margin-bottom: $article-padding*0.25;
-        padding-top: $article-padding*0.25;
-
-        .wrapper::before{
-            top: $sml-header-height * 0.235;
-            height: $sml-header-height * 0.68;
-        }
+        @include generate-header($sml-header-height, $sml-padding);
 
         .wrapper {
             max-width: 295px;
             min-width: 290px;
             padding-right: 15px;
-        }
-
-        .wrapper::after{
-            margin-left: $sml-header-height;
-            top: $sml-header-height * 0.235;
-            height: $sml-header-height * 0.68;
         }
 
             #ribbon-vert {
