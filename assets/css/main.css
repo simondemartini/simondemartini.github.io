@@ -295,7 +295,7 @@ p {
 
 #header {
   font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
-  height: 200px;
+  height: 180px;
   z-index: 2;
   overflow: hidden;
   position: relative; }
@@ -303,19 +303,19 @@ p {
     margin-left: -100vw;
     background-color: #c66535;
     width: 100vw;
-    top: 32px;
-    height: 136px;
+    top: 28.8px;
+    height: 122.4px;
     display: inline-block;
     position: absolute;
     z-index: -1;
     content: " ";
     box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15); }
   #header .wrapper::after {
-    margin-left: 200px;
+    margin-left: 180px;
     background-color: #c66535;
     width: 100vw;
-    top: 32px;
-    height: 136px;
+    top: 28.8px;
+    height: 122.4px;
     display: inline-block;
     position: absolute;
     z-index: -1;
@@ -326,11 +326,11 @@ p {
     padding-right: 30px;
     max-width: 600px; }
     #header .wrapper #text {
-      margin-top: -145px;
+      margin-top: -135px;
       margin-left: -25px; }
       #header .wrapper #text #name {
-        margin-top: -125px;
-        margin-left: 260px;
+        margin-top: -105px;
+        margin-left: 240px;
         color: #ffffff;
         font-size: 3.25em;
         font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
@@ -338,14 +338,14 @@ p {
       #header .wrapper #text .nav-link {
         font-size: 1.1em;
         margin-top: -8px;
-        margin-left: 250px;
+        margin-left: 230px;
         list-style-type: none;
         line-height: 2em; }
         #header .wrapper #text .nav-link li {
           padding-bottom: 8px; }
     #header .wrapper #logo {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       background-image: url("../img/sd-shadow.svg");
       background-size: contain;
       background-position: 0 3px; }
@@ -364,8 +364,8 @@ article, .pagination {
   border-bottom-color: #f4f4f4;
   border-bottom-style: solid; }
   article:first-child, .pagination:first-child {
-    margin-top: -200px;
-    padding-top: 215px; }
+    margin-top: -180px;
+    padding-top: 195px; }
   article:last-child, .pagination:last-child {
     margin-bottom: 0;
     border-bottom: 0; }
@@ -393,20 +393,20 @@ article, .pagination {
 
 #container {
   min-height: 100%;
-  margin-top: -200px;
-  padding-top: 200px;
-  padding-bottom: 82px;
+  margin-top: -180px;
+  padding-top: 180px;
+  padding-bottom: 70px;
   background-color: #ffffff; }
 
 #footer {
   font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
-  height: 52px;
+  height: 40px;
   margin-bottom: 30px;
-  margin-top: -112px;
+  margin-top: -100px;
   position: relative;
   background-color: #c66535;
   padding: 15px;
-  line-height: 2em;
+  line-height: 1.5em;
   z-index: 1; }
   #footer a:hover {
     color: #c66535; }
@@ -556,7 +556,6 @@ article, .pagination {
 
   article, .pagination {
     padding-top: 22.5px;
-    padding-bottom: 22.5px;
     padding-left: 15px;
     padding-right: 15px; }
     article .head, .pagination .head {
@@ -573,13 +572,14 @@ article, .pagination {
     padding-right: 15px;
     max-width: 440px; }
     #header .wrapper #text {
-      margin-top: -152px;
+      margin-top: -141px;
       margin-left: -25px; }
       #header .wrapper #text #name {
-        font-size: 2.5em;
+        font-size: 2.4em;
         line-height: 1.1; }
       #header .wrapper #text .nav-link {
-        margin-top: 0; }
+        margin-top: 0;
+        font-size: 1.0em; }
 
   #container {
     margin-left: 10px;
@@ -619,8 +619,8 @@ article, .pagination {
       width: 120px !important;
       height: 120px !important; }
     #header #text {
-      margin-left: -120px !important;
-      margin-top: 40px !important; }
+      margin-left: -100px !important;
+      margin-top: 19px !important; }
       #header #text #name {
         font-size: 1.9em !important;
         line-height: 1.1em;
@@ -639,18 +639,14 @@ article, .pagination {
   #container {
     margin-left: 15px;
     margin-right: 15px;
-    padding-bottom: 30px;
     margin-top: -210px;
     padding-top: 210px;
-    padding-bottom: 82px; }
+    padding-bottom: 70px; }
     #container .big-img {
       margin: 20px -15px;
       margin-bottom: 15px; }
       #container .big-img:first-child {
-        margin-top: -16px; }
-
-  #footer {
-    margin-bottom: 30px; } }
+        margin-top: -16px; } }
 @media screen and (max-width: 380px) {
   .hidden-sml {
     visibility: hidden; }
@@ -690,8 +686,8 @@ article, .pagination {
       width: 100px !important;
       height: 100px !important; }
     #header #text {
-      margin-left: -140px !important;
-      margin-top: 50px !important; }
+      margin-left: -125px !important;
+      margin-top: 30px !important; }
       #header #text #name {
         font-size: 1.5em !important;
         line-height: 1.1em;
@@ -724,9 +720,6 @@ article, .pagination {
     padding-bottom: 20px;
     margin-top: -170px;
     padding-top: 170px;
-    padding-bottom: 72px; }
-
-  #footer {
-    margin-bottom: 20px; } }
+    padding-bottom: 60px; } }
 
 /*# sourceMappingURL=main.css.map */
