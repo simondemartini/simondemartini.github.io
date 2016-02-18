@@ -215,7 +215,7 @@ article {
     }
     &:last-child {
         margin-bottom: 0;
-        padding-bottom: 2 *($footer-height + $article-padding ) - 10px;
+        padding-bottom: 2 *($footer-height + $article-padding );
         border-bottom: 0;
         height: auto !important; /*min-height hack*/
         height: 100%;
