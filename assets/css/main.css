@@ -269,7 +269,8 @@ body {
   background: #f4f4f4;
   color: #333333;
   height: 100%;
-  position: relative; }
+  position: relative;
+  min-height: 100%; }
 
 a {
   color: #b25b30;
@@ -368,7 +369,13 @@ article, .pagination {
     padding-top: 195px; }
   article:last-child, .pagination:last-child {
     margin-bottom: 0;
-    border-bottom: 0; }
+    padding-bottom: 140px;
+    border-bottom: 0;
+    height: auto !important;
+    /*min-height hack*/
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden; }
   article .head, .pagination .head {
     width: 100%;
     padding: 0 30px 0 30px;
@@ -393,17 +400,22 @@ article, .pagination {
 
 #container {
   min-height: 100%;
-  margin-top: -180px;
-  padding-top: 180px;
-  padding-bottom: 70px;
+  position: relative; }
+
+#content {
+  min-height: 100vh;
+  position: relative;
+  bottom: 0;
   background-color: #ffffff; }
 
 #footer {
   font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
   height: 40px;
   margin-bottom: 30px;
-  margin-top: -100px;
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: #c66535;
   padding: 15px;
   line-height: 1.5em;
@@ -497,7 +509,6 @@ article, .pagination {
   z-index: 0;
   min-height: 0;
   margin: 0 auto;
-  padding-bottom: 60px;
   color: #999999;
   display: block;
   text-align: center;
@@ -581,7 +592,7 @@ article, .pagination {
         margin-top: 0;
         font-size: 1.0em; }
 
-  #container {
+  #content {
     margin-left: 10px;
     margin-right: 10px; } }
 @media screen and (max-width: 600px) and (min-width: 381px) {
@@ -636,16 +647,13 @@ article, .pagination {
   .hidden-med {
     visibility: hidden; }
 
-  #container {
+  #content {
     margin-left: 15px;
-    margin-right: 15px;
-    margin-top: -210px;
-    padding-top: 210px;
-    padding-bottom: 70px; }
-    #container .big-img {
+    margin-right: 15px; }
+    #content .big-img {
       margin: 20px -15px;
       margin-bottom: 15px; }
-      #container .big-img:first-child {
+      #content .big-img:first-child {
         margin-top: -16px; } }
 @media screen and (max-width: 380px) {
   .hidden-sml {
@@ -714,12 +722,8 @@ article, .pagination {
       article .big-img:first-child, .pagination .big-img:first-child {
         margin-top: -16px; }
 
-  #container {
+  #content {
     margin-left: 10px;
-    margin-right: 10px;
-    padding-bottom: 20px;
-    margin-top: -170px;
-    padding-top: 170px;
-    padding-bottom: 60px; } }
+    margin-right: 10px; } }
 
 /*# sourceMappingURL=main.css.map */

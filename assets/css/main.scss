@@ -132,6 +132,7 @@ body {
     color: $color-darktext;
     height: 100%;
     position: relative;
+    min-height: 100%;
 }
 
 a {
@@ -214,7 +215,12 @@ article {
     }
     &:last-child {
         margin-bottom: 0;
+        padding-bottom: 2 *($footer-height + $article-padding );
         border-bottom: 0;
+        height: auto !important; /*min-height hack*/
+        height: 100%;
+        min-height:100%;
+        overflow: hidden;
     }
 
     .head{
@@ -247,12 +253,14 @@ article {
 }
 
 #container {
-    $header-adjust: $header-height;
-
     min-height: 100%;
-    margin-top: -$header-adjust;
-    padding-top: $header-adjust;
-    padding-bottom: $footer-height + 1*($article-padding);
+    position:relative;
+}
+
+#content {
+    min-height: 100vh;
+    position:relative;
+    bottom:0;
     background-color: $color-white;
 }
 
@@ -260,8 +268,10 @@ article {
     font-family: $font-stack-title;
     height: $footer-height;
     margin-bottom: $article-padding;
-    margin-top: -$footer-height  - ($article-padding * 2);
-    position: relative;
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
     background-color: $color-header;
     padding: $article-padding/2;
     line-height: 1.5em;
@@ -357,7 +367,6 @@ article {
     z-index:0;
     min-height: 0;
     margin: 0 auto;
-    padding-bottom: $footer-height + 20px;
     color: $color-neutral;
     display: block;
     text-align: center;
@@ -468,7 +477,7 @@ article {
         }
     }
 
-    #container {
+    #content {
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -514,15 +523,9 @@ article {
         visibility: hidden;
     }
 
-    #container {
-        $header-adjust: $med-header-height + 2*($article-padding + $med-padding);
-
+    #content {
         margin-left: $med-padding;
 		margin-right: $med-padding;
-        //padding-bottom: $med-padding*2;
-        margin-top: -$header-adjust;
-        padding-top: $header-adjust;
-        padding-bottom: $footer-height + 2*($med-padding);
         .big-img {
             margin: 20px $med-padding - $article-padding;
             margin-bottom: $med-padding;
@@ -593,15 +596,9 @@ article {
         }
     }
 
-    #container {
-        $header-adjust: $sml-header-height + 2*($article-padding + 5px);
-
+    #content {
         margin-left: 10px;
 		margin-right: 10px;
-        padding-bottom: $sml-padding*2;
-        margin-top: -$header-adjust;
-        padding-top: $header-adjust;
-        padding-bottom: $footer-height + 2*($sml-padding);
     }
 
 }
