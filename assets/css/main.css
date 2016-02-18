@@ -369,7 +369,7 @@ article, .pagination {
     padding-top: 195px; }
   article:last-child, .pagination:last-child {
     margin-bottom: 0;
-    padding-bottom: 140px;
+    padding-bottom: 130px;
     border-bottom: 0;
     height: auto !important;
     /*min-height hack*/
