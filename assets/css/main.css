@@ -363,13 +363,15 @@ article, .pagination {
   position: relative;
   border-bottom: 30px;
   border-bottom-color: #f4f4f4;
-  border-bottom-style: solid; }
+  border-bottom-style: solid;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
   article:first-child, .pagination:first-child {
     margin-top: -180px;
     padding-top: 195px; }
   article:last-child, .pagination:last-child {
     margin-bottom: 0;
-    padding-bottom: 140px;
+    padding-bottom: 130px;
     border-bottom: 0;
     height: auto !important;
     /*min-height hack*/
@@ -521,7 +523,8 @@ article, .pagination {
   .pagination .page-number {
     margin-left: auto;
     margin-right: auto;
-    text-align: center; }
+    text-align: center;
+    padding-top: 4px; }
   .pagination .older-posts {
     float: right;
     text-align: right; }
