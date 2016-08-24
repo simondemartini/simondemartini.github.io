@@ -419,7 +419,6 @@ article, .pagination {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #c66535;
   padding: 15px;
   line-height: 1.5em;
   z-index: 1; }
@@ -474,12 +473,12 @@ article, .pagination {
   background-color: #f4f4f4;
   border: 1px solid #f4f4f4; }
 
-.link-neutral a {
-  color: #f4f4f4; }
-.link-neutral a:hover {
+.link-neutral a, #footer a {
+  color: #999999; }
+.link-neutral a:hover, #footer a:hover {
   color: #f4f4f4;
-  background-color: #f4f4f4;
-  border: 1px solid #f4f4f4; }
+  background-color: #999999;
+  border: 1px solid #999999; }
 
 .link-title a {
   color: #333333; }

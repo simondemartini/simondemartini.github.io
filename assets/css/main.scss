@@ -279,11 +279,11 @@ article {
     left:0;
     right:0;
     bottom:0;
-    background-color: $color-header;
+    //background-color: $color-header;
     padding: $article-padding/2;
     line-height: 1.5em;
     z-index: 1;
-
+    @extend .link-neutral;
     a {
         &:hover {
             color: $color-header;
@@ -335,7 +335,7 @@ article {
 }
 
 .link-neutral {
-    @include extend-a-color($color-offwhite,$color-offwhite);
+    @include extend-a-color($color-neutral,$color-offwhite);
 }
 
 .link-title {
