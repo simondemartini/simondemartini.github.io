@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="801">
+  <defs>
+    <linearGradient id="a">
+      <stop offset="0" stop-opacity=".157"/>
+      <stop offset=".408" stop-opacity=".031"/>
+      <stop offset="1" stop-opacity=".157"/>
+    </linearGradient>
+    <filter id="c" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="16 2" result="blur"/>
+    </filter>
+    <linearGradient xlink:href="#a" id="b" gradientUnits="userSpaceOnUse" x1="-.893" y1="586.306" x2="799.07" y2="582.771"/>
+  </defs>
+  <path d="M326.292 287.098l228.098-6.582V462.29l-228.11 17.46m472.81 336.38l-456.22 83.226V502.478l239.517-19.41-.035-203.016 216.732-7.887c.006 45.33.01 90.66.01 135.99.003 45.33.003 90.66.002 135.992 0 45.33-.002 90.66-.004 135.992l19.7 135.88-19.702.11zM595.864 613.68l-24.884 2.633v97.72l24.884-3.88zM326.277 287.002S108.143 276.99-.893 272.148c.005 116.998.003 234.64.003 351.873l203.374 37.79-.013 23.746L-.89 646.028V816.15l320.093 84.314v-396.18L96.376 477.37v-23.03l229.9 25.276" fill="url(#b)" transform="matrix(1.0025 0 0 1 -805.858 -131.148)" filter="url(#c)"/>
+  <path d="M-4.786 129h19.814v544H-4.787z" fill="#c66535" fill-rule="evenodd"/>
+</svg>

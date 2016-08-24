@@ -62,15 +62,21 @@ $device-large:      800px;
 }
 
 @mixin generate-header-wrapper($height, $padding) {
-    background-color: $color-header;
+    //background-color: $color-header;
+    background-image: url("../img/sd-bar.svg");
+    background-repeat: repeat-x;
+    background-position: right top;
+    background-size: 3px $height;
     width: 100vw;
-    top: 0.16 * $height;
-    height: $height * 0.68;
+    //top: 0.16 * $height;
+    top:0;
+    //height: $height * 0.68;
+    height: $height;
     display: inline-block;
     position: absolute;
     z-index: -1;
     content: " ";
-    @include drop-shadow();
+    //@include drop-shadow();
 }
 
 @mixin border-radius($radius) {
@@ -190,9 +196,11 @@ p {
             width: $header-height;
             height: $header-height;
             background-color: $color-white;
-            background-image: url("../img/sd-shadow.png");
-            background-size: contain;
-            background-position: 0 3px;
+            //background-image: url("../img/sd-shadow.png");
+            background-image: url("../img/sd-square-incl.svg");
+            background-repeat: no-repeat;
+            background-position: top left;
+            background-size: ($header-height + .028 *$header-height) $header-height;
         }
 
         #logo-s {
@@ -505,6 +513,7 @@ article {
         #logo {
             width: $med-header-height !important;
             height: $med-header-height !important;
+            background-size: ($med-header-height + .028 *$med-header-height) $med-header-height !important;
         }
 
         #text {
@@ -564,6 +573,7 @@ article {
         #logo {
             width: $sml-header-height !important;
             height: $sml-header-height !important;
+            background-size: ($sml-header-height + .028 *$sml-header-height) $sml-header-height !important;
         }
 
         #text {
