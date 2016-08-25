@@ -9,7 +9,6 @@ $font-stack-title: 	'Roboto Slab', Helvetica, Arial, sans-serif;
 /*Markdown Post Styles*/
 @import 'markdown';
 
-
 /* Variables */
 $color-primary: 	#333333;
 $color-secondary: 	#638e99;
@@ -410,10 +409,13 @@ article {
 }
 
 .unselectable {
+    user-drag: none;
     user-select: none;
     -moz-user-select: none;
+    -ms-user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
+    pointer-events: none;
 }
 
 .wrapper {
