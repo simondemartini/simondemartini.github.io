@@ -504,6 +504,13 @@ article {
         }
     }
 
+    article {
+        &:first-child {
+            margin-top: -$med-header-height;
+            padding-top: $med-header-height + $med-padding/2;
+        }
+    }
+
 }
 
 @media screen and (max-width: $device-small){
@@ -555,6 +562,10 @@ article {
         .big-img {
             margin: 20px $sml-padding - 20px;
             margin-bottom: $sml-padding;
+        }
+        &:first-child {
+            margin-top: -$sml-header-height;
+            padding-top: $sml-header-height + $sml-padding/2;
         }
     }
 
