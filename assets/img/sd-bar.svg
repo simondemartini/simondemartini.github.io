@@ -1,15 +1,108 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="801">
-  <defs>
-    <linearGradient id="a">
-      <stop offset="0" stop-opacity=".157"/>
-      <stop offset=".408" stop-opacity=".031"/>
-      <stop offset="1" stop-opacity=".157"/>
-    </linearGradient>
-    <filter id="c" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="16 2" result="blur"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2000"
+   height="801"
+   viewBox="0 0 2000 801"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="sd-bar.svg">
+  <metadata
+     id="metadata15">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1270"
+     inkscape:window-height="1010"
+     id="namedview13"
+     showgrid="false"
+     inkscape:zoom="0.58926342"
+     inkscape:cx="520.02276"
+     inkscape:cy="188.90721"
+     inkscape:window-x="2330"
+     inkscape:window-y="33"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <filter
+       id="c"
+       style="color-interpolation-filters:sRGB">
+      <feGaussianBlur
+         stdDeviation="16 2"
+         result="blur"
+         id="feGaussianBlur7" />
     </filter>
-    <linearGradient xlink:href="#a" id="b" gradientUnits="userSpaceOnUse" x1="-.893" y1="586.306" x2="799.07" y2="582.771"/>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4145">
+      <rect
+         style="fill:#000000;fill-opacity:0.02352941;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+         id="rect4147"
+         width="9.5759325"
+         height="801.58942"
+         x="804.4469"
+         y="131.15857" />
+    </clipPath>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter4353">
+      <feFlood
+         flood-opacity="0.980392"
+         flood-color="rgba(0,0,0, 0.157)"
+         result="flood"
+         id="feFlood4355" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite4357" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="2"
+         result="blur"
+         id="feGaussianBlur4359" />
+      <feOffset
+         dx="0"
+         dy="12"
+         result="offset"
+         id="feOffset4361" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite4363" />
+    </filter>
   </defs>
-  <path d="M326.292 287.098l228.098-6.582V462.29l-228.11 17.46m472.81 336.38l-456.22 83.226V502.478l239.517-19.41-.035-203.016 216.732-7.887c.006 45.33.01 90.66.01 135.99.003 45.33.003 90.66.002 135.992 0 45.33-.002 90.66-.004 135.992l19.7 135.88-19.702.11zM595.864 613.68l-24.884 2.633v97.72l24.884-3.88zM326.277 287.002S108.143 276.99-.893 272.148c.005 116.998.003 234.64.003 351.873l203.374 37.79-.013 23.746L-.89 646.028V816.15l320.093 84.314v-396.18L96.376 477.37v-23.03l229.9 25.276" fill="url(#b)" transform="matrix(1.0025 0 0 1 -805.858 -131.148)" filter="url(#c)"/>
-  <path d="M-4.786 129h19.814v544H-4.787z" fill="#c66535" fill-rule="evenodd"/>
+  <path
+     d="m -4.6857551,129 2006.0654551,0 0,544 -2006.1667,0 z"
+     id="path11"
+     inkscape:connector-curvature="0"
+     style="fill:#c66535;fill-rule:evenodd;filter:url(#filter4353)" />
 </svg>

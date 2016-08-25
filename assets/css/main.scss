@@ -43,40 +43,41 @@ $device-large:      800px;
 
 /* Mixins */
 
+@mixin logo-size($height) {
+    width: $height;
+    height: $height;
+    div {
+        width: $height;
+        height: $height;
+        background-size: ($height + .028 *$height) $height;
+    }
+}
+
 @mixin generate-header($height, $padding) {
-    height: $height; //Chrome mobile fixed child bug work-around. TEMPORARY
-    //margin-bottom: $article-padding*0.5;
-    z-index: 2;
+    height: $height;
 	overflow: hidden;
     position: relative;
 
-    .wrapper::before{
-        margin-left: -100vw;
-        @include generate-header-wrapper($height, $padding);
+    #logo-link{
+        float:left;
     }
-
-    .wrapper::after{
-        margin-left: $height;
-        @include generate-header-wrapper($height, $padding);
+    #logo {
+        width: $height;
+        height: $height;
+        background-color: $color-white;
+        background-image: url("../img/sd-square-incl.svg");
+        background-repeat: no-repeat;
+        background-size: ($height + .028 *$height) $height;
     }
 }
 
 @mixin generate-header-wrapper($height, $padding) {
-    //background-color: $color-header;
     background-image: url("../img/sd-bar.svg");
     background-repeat: repeat-x;
-    background-position: right top;
-    background-size: 3px $height;
-    width: 100vw;
-    //top: 0.16 * $height;
-    top:0;
-    //height: $height * 0.68;
-    height: $height;
+    background-size: auto $height;
     display: inline-block;
     position: absolute;
-    z-index: -1;
     content: " ";
-    //@include drop-shadow();
 }
 
 @mixin border-radius($radius) {
@@ -84,10 +85,6 @@ $device-large:      800px;
     -moz-border-radius: $radius;
     -ms-border-radius: $radius;
     border-radius: $radius;
-}
-
-@mixin drop-shadow() {
-    box-shadow: 0px 1px 1px 2px $color-border;
 }
 
 @mixin a-color($color, $color-invert) {
@@ -162,53 +159,57 @@ p {
 
 #header {
     font-family: $font-stack-title;
-    @include generate-header($header-height, $article-padding);
+    height: $header-height;
+	overflow: hidden;
+    position: relative;
+    z-index: 10;
 
     .wrapper {
-        padding-left: $article-padding;
-        padding-right: $article-padding;
-        max-width: 600px;
+        @include generate-header-wrapper($header-height, $article-padding);
+        top:0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        width: 100vw;
+        max-width: 100vw;
+        height: $header-height;
+
+        #logo{
+            float:left;
+            @include logo-size($header-height);
+            div {
+                background-color: $color-white;
+                background-image: url("../img/sd-square-incl.svg");
+                background-repeat: no-repeat;
+            }
+        }
 
         #text{
-            margin-top: -135px;
-            margin-left: -25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            float: left;
+            height: $header-height;
+            padding-left: $article-padding;
+            color: $color-white;
+
             #name {
-                margin-top: 75px - $header-height;
-                margin-left: $header-height + 60;
-                color: $color-white;
                 font-size: 3.25em;
-                font-family: $font-stack-title;
                 font-weight: 700;
             }
+
             .nav-link {
                 font-size: 1.1em;
                 margin-top: -8px;
-                margin-left: $header-height + 50;
     			list-style-type:none;
                 line-height: 2em;
                 li {
+                    margin-left: 0;
                     padding-bottom: 8px;
                 }
             }
-        }
-
-        #logo {
-            width: $header-height;
-            height: $header-height;
-            background-color: $color-white;
-            //background-image: url("../img/sd-shadow.png");
-            background-image: url("../img/sd-square-incl.svg");
-            background-repeat: no-repeat;
-            background-position: top left;
-            background-size: ($header-height + .028 *$header-height) $header-height;
-        }
-
-        #logo-s {
-            fill: $color-logo-s;
-        }
-
-        #logo-d {
-            fill: $color-logo-d;
         }
     }
 }
@@ -249,7 +250,7 @@ article {
         .date {
             width: auto;
             margin-bottom: 10px;
-            margin-top:5px;
+            margin-top: 5px;
             margin-left: 2px;
             display: block;
             font: 1.0em $font-stack-title;
@@ -287,7 +288,6 @@ article {
     left:0;
     right:0;
     bottom:0;
-    //background-color: $color-header;
     padding: $article-padding/2;
     line-height: 1.5em;
     z-index: 1;
@@ -316,10 +316,6 @@ article {
 
 .clearfix {
     clear: both;
-}
-
-.drop-shadow {
-    @include drop-shadow();
 }
 
 .invisible {
@@ -457,7 +453,6 @@ article {
 
     article {
         padding-top: $lrg-padding*1.5;
-        //padding-bottom: $lrg-padding*1.5;
 		padding-left: $lrg-padding;
 		padding-right: $lrg-padding;
 		.head {
@@ -467,27 +462,15 @@ article {
         .big-img {
             margin: 20px $lrg-padding - $article-padding;
             margin-bottom: $lrg-padding;
-            &:first-child {
-                margin-top: -16px;
-            }
         }
     }
 
     #header {
         .wrapper {
-            padding-left: $article-padding/2;
-            padding-right: $article-padding/2;
-            max-width: 440px;
             #text {
-                margin-top: -141px;
-                margin-left: -25px;
+                padding-left: $lrg-padding;
                 #name {
-                    font-size: 2.4em;
-                    line-height: 1.1;
-                }
-                .nav-link {
-                    margin-top: 0;
-                    font-size: 1.0em;
+                    font-size: 3em;
                 }
             }
         }
@@ -503,38 +486,29 @@ article {
     $med-padding: $article-padding/2;
 
     #header {
-        @include generate-header($med-header-height, $med-padding);
-
+        height: $med-header-height;
         .wrapper {
-            width: 350px;
-            padding-right: 15px;
-        }
+            background-size: auto $med-header-height;
 
-        #logo {
-            width: $med-header-height !important;
-            height: $med-header-height !important;
-            background-size: ($med-header-height + .028 *$med-header-height) $med-header-height !important;
-        }
-
-        #text {
-            margin-left: -100px !important;
-            margin-top: 19px !important;
-            #name {
-                font-size: 1.9em !important;
-                line-height: 1.1em;
-                max-width: 300px;
+            #logo{
+                @include logo-size($med-header-height);
             }
-            .nav-link {
-                overflow: hidden !important;
-                font-size: 1.0em !important;
-                line-height: 1.5em !important;
-                margin-top: 0 !important;
-                li {
-                    margin-right: 0;
+
+            #text {
+                height: $med-header-height;
+                padding-left: $med-padding;
+                #name {
+                    font-size: 1.9em;
+                    line-height: 1.1em;
+                }
+                .nav-link {
+                    font-size: 1.0em;
+                    line-height: 1.5em;
+                    margin-top: 0;
                 }
             }
         }
-        }
+    }
 
     .hidden-med {
         visibility: hidden;
@@ -562,39 +536,29 @@ article {
     }
 
     #header {
-        @include generate-header($sml-header-height, $sml-padding);
-
+        height: $sml-header-height;
         .wrapper {
-            max-width: 295px;
-            min-width: 290px;
-            padding-right: 15px;
-        }
+            background-size: auto $sml-header-height;
 
-        #logo {
-            width: $sml-header-height !important;
-            height: $sml-header-height !important;
-            background-size: ($sml-header-height + .028 *$sml-header-height) $sml-header-height !important;
-        }
-
-        #text {
-            margin-left: -125px !important;
-            margin-top:30px !important;
-            #name {
-                font-size: 1.5em !important;
-                line-height: 1.1em;
-                max-width: 300px;
+            #logo{
+                @include logo-size($sml-header-height);
             }
-            .nav-link {
-                overflow: hidden !important;
-                font-size: 1.0em !important;
-                line-height: 1.6em !important;
-                margin-top: 0 !important;
-                li {
-                    margin-right: 0;
+
+            #text {
+                height: $sml-header-height;
+                padding-left: $sml-padding;
+                #name {
+                    font-size: 1.5em;
+                    line-height: 1.1em;
+                }
+                .nav-link {
+                    font-size: 1.0em;
+                    line-height: 1.6em;
+                    margin-top: 0;
                 }
             }
         }
-        }
+    }
 
     article {
         padding-top: $sml-padding;
@@ -608,9 +572,6 @@ article {
         .big-img {
             margin: 20px $sml-padding - 20px;
             margin-bottom: $sml-padding;
-            &:first-child {
-                margin-top: -16px;
-            }
         }
     }
 
