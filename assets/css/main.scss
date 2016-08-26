@@ -161,7 +161,7 @@ p {
         @include logo-size($header-height);
         div {
             background-color: $color-white;
-            background-image: url("../img/sd-square-incl.svg");
+            background-image: url("../img/sd-square.svg");
             background-repeat: no-repeat;
         }
     }
@@ -584,7 +584,7 @@ article {
         #logo{
             div {
                 /*Fix stray white pixels whn scaling SVG in IE. Fallback logo to PNG. */
-                background-image: url("../img/sd-square-incl-fallback.png");
+                background-image: url("../img/sd-square-fallback.png");
             }
         }
     }
