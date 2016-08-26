@@ -73,7 +73,7 @@
        id="filter4353">
       <feFlood
          flood-opacity="0.157"
-         flood-color="rgba(0,0,0)"
+         flood-color="#000000"
          result="flood"
          id="feFlood4355" />
       <feComposite
