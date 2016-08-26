@@ -72,8 +72,8 @@
        inkscape:label="Drop Shadow"
        id="filter4353">
       <feFlood
-         flood-opacity="0.980392"
-         flood-color="rgba(0,0,0, 0.157)"
+         flood-opacity="0.157"
+         flood-color="rgba(0,0,0)"
          result="flood"
          id="feFlood4355" />
       <feComposite
