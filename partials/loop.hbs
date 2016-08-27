@@ -1,15 +1,11 @@
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
+{{^has tag="#about"}}
 <article class="{{post_class}} wrapper">
     <header class="head">
 
         <h1 class="link-title"><a href="{{url}}">{{{title}}}</a></h1>
         <time class="date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, "}}<span class="year">{{date format="YYYY"}}</span></time>
-
-        {{! Display tags, if assigned}}
-        {{#if tags}}
-        <ul class="tags link-secondary"><li>{{tags separator="</li><li>"}}</li></ul>
-        {{/if}}
 
     </header>
 
@@ -28,7 +24,5 @@
 
     </footer>
 </article>
+{{/has}}
 {{/foreach}}
-
-{{! Previous/next page links - displayed on every page }}
-{{pagination}}

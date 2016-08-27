@@ -1,0 +1,28 @@
+{{! This is the post loop - each post will be output using this markup }}
+
+{{#foreach posts}}
+{{#has tag="#about"}}
+
+<article class="{{post_class}} wrapper" id="{{slug}}">
+    <header class="head">
+        <h1 class="link-title"><a href="{{@blog.url}}/#{{slug}}">{{{title}}}</a></h1>
+    </header>
+
+    <section class="post-excerpt {{post_class}} about-post">
+        {{! Display header image, if assigned }}
+        {{#if image}}
+        <div class="big-img">
+            <img src="{{image}}" />
+        </div>
+        {{/if}}
+
+        {{content}}
+
+    </section>
+    <footer class="post-meta">
+
+    </footer>
+</article>
+
+{{/has}}
+{{/foreach}}
