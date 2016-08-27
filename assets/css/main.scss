@@ -206,7 +206,6 @@ article {
     -ms-word-wrap: break-word;
     word-wrap: break-word;
     &:first-child {
-        margin-top: -$header-height;
         padding-top: $header-height + $article-padding/2;
     }
     &:last-child {
@@ -254,6 +253,7 @@ article {
 }
 
 #content {
+    margin-top: -$header-height;
     min-height: 100vh;
     position:relative;
     bottom:0;
@@ -495,6 +495,7 @@ article {
     }
 
     #content {
+        margin-top: -$med-header-height;
         margin-left: $med-padding;
 		margin-right: $med-padding;
         .big-img {
@@ -508,7 +509,6 @@ article {
 
     article {
         &:first-child {
-            margin-top: -$med-header-height;
             padding-top: $med-header-height + $med-padding/2;
         }
     }
@@ -566,12 +566,12 @@ article {
             margin-bottom: $sml-padding;
         }
         &:first-child {
-            margin-top: -$sml-header-height;
             padding-top: $sml-header-height + $sml-padding/2;
         }
     }
 
     #content {
+        margin-top: -$sml-header-height;
         margin-left: 10px;
 		margin-right: 10px;
     }
