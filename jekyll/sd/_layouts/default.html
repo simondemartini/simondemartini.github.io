@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/main.css" />
+    <!--[if IE]>
+	   <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/ie.css" />
+    <![endif]-->
+
+    <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
+</head>
+<body class="nav-closed">
+    <div id="container" role="main">
+
+        <div id="header">
+        	<div class="wrapper">
+        		<a href="{{ site.url }}" draggable="false" class="link-nostyle unselectable" id="logo">
+                    <div draggable="false"  class="unselectable">
+                    </div>
+                </a>
+        		<div id="text">
+        			<div id="name" class=""><a href="{{ site.url }}" class="link-nostyle">{{ site.title }}</a></div>
+
+                    {% include navigation.html %}
+
+        		</div>
+        	</div>
+        </div>
+
+        <div id="content" class=wrapper>
+
+            {{ content }}
+
+        </div>
+
+        <div id="footer" class="">
+            <div class="wrapper center-text">
+                <a href="{{ site.url }}">{{site.title }}</a>
+                <br>
+                {% include navigation.html %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
