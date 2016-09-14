@@ -358,6 +358,7 @@ article {
 
 .pagination{
     @extend article;
+    padding-top:0 !important; /** Fix broken pagination */
     z-index:0;
     min-height: 0;
     margin: 0 auto;
