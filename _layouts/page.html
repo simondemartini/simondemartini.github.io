@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<article class="wrapper">
+    <header class="head link-title">
+        <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+    </header>
+    <section class="post">
+
+        {% if page.image %}
+        <div class="big-img">
+            <img src="{{ page.image }}" />
+        </div>
+        {% endif %}
+
+        {{content}}
+
+    </section>
+    <footer class="post-meta">
+
+    </footer>
+</article>
