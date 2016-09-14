@@ -30,7 +30,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 ### Big Image
 
-<div class="big-img">
+<div class="big-img" markdown="1">
 ![Big Image](http://demo.ghost.io/content/images/2014/09/testimg1.jpeg)
 </div>
 
@@ -159,8 +159,8 @@ The <u>u element</u> example
 
 ## Forms
 
-<form> 
-<fieldset> 
+<form>
+<fieldset>
 <legend>Inputs as descendents of labels (form legend)</legend>
 <label>
 <b>Text input</b>
@@ -189,7 +189,7 @@ The <u>u element</u> example
 <label>
 <b>File input</b>
 <input type="file">
-</label> 
+</label>
 <label>
 <b>Radio input</b>
 <input type="radio" name="rad">
@@ -203,7 +203,7 @@ The <u>u element</u> example
 </label>
 <label>
 <input type="checkbox"> Checkbox input
-</label> 
+</label>
 <label>
 <b>Select field</b>
 <select>
@@ -214,53 +214,53 @@ The <u>u element</u> example
 <label>
 <b>Textarea</b>
 <textarea cols="30" rows="5" >Textarea text</textarea>
-</label> 
-</fieldset> 
+</label>
+</fieldset>
 
-<fieldset> 
+<fieldset>
 <legend>Clickable inputs and buttons</legend>
 <input type="image" src="http://placekitten.com/90/24" alt="Image (input)">
 <input type="reset" value="Reset (input)">
 <input type="button" value="Button (input)">
-<input type="submit" value="Submit (input)"> 
+<input type="submit" value="Submit (input)">
 <button type="reset">Reset (button)</button>
 <button type="button">Button (button)</button>
-<button type="submit">Submit (button)</button> 
-</fieldset> 
+<button type="submit">Submit (button)</button>
+</fieldset>
 
-<fieldset id="boxsize"> 
-<legend>box-sizing tests</legend> 
-<div><input type="text" value="text"></div> 
-<div><input type="email" value="email"></div> 
-<div><input type="search" value="search"></div> 
-<div><input type="url" value="http://example.com"></div> 
-<div><input type="password" value="password"></div> 
+<fieldset id="boxsize">
+<legend>box-sizing tests</legend>
+<div><input type="text" value="text"></div>
+<div><input type="email" value="email"></div>
+<div><input type="search" value="search"></div>
+<div><input type="url" value="http://example.com"></div>
+<div><input type="password" value="password"></div>
 
-<div><input type="color" value="#000000"></div> 
-<div><input type="number" value="5"></div> 
-<div><input type="range" value="10"></div> 
-<div><input type="date" value="1970-01-01"></div> 
-<div><input type="month" value="1970-01"></div> 
+<div><input type="color" value="#000000"></div>
+<div><input type="number" value="5"></div>
+<div><input type="range" value="10"></div>
+<div><input type="date" value="1970-01-01"></div>
+<div><input type="month" value="1970-01"></div>
 <div><input type="week" value="1970-W01"></div>
 <div><input type="time" value="18:23"></div>
-<div><input type="datetime" value="1970-01-01T00:00:00Z"></div> 
-<div><input type="datetime-local" value="1970-01-01T00:00"></div> 
+<div><input type="datetime" value="1970-01-01T00:00:00Z"></div>
+<div><input type="datetime-local" value="1970-01-01T00:00"></div>
 
-<div><input type="radio"></div> 
-<div><input type="checkbox"></div> 
+<div><input type="radio"></div>
+<div><input type="checkbox"></div>
 
-<div><select><option>Option 01</option><option>Option 02</option></select></div> 
-<div><textarea cols="30" rows="5" >Textarea text</textarea></div> 
+<div><select><option>Option 01</option><option>Option 02</option></select></div>
+<div><textarea cols="30" rows="5" >Textarea text</textarea></div>
 
-<div><input type="image" src="http://placekitten.com/90/24" alt="Image (input)"></div> 
-<div><input type="reset" value="Reset (input)"></div> 
-<div><input type="button" value="Button (input)"></div> 
-<div><input type="submit" value="Submit (input)"></div> 
+<div><input type="image" src="http://placekitten.com/90/24" alt="Image (input)"></div>
+<div><input type="reset" value="Reset (input)"></div>
+<div><input type="button" value="Button (input)"></div>
+<div><input type="submit" value="Submit (input)"></div>
 
-<div><button type="reset">Reset (button)</button></div> 
-<div><button type="button">Button (button)</button></div> 
-<div><button type="submit">Submit (button)</button></div> 
-</fieldset> 
+<div><button type="reset">Reset (button)</button></div>
+<div><button type="button">Button (button)</button></div>
+<div><button type="submit">Submit (button)</button></div>
+</fieldset>
 </form>
 
 ---
@@ -323,12 +323,12 @@ Spinner.prototype.draw = function() {
   c.beginPath();
   c.arc(this.x, this.y, littleCircle, 0, TWO_PI);
   c.fill();
-  c.closePath(); 
+  c.closePath();
 }
 c.setup = function() {
   spinner = new Spinner();
   spinner.setup();
-} 
+}
 c.update = function() {
   spinner.update();
   hue = ++hue % 360;
