@@ -201,7 +201,7 @@ article {
     background-color: $color-white;
     z-index: 1;
     padding: $article-padding;
-    padding-bottom: $article-padding * 2;
+    padding-bottom: $article-padding;
     position: relative;
     border-bottom: 30px;
     border-bottom-color: $color-offwhite;
@@ -260,7 +260,6 @@ article {
     min-height: 100vh;
     position:relative;
     bottom:0;
-    background-color: $color-white;
 }
 
 #footer {
@@ -290,6 +289,14 @@ article {
     margin: $article-padding/2 0 -$article-padding;
     &:first-child{
         margin-top:-$article-padding/2 - 1px;
+    }
+}
+
+.project {
+    padding-top: $article-padding;
+    .head {
+        border-bottom: none;
+        padding-bottom: 0;
     }
 }
 
@@ -387,9 +394,9 @@ article {
 }
 
 .read-more {
+    display: inline-block;
     margin-left: -3px;
-    position: absolute;
-    bottom: $article-padding;
+    margin-top: $article-padding /2;
 }
 
 .tags{
