@@ -3,7 +3,7 @@ layout: post
 title:  "Words and Shit"
 date:   2016-08-20 17:11:01 -0700
 categories: jekyll
-image: http://wallpaperfx.com/uploads/wallpapers/2016/05/23/18534/preview_the-sunset-road.jpg
+image: https://mymostlyunfabulouslife.files.wordpress.com/2013/09/autumn-nature-desktop.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, ipsum nec cursus gravida, neque lectus iaculis nulla, ac sodales orci orci a neque. Vestibulum ligula nisl, condimentum ut eros vel, tempor mattis eros. Integer luctus lectus in diam scelerisque suscipit. Mauris sed ante tellus. Phasellus vel bibendum libero, at pretium sapien. Vivamus elit leo, ullamcorper at ultricies non, suscipit id orci. Nulla viverra tortor molestie sapien pharetra malesuada. Aliquam eu erat odio. Etiam dictum vitae sapien ac finibus. Proin imperdiet, leo id interdum sollicitudin, felis lacus ultricies velit, at sagittis leo sapien non dui. Proin finibus sit amet sapien eu interdum. Quisque commodo finibus sapien vel volutpat. In tincidunt justo id molestie condimentum.
 

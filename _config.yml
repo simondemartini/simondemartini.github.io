@@ -28,7 +28,9 @@ permalink: /blog/:year/:month/:day/:title/
 # Organization settings
 collections:
     projects:
-        output: true 
+        output: true
+    about:
+        output: false
 
 # Build settings
 markdown: kramdown

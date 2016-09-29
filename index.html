@@ -1,0 +1,24 @@
+---
+layout: default
+title: Home
+---
+{% for topic in site.about %}
+<article class="wrapper about" id="{{topic.slug}}">
+    <header class="head">
+        <h1 class="link-title">{{ topic.title }}</h1>
+    </header>
+    <section class="post-excerpt {{post_class}}">
+        {%if topic.image %}
+        <div class="big-img">
+            <img src="{{ topic.image }}" />
+        </div>
+        {% endif %}
+
+        {{ topic.content }}
+
+    </section>
+    <footer class="post-meta">
+
+    </footer>
+</article>
+{% endfor %}
