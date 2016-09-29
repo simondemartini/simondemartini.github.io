@@ -16,6 +16,11 @@
     <![endif]-->
 
     <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
+
+    {% if jekyll.environment == 'production' %}
+        {% include analytics.html %}
+    {% endif %}
+
 </head>
 <body class="nav-closed">
     <div id="container" role="main">

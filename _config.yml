@@ -21,6 +21,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://127.0.0.1:3000" # the base hostname & protocol for your site
 github_username:  simondemartini
 
+# Google services
+google_analytics: UA-84923253-1
+
 # Style settings
 # paginate: 5
 permalink: /blog/:year/:month/:day/:title/
