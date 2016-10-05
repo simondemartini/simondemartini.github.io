@@ -6,6 +6,6 @@ slug: about
 order: 1
 ---
 
-I am Simon DeMartini, an aspiring programmer, designer, and IT expert. My passions lie in open source communities, user experience and design, as well software development. I thouroughly enjoy breaking fixing things all things computer related and seeing how they work.
+Hey there! I am Simon DeMartini, a computer nerd with a wide variety of skills. My love for computers stem from a passion of open source systems and communities, user experience and design, as well as software development. In my (limited) spare time, I thoroughly enjoy breaking fixing things all things computer related to see how they work.
 
-Currently, I am a Computer Science & Systems major at the University of Washington Tacoma, planned graduate in Fall 2017. If you have any questions, comments, or opportunites, feel free to contact me via [LinkedIn](https://www.linkedin.com/in/simondemartini) or my [Github](https://github.com/simondemartini) pages.
+Currently, I am a Computer Science & Systems major at the University of Washington Tacoma, planned to graduate in Fall 2017.  If you have any questions or comments, feel free to connect with me via [LinkedIn](https://www.linkedin.com/in/simondemartini) or check out my [Github](https://github.com/simondemartini) page.
