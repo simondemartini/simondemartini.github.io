@@ -14,9 +14,9 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="favicon.svg"
-   inkscape:export-filename="/home/simon/Dropbox/Development/rift/img/favicon16.png"
-   inkscape:export-xdpi="45"
-   inkscape:export-ydpi="45">
+   inkscape:export-filename="/home/simon/Dropbox/Development/rift/img/favicon32.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <metadata
      id="metadata29">
     <rdf:RDF>
@@ -95,7 +95,7 @@
     </filter>
   </defs>
   <path
-     d="m 19,3 5.5,1 0,6.5 L 19,10 M 31.999852,27.501437 20,29 l 0,-16.5 6.5,0 0,-8 5.5,1 c 6.39e-4,7.672609 -1.75e-4,14.328827 -1.75e-4,22.001437 z M 27.5,17.5 l -2,0 0,5 2,0 z"
+     d="m 19,3 5.5,1 0,6.5 L 19,10 M 31.999852,27.501437 20,29 l 0,-16.5 6.5,0.5 0,-8.5 5.5,1 c 6.39e-4,7.672609 -1.75e-4,14.328827 -1.75e-4,22.001437 z M 27.5,17.5 l -2,0 0,5 2,0 z"
      id="path23"
      inkscape:connector-curvature="0"
      style="fill:#d27f49;fill-opacity:1"
@@ -103,7 +103,7 @@
      inkscape:export-xdpi="45"
      inkscape:export-ydpi="45" />
   <path
-     d="M 19,3 C 19,3 6.610167,3.982991 -3.4948027e-8,4.4831879 3.2067504e-4,9.4338829 0,14.039361 0,19 l 12.5,0.5 0,2.5 L 0,21.5 1.3155478e-4,27.502282 18,29 18,12.5 6,12.5 6,10.5 19,10"
+     d="M 19,3 C 19,3 6.610167,3.982991 -3.4948027e-8,4.4831879 3.2067504e-4,9.4338829 0,14.039361 0,19 l 12.5,0.5 0,2.5 L 0,21.5 1.3155478e-4,27.502282 18,29 18,12.5 6,13 6,10.5 19,10"
      id="path25"
      inkscape:connector-curvature="0"
      style="fill:#9d4625;fill-opacity:1"

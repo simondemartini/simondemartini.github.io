@@ -14,12 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Simon DeMartini
-email: simondemartini@gmail.com
+email: info@simondemartini.com
 description: > # this means to ignore newlines until "baseurl:"
   Simon DeMartini's rambling thoughts and a catalog of the work I've done and ways to contact me.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://simondemartini.github.io" # the base hostname & protocol for your site
 github_username:  simondemartini
+repository: simondemartini/simondemartini.github.io
 
 # Google services
 google_analytics: UA-84923253-1
