@@ -1,0 +1,22 @@
+{% assign sorted = (site.jobs | sort: 'date') | reverse %}
+{% for job in sorted %}
+<div class="wrapper job">
+    <header class="head">
+        <h3 class="link-title">{{ job.title }}</h3>
+        <time class="date" datetime="{{ job.start_date | date: "%Y-%b-%d"}}">{{ job.start_date | date: "%B %Y"}}</time> - <time class="date" datetime="{{ job.completion_date | date: "%Y-%b-%d"}}">{{ job.completion_date | date: "%B %Y"}}</time>
+
+    </header>
+    <section class="post-excerpt {{post_class}}">
+        {%if job.image %}
+        <div class="big-img">
+            <img src="{{ job.image }}" />
+        </div>
+        {% endif %}
+
+        {{ job.content }}
+    </section>
+    <footer class="post-meta">
+
+    </footer>
+</div>
+{% endfor %}

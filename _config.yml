@@ -32,6 +32,8 @@ permalink: /blog/:year/:month/:day/:title/
 collections:
     projects:
         output: true
+    jobs:
+        output: true
     about:
         output: false
 

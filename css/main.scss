@@ -127,7 +127,7 @@ img {
     height:auto;
 }
 
-p {
+p, ul {
     font-size: 1.1em;
     line-height: 1.6em;
     margin-bottom: 15px;
@@ -234,13 +234,8 @@ article {
             width: auto;
             margin-bottom: 10px;
             margin-top: 5px;
-            margin-left: 2px;
-            display: block;
             font: 1.0em $font-stack-title;
-            color: lighten($color-darktext, 10% );
-            .year {
-                color: lighten($color-darktext, 30% );
-            }
+            color: lighten($color-darktext, 20% );
         }
 
         h1 {
@@ -353,7 +348,12 @@ form {
     }
 }
 
-.project {
+.project, .job {
+
+    &:first-child {
+        padding-top: $article-padding/2;
+    }
+
     padding-top: $article-padding;
     .head {
         border-bottom: none;

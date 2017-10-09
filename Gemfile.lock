@@ -136,7 +136,7 @@ DEPENDENCIES
   github-pages
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.3.4p301
 
 BUNDLED WITH
-   1.13.0
+   1.15.4

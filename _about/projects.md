@@ -1,8 +1,8 @@
 ---
 collection: about
 layout: page
-title: Projects, Awards & Experience
+title: Projects & Awards
 slug: projects
-order: 2
+order: 3
 ---
 {% include projects.html %}

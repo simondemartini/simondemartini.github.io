@@ -3,7 +3,7 @@
 <div class="wrapper project">
     <header class="head">
         <h3 class="link-title">{{ project.title }}</h3>
-        <time class="date" datetime="{{ project.completion_date | date: "%Y-%b-%d"}}">{{ project.completion_date | date: "%B, "}}<span class="year">{{ project.completion_date | date: "%Y"}}</span></time>
+        <time class="date" datetime="{{ project.completion_date | date: "%Y-%b-%d"}}">{{ project.completion_date | date: "%B %Y"}}</time>
     </header>
     <section class="post-excerpt {{post_class}}">
         {%if project.image %}
