@@ -37,7 +37,7 @@ $main-width: 		780px;
 $article-padding:   30px;
 $article-width:     $main-width - (2*$article-padding);
 
-$border-radius: 	3px;
+$border-radius:     3px;
 
 $device-small:      380px;
 $device-medium:     600px;
@@ -238,6 +238,11 @@ article {
             color: lighten($color-darktext, 20% );
         }
 
+        .company {
+            font-style: italic;
+            color: lighten($color-darktext, 30% );
+        }
+
         h1 {
             font-weight: 700;
             letter-spacing: -1px;
@@ -410,6 +415,10 @@ form {
 
 .link-button {
     padding: 3px;
+}
+
+.text-lighter {
+    color: lighten($color-darktext, 30% );;
 }
 
 .nav-link {
