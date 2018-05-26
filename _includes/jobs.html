@@ -4,8 +4,12 @@
     <header class="head">
         <h3 class="link-title">{{ job.title }} <span class="company">at {{ job.company }}</span></h3>
 
-        <time class="date" datetime="{{ job.start_date | date: "%Y-%b-%d"}}">{{ job.start_date | date: "%B %Y"}}</time> - <time class="date" datetime="{{ job.completion_date | date: "%Y-%b-%d"}}">{{ job.completion_date | date: "%B %Y"}}</time>
-
+        <time class="date" datetime="{{ job.start_date | date: "%Y-%b-%d"}}">{{ job.start_date | date: "%B %Y"}}</time> - 
+        {%if job.completion_date %}
+            <time class="date" datetime="{{ job.completion_date | date: "%Y-%b-%d"}}">{{ job.completion_date | date: "%B %Y"}}</time>
+        {% else %}
+            <span class="date" >Current</span>
+        {% endif %}
     </header>
     <section class="post-excerpt {{post_class}}">
         {%if job.image %}
