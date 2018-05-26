@@ -2,7 +2,7 @@
 layout: default
 title: Home
 ---
-{% assign sorted = (site.about | sort: 'order') %}
+{% assign sorted = site.about | sort: 'order' %}
 {% for topic in sorted %}
 <article class="wrapper about" id="{{topic.slug}}">
     <header class="head">
