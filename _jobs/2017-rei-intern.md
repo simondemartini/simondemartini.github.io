@@ -1,7 +1,7 @@
 ---
 collection: jobs
 layout: page
-title: Software Engineer - Java Intern
+title: Software Engineer Intern
 company: REI Co-op
 start_date: 2017-06-01
 completion_date:   2017-08-25
