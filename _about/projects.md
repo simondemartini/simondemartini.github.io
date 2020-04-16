@@ -1,7 +1,7 @@
 ---
 collection: about
 layout: page
-title: Projects & Awards
+title: Projects
 slug: projects
 order: 3
 ---
