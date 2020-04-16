@@ -2,7 +2,7 @@
 collection: projects
 layout: page
 title: "Research Paper: Multilevel Selection Can Lead to Cooperation in a Public Goods Game"
-completion_date:   2018-01-08 12:00:00 -0700
+completion_date:   2018-01-01
 ---
 As an undergrad research assistant at University of Washington Tacoma:
 - Developed genetic evolution simulations with javascript/html/css, storing data in a NoSQL database.

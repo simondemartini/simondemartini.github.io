@@ -3,8 +3,8 @@ collection: jobs
 layout: page
 title: Software Engineer Intern
 company: REI Co-op
-start_date: 2017-06-01
-completion_date:   2017-08-01
+start_date: 2017-06
+completion_date:   2017-08
 ---
 Automated code freezes by integrating with the continuous delivery pipeline to provide additional checkpoints during high-traffic periods.
 
