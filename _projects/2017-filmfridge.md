@@ -2,7 +2,7 @@
 collection: projects
 layout: page
 title: FilmFridge
-completion_date:   2017-03
+completion_date:   2017-03-01
 ---
 Built a native Android ​app from scratch​ that ​uses the TMDb API and recommends movies to a user
 based on a simple MVC design. I created the initial UI mockups, then iteratively developed the core
