@@ -1,7 +1,7 @@
 ---
 collection: about
 layout: page
-title: Experience
+title: Work
 slug: work
 order: 3
 ---
