@@ -4,10 +4,8 @@ layout: page
 title: Software Engineer Intern
 company: REI Co-op
 start_date: 2017-06-01
-completion_date:   2017-08-25
+completion_date:   2017-08-01
 ---
-Working with the Platform Engineering Team, I contributed bug fixes, features, and tests for the tools, libraries and applications used by REI’s DevOps and CI/CD systems. Major contributions include:
+Automated code freezes by integrating with the continuous delivery pipeline to provide additional checkpoints during high-traffic periods.
 
-- Automated code freezes by integrating with the continuous delivery pipeline to provide additional checkpoints during high-traffic periods. Documented and presented my solutions to IT management and internal development community.  
-- Enabled easy deployment rollback, added additions to identify app startup errors and fixed bugs in the deployment and infrastructure management tool for both on-prem and AWS apps.
-- Contributed to discussions about a public engineering site and internal engineering culture.
+Enabled easy deployment rollback, added additions to identify app startup errors and fixed bugs in the deployment and infrastructure management tool for both on-prem and cloud apps.
