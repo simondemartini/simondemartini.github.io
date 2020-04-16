@@ -1,7 +1,7 @@
 ---
 collection: jobs
 layout: page
-title: Software Engineer
+title: Senior Software Engineer
 company: REI Co-op
 start_date: 2018-02-15
 ---
